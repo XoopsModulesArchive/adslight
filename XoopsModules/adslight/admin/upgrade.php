@@ -60,7 +60,7 @@ if(!jlm_ads_TableExists($xoopsDB->prefix("adslight_pictures")))
   			url varchar(50) NOT NULL default '',
   			PRIMARY KEY  (cod_img),
   			KEY storyid (storyid)
-			) TYPE=MyISAM;";
+			) ENGINE=MyISAM;";
 		if (!$xoopsDB->queryF($sql)) {
 	    	echo '<br />' . constant($admin_lang."_UPGRADEFAILED").' '.constant($admin_lang."_UPGRADEFAILED1");
 	    	$errors++;
@@ -81,7 +81,7 @@ if(!jlm_ads_TableExists($xoopsDB->prefix("adslight_pictures")))
 	  email varchar(100) NOT NULL default '',
 	  r_usid int(11) NOT NULL default '0',
 	  PRIMARY KEY  (r_lid)
-	) TYPE=MyISAM;";
+	) ENGINE=MyISAM;";
 
 		if (!$xoopsDB->queryF($sql3)) {
 		    	echo '<br />' . constant($admin_lang."_UPGRADEFAILED").' '.constant($admin_lang."_UPGRADEFAILED1");
