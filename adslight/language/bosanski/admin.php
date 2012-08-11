@@ -44,8 +44,8 @@ define("_AM_ADSLIGHT_ANNDEL","Izaberi Oglase koje treba izbrisati");
 define("_AM_ADSLIGHT_ADDCATPRINC","Napravi kategoriju");
 define("_AM_ADSLIGHT_CATNAME","Naziv :");
 define("_AM_ADSLIGHT_ADDSUBCAT","Napravi podkategoriju");
-define("_AM_ADSLIGHT_DELSUBCAT", "Izbri&scaron;i kategoriju");
-define("_AM_ADSLIGHT_MODIFSUBCAT", "Uredi kategoriju");
+define("_AM_ADSLIGHT_DELSUBCAT","Izbri&scaron;i kategoriju");
+define("_AM_ADSLIGHT_MODIFSUBCAT","Uredi kategoriju");
 define("_AM_ADSLIGHT_ADD","Napravi");
 define("_AM_ADSLIGHT_CATDEL","Kategorija je izbrisana");
 define("_AM_ADSLIGHT_OUI","da");
@@ -136,12 +136,12 @@ define("_AM_ADSLIGHT_NBDISPLSUBCAT","prika&#382;i podkategorije :");
 define("_AM_ADSLIGHT_IF","ako");
 define("_AM_ADSLIGHT_ISAT","je na");
 define("_AM_ADSLIGHT_VIEWNEWCLASS","prika&#382;i nove Oglase :");
-define("_AM_ADSLIGHT_PERMADDNG", "dodavanje %s nije dozvoljeno za %s za grupe %s");
-define("_AM_ADSLIGHT_PERMADDOK", " %s odobrenje za %s za grupe %s");
+define("_AM_ADSLIGHT_PERMADDNG","dodavanje %s nije dozvoljeno za %s za grupe %s");
+define("_AM_ADSLIGHT_PERMADDOK"," %s odobrenje za %s za grupe %s");
 define("_AM_ADSLIGHT_PERMRESETNG","Odobrenja za grupe se nemogu mjenjati %s");
-define("_AM_ADSLIGHT_PERMADDNGP", "Moraju se svi Artikli ozna&#269;iti.");
-define("_AM_ADSLIGHT_EXPIRE", "Oglas isti&#269;e za (Dana)");
-define("_AM_ADSLIGHT_DBUPDATED", "Baza podataka je aktulizirana.");
+define("_AM_ADSLIGHT_PERMADDNGP","Moraju se svi Artikli ozna&#269;iti.");
+define("_AM_ADSLIGHT_EXPIRE","Oglas isti&#269;e za (Dana)");
+define("_AM_ADSLIGHT_DBUPDATED","Baza podataka je aktulizirana.");
 define("_AM_ADSLIGHT_CONTACT_BY_EMAIL","E-mail");
 define("_AM_ADSLIGHT_CONTACT_BY_PM","Private poruka");
 define("_AM_ADSLIGHT_CONTACT_BY_BOTH","Oboje E-Mail i Privatna poruka");
@@ -161,14 +161,14 @@ define("_AM_ADSLIGHT_UPDATEMODULE","<b>Update Modula</b>");
 define("_AM_ADSLIGHT_UPGRADEFAILED","Update nije uspjelo");
 define("_AM_ADSLIGHT_UPGRADEFAILED0","Update");
 define("_AM_ADSLIGHT_UPGR_ACCESS_ERROR","Pristup gre&scaron;ka");
-define("_AM_ADSLIGHT_THANKS", "Zahvaljujemo ti se &scaron;to koristi&scaron; na&scaron;e Oglase");
-define("_AM_ADSLIGHT_WEBMASTER", "Webmaster");
-define("_AM_ADSLIGHT_YOUR_AD", "Mali Oglasi");
+define("_AM_ADSLIGHT_THANKS","Zahvaljujemo ti se &scaron;to koristi&scaron; na&scaron;e Oglase");
+define("_AM_ADSLIGHT_WEBMASTER","Webmaster");
+define("_AM_ADSLIGHT_YOUR_AD","Mali Oglasi");
 define("_AM_ADSLIGHT_AT","kod");
-define("_AM_ADSLIGHT_VEDIT_AD", "Ovdje mo&#382;e&scaron; svoj Oglas objaviti i urediti");
-define("_AM_ADSLIGHT_YOUR_AD_ON", "Oglas na");
-define("_AM_ADSLIGHT_APPROVED", "je potvr&#273;en.");
-define("_AM_ADSLIGHT_EXPIRED", "je istekao i izbrisan je.");
+define("_AM_ADSLIGHT_VEDIT_AD","Ovdje mo&#382;e&scaron; svoj Oglas objaviti i urediti");
+define("_AM_ADSLIGHT_YOUR_AD_ON","Oglas na");
+define("_AM_ADSLIGHT_APPROVED","je potvr&#273;en.");
+define("_AM_ADSLIGHT_EXPIRED","je istekao i izbrisan je.");
 
 define("_AM_ADSLIGHT_CHECKER", 'Provjera direktorija');
 define("_AM_ADSLIGHT_DIRPERMS", 'Provjeridalise u direktorije mo&#382;e pisati(CHMOD) ! => ');
@@ -181,9 +181,9 @@ define("_AM_ADSLIGHT_DATE","Datum objave");
 define("_AM_ADSLIGHT_DESC","Opis");
 define("_AM_ADSLIGHT_FREECAT","Ovo je slobodna Kategorija");
 define("_AM_ADSLIGHT_MODERATE_CAT","Kategoriju Moderirati");
-define("_AM_ADSLIGHT_VISIT_LINK", "Ovdje klikni i vidi kompletan Oglas:");
-define("_AM_ADSLIGHT_LISTING_NUMBER", "Broj Oglasa ");
-define("_AM_ADSLIGHT_YOU_CAN_VIEW_BELOW", "Ovdje klikni i vidi kompletan Oglas");
+define("_AM_ADSLIGHT_VISIT_LINK","Ovdje klikni i vidi kompletan Oglas:");
+define("_AM_ADSLIGHT_LISTING_NUMBER","Broj Oglasa ");
+define("_AM_ADSLIGHT_YOU_CAN_VIEW_BELOW","Ovdje klikni i vidi kompletan Oglas");
 define("_AM_ADSLIGHT_NOREPLY","!!!  Molimo te da ne &scaron;alje&scaron; E-Mail na ovu adresu, ne odgovaram na E-Mail.  !!!");
 define("_AM_ADSLIGHT_ADDED_TO_CAT","Novi Oglas je u ovu kategoriju poslat ");
 define("_AM_ADSLIGHT_RECIEVING_NOTIF","Abonirano je obavje&scaron;tenje ove vrste");
@@ -199,11 +199,11 @@ define("_AM_ADSLIGHT_INCOMPLETE","Nekompletno");
 
 // Ajouter par iLuc //
 //Condition de paiement
-define("_AM_ADSLIGHT_ADDUSURE", "Tip podnosioca dodaj");
-define("_AM_ADSLIGHT_MODUSURE", "Tip podnosioca uredi");
-define("_AM_ADSLIGHT_ADDUSURE2", "Vrsta podnosioca je dodata");
-define("_AM_ADSLIGHT_USUREMOD", "Mustra podnosioca je promijenjena");
-define("_AM_ADSLIGHT_USUREDEL", "Vrsta podnosioca je izbrisana ");
+define("_AM_ADSLIGHT_ADDUSURE","Tip podnosioca dodaj");
+define("_AM_ADSLIGHT_MODUSURE","Tip podnosioca uredi");
+define("_AM_ADSLIGHT_ADDUSURE2","Vrsta podnosioca je dodata");
+define("_AM_ADSLIGHT_USUREMOD","Mustra podnosioca je promijenjena");
+define("_AM_ADSLIGHT_USUREDEL","Vrsta podnosioca je izbrisana ");
 
 //about.php
 define("_AM_ADSLIGHT_ABOUT_AUTHOR","Autor");
@@ -225,39 +225,39 @@ define("_AM_ADSLIGHT_PERSONS_PARTICIP_DESC","Pregled");
 define("_AM_ADSLIGHT_GPERM_G_ADD" , "Mogu slati Oglase" ) ;
 define("_AM_ADSLIGHT_CAT2GROUPDESC" , "Provjeri Kategorije kojima ima&scaron; pristup" ) ;
 define("_AM_ADSLIGHT_GROUPPERMDESC" , "Izaberi grupe koje mogu slati Oglase." ) ;
-define("_AM_ADSLIGHT_GROUPPERM", "Odobrenja dodjeli ");
-define("_AM_ADSLIGHT_SUBMITFORM", "Odredi odobrenja za slanje podataka u oglasu");
-define("_AM_ADSLIGHT_SUBMITFORM_DESC", "Odredi koji Oglasi se mogu objaviti");
-define("_AM_ADSLIGHT_VIEWFORM", "Odobrenja u Oglasima prikazati");
-define("_AM_ADSLIGHT_VIEWFORM_DESC", "Izaberi grupe koje mogu odobrenja vidjeti");
-define("_AM_ADSLIGHT_VIEW_RESUMEFORM_DESC", "Izaberi ko sa&#382;etke mo&#382;e vidjeti");
-define("_AM_ADSLIGHT_SUPPORT", "Podr&#382;i ovaj Program");
-define("_AM_ADSLIGHT_OP", "Pro&#269;itaj moje mi&scaron;ljenje");
-define("_AM_ADSLIGHT_PREMIUM_DESC", "Izaberi grupe koje mogu produ&#382;ivati Oglase");
+define("_AM_ADSLIGHT_GROUPPERM","Odobrenja dodjeli ");
+define("_AM_ADSLIGHT_SUBMITFORM","Odredi odobrenja za slanje podataka u oglasu");
+define("_AM_ADSLIGHT_SUBMITFORM_DESC","Odredi koji Oglasi se mogu objaviti");
+define("_AM_ADSLIGHT_VIEWFORM","Odobrenja u Oglasima prikazati");
+define("_AM_ADSLIGHT_VIEWFORM_DESC","Izaberi grupe koje mogu odobrenja vidjeti");
+define("_AM_ADSLIGHT_VIEW_RESUMEFORM_DESC","Izaberi ko sa&#382;etke mo&#382;e vidjeti");
+define("_AM_ADSLIGHT_SUPPORT","Podr&#382;i ovaj Program");
+define("_AM_ADSLIGHT_OP","Pro&#269;itaj moje mi&scaron;ljenje");
+define("_AM_ADSLIGHT_PREMIUM_DESC","Izaberi grupe koje mogu produ&#382;ivati Oglase");
 
 //Release Test
-define("_AM_ADSLIGHT_RELEASEOK", "Modul je sa najnovijom verziom kod tebe na web stranici.");
-define("_AM_ADSLIGHT_RELEASEISNOTOK", "Modul je star, ima novija verzija.");
-define("_AM_ADSLIGHT_RELEASEDOWNLOAD", "Downloduj.");
+define("_AM_ADSLIGHT_RELEASEOK","Modul je sa najnovijom verziom kod tebe na web stranici.");
+define("_AM_ADSLIGHT_RELEASEISNOTOK","Modul je star, ima novija verzija.");
+define("_AM_ADSLIGHT_RELEASEDOWNLOAD","Downloduj.");
 define("_AM_ADSLIGHT_NBR_PHOTO","Slika");
 
 //Version 1.05
-// Méta Description / keywords Categories
+// MÃ©ta Description / keywords Categories
 define("_AM_ADSLIGHT_CAT_META_DESCRIPTION","<b>Meta Opis:</b><br/>Za bolju optimizaciju,</b>upi&scaron;i ta&#269;an opis oglasa. ");
 define("_AM_ADSLIGHT_CAT_META_KEYWORDS","<b>Meta-Keywords:</b><br/>Za bolju optimizaciju,</b>upi&scaron;i klju&#269;ne rije&#269;i, u vezi postavljene kategorije.<br/><b><font color=\"#ff3300\">rije&#269;i rastavi sa zarezom</font></b>.Npr. ( english, espagne, france,bosna,...)");
 
 //Version 1.053
 // Test Maps Xml
-define("_AM_ADSLIGHT_XMLNOTOK", "XML-podatak za Kartu ne postoji, ili nije sa Kartom u pode&scaron;avanju izabran.");
-define("_AM_ADSLIGHT_XMLUPGRADE", "Aktualiziranje XML-podaka");
+define("_AM_ADSLIGHT_XMLNOTOK","XML-podatak za Kartu ne postoji, ili nije sa Kartom u pode&scaron;avanju izabran.");
+define("_AM_ADSLIGHT_XMLUPGRADE","Aktualiziranje XML-podaka");
 
 //Version 1.054
 // Support_forum.php
-define("_AM_ADSLIGHT_SUPPORTFORUM_TITLE", "Lista Support-Foruma");
-define("_AM_ADSLIGHT_SUPPORTFORUM_WEBLINKS", "Link");
-define("_AM_ADSLIGHT_SUPPORTFORUM_CONTRYLANG", "Govor");
-define("_AM_ADSLIGHT_SUPPORTFORUM_DESC", "Opis");
-define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE", "Prijevod");
+define("_AM_ADSLIGHT_SUPPORTFORUM_TITLE","Lista Support-Foruma");
+define("_AM_ADSLIGHT_SUPPORTFORUM_WEBLINKS","Link");
+define("_AM_ADSLIGHT_SUPPORTFORUM_CONTRYLANG","Govor");
+define("_AM_ADSLIGHT_SUPPORTFORUM_DESC","Opis");
+define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE","Prijevod");
 
 ////////////////////////////
 //// Version 1.06 //////////
@@ -265,64 +265,64 @@ define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE", "Prijevod");
 // ../admin/index.php
 
 // Stat
-define("_AM_ADSLIGHT_STAT_TITLE", "Statistika");
-define("_AM_ADSLIGHT_STAT_NUM1", "Oglasi");
-define("_AM_ADSLIGHT_STAT_NUM2", "Kategorije");
-define("_AM_ADSLIGHT_STAT_NUM3", "Korisnici");
-define("_AM_ADSLIGHT_STAT_NUM4", "Komentari");
+define("_AM_ADSLIGHT_STAT_TITLE","Statistika");
+define("_AM_ADSLIGHT_STAT_NUM1","Oglasi");
+define("_AM_ADSLIGHT_STAT_NUM2","Kategorije");
+define("_AM_ADSLIGHT_STAT_NUM3","Korisnici");
+define("_AM_ADSLIGHT_STAT_NUM4","Komentari");
 
 
 // Option Menu
-define("_AM_ADSLIGHT_USERMENU_TITLE", "Mogu&#263;nosti");
-define("_AM_ADSLIGHT_USERMENU_SENDMAIL", " Po&#353;alji e-mail");
-define("_AM_ADSLIGHT_USERMENU_COMMENT", " Komentari");
-define("_AM_ADSLIGHT_USERMENU_BAMMIER", " Banneri");
+define("_AM_ADSLIGHT_USERMENU_TITLE","Mogu&#263;nosti");
+define("_AM_ADSLIGHT_USERMENU_SENDMAIL"," Po&#353;alji e-mail");
+define("_AM_ADSLIGHT_USERMENU_COMMENT"," Komentari");
+define("_AM_ADSLIGHT_USERMENU_BAMMIER"," Banneri");
 
 // Menu Category
-define("_AM_ADSLIGHT_CATMENU_TITLE", "Kategorije");
-define("_AM_ADSLIGHT_CATMENU_CATEGORY", " Dodaj kategorijama");
-define("_AM_ADSLIGHT_CATMENU_MODIFCAT", " Category Management");
+define("_AM_ADSLIGHT_CATMENU_TITLE","Kategorije");
+define("_AM_ADSLIGHT_CATMENU_CATEGORY"," Dodaj kategorijama");
+define("_AM_ADSLIGHT_CATMENU_MODIFCAT"," Category Management");
 
 // Menu Annonces
-define("_AM_ADSLIGHT_ADSMENU_TITLE", "Oglasi");
-define("_AM_ADSLIGHT_ADSMENU_VALIDADS", " Po&#353;aljite oglasi");
-define("_AM_ADSLIGHT_ADSMENU_VIEWADS", " Prika&#382;i oglase");
-define("_AM_ADSLIGHT_ADS_MODIFADS", " Uredi Oglasi");
+define("_AM_ADSLIGHT_ADSMENU_TITLE","Oglasi");
+define("_AM_ADSLIGHT_ADSMENU_VALIDADS"," Po&#353;aljite oglasi");
+define("_AM_ADSLIGHT_ADSMENU_VIEWADS"," Prika&#382;i oglase");
+define("_AM_ADSLIGHT_ADS_MODIFADS"," Uredi Oglasi");
 
 // Menu Downloads
-define("_AM_ADSLIGHT_DOWNLOADS_TITLE", "Preuzmite");
-define("_AM_ADSLIGHT_DOWNLOADS_PLUGINS", " Plugins");
-define("_AM_ADSLIGHT_DOWNLOADS_MAPS", " Karte");
+define("_AM_ADSLIGHT_DOWNLOADS_TITLE","Preuzmite");
+define("_AM_ADSLIGHT_DOWNLOADS_PLUGINS"," Plugins");
+define("_AM_ADSLIGHT_DOWNLOADS_MAPS"," Karte");
 
 // Menu Devellopment
-define("_AM_ADSLIGHT_DEVLLP_TITLE", "Razvoj");
-define("_AM_ADSLIGHT_DEVLLP_HACK", " Predlo&#382;i Hack");
-define("_AM_ADSLIGHT_DEVLLP_TRANSLATE", " Po&#353;aljite Prijevod");
-define("_AM_ADSLIGHT_DEVLLP_CORRECTION", " Predlo&#382;i ispravak");
-define("_AM_ADSLIGHT_DEVLLP_MAPFLASH", " Po&#353;aljite karte (.Swf)");
-define("_AM_ADSLIGHT_DEVLLP_FORUM", " Forum");
+define("_AM_ADSLIGHT_DEVLLP_TITLE","Razvoj");
+define("_AM_ADSLIGHT_DEVLLP_HACK"," Predlo&#382;i Hack");
+define("_AM_ADSLIGHT_DEVLLP_TRANSLATE"," Po&#353;aljite Prijevod");
+define("_AM_ADSLIGHT_DEVLLP_CORRECTION"," Predlo&#382;i ispravak");
+define("_AM_ADSLIGHT_DEVLLP_MAPFLASH"," Po&#353;aljite karte (.Swf)");
+define("_AM_ADSLIGHT_DEVLLP_FORUM"," Forum");
 
 // Menu Faire un Don
-define("_AM_ADSLIGHT_DONATE_TITLE", " Darovati");
-define("_AM_ADSLIGHT_DONATE", "AdsLight nije komercijalni projekt,<br />njegova uporaba je besplatna i da &#263;e ostati tako.<br />Mo&#382;ete, ako &#382;elite,<br />Napravite donacije projekt za mene poticanja.<br />");
+define("_AM_ADSLIGHT_DONATE_TITLE"," Darovati");
+define("_AM_ADSLIGHT_DONATE","AdsLight nije komercijalni projekt,<br />njegova uporaba je besplatna i da &#263;e ostati tako.<br />Mo&#382;ete, ako &#382;elite,<br />Napravite donacije projekt za mene poticanja.<br />");
 
 
 ////RSS Forum
-define("_AM_ADSLIGHT_MENURSSFORUM_TITLE", "uzajamna pomo&#263; forum AdsLight");
-define("_AM_ADSLIGHT_MENURSSFORUM_URL", "http://www.i-luc.fr/adslight/modules/newbb/rss.php?f=66");
+define("_AM_ADSLIGHT_MENURSSFORUM_TITLE","uzajamna pomo&#263; forum AdsLight");
+define("_AM_ADSLIGHT_MENURSSFORUM_URL","http://www.i-luc.fr/adslight/modules/newbb/rss.php?f=66");
 
-define("_AM_ADSLIGHT_MENURSSFORUM_LINK1", "http://www.i-luc.fr/adslight/modules/newbb/#googtrans/auto/hr");
-define("_AM_ADSLIGHT_MENURSSFORUM_GOFORUM", "Idi na forum");
+define("_AM_ADSLIGHT_MENURSSFORUM_LINK1","http://www.i-luc.fr/adslight/modules/newbb/#googtrans/auto/hr");
+define("_AM_ADSLIGHT_MENURSSFORUM_GOFORUM","Idi na forum");
 
-define("_AM_ADSLIGHT_MENURSSFORUM_LINK2", "http://www.i-luc.fr/adslight/modules/profile/register.php#googtrans/auto/hr");
-define("_AM_ADSLIGHT_MENURSSFORUM_SUBSCRIT", "potpisati");
+define("_AM_ADSLIGHT_MENURSSFORUM_LINK2","http://www.i-luc.fr/adslight/modules/profile/register.php#googtrans/auto/hr");
+define("_AM_ADSLIGHT_MENURSSFORUM_SUBSCRIT","potpisati");
 
 ////	RSS AdsLight News
-define("_AM_ADSLIGHT_MENURSS_TITLE", "Vijesti AdsLight");
+define("_AM_ADSLIGHT_MENURSS_TITLE","Vijesti AdsLight");
  
 // ../admin/view_ads.php
-define("_AM_ADSLIGHT_ADSVALIDE", "Oglasi va&#382;e&#263;i");
-define("_AM_ADSLIGHT_NOANNVALADS", "Trenutno nema oglasa");
+define("_AM_ADSLIGHT_ADSVALIDE","Oglasi va&#382;e&#263;i");
+define("_AM_ADSLIGHT_NOANNVALADS","Trenutno nema oglasa");
 
 
 // Logo Paypall Donate
