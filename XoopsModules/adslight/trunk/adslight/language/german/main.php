@@ -41,7 +41,7 @@
 
 define("_ADSLIGHT_ADDON","Zusatz");
 define("_ADSLIGHT_ANNONCES","Kleinanzeigen");
-define("_ADSLIGHT_LOGOLINK", "Xoops Modul AdsLight kostenlose Kleinanzeigen");
+define("_ADSLIGHT_LOGOLINK","Xoops Modul AdsLight kostenlose Kleinanzeigen");
 define("_ADSLIGHT_MAIN","Hauptseite");
 define("_ADSLIGHT_ADDFROM","Kleinanzeigen");
 define("_ADSLIGHT_NEWTOD","Neue Anzeigen von heute in dieser Kategorie");
@@ -164,7 +164,7 @@ define("_ADSLIGHT_ANNSEND","Die Kleinanzeige wurde gesendet");
 define("_ADSLIGHT_SUBJET","Hi, vielleicht eine interesante Kleinanzeige f&uuml;r dich");
 define("_ADSLIGHT_HELLO","Hallo");
 define("_ADSLIGHT_MESSAGE","Ich dachte vielleicht interessiert dich die Kleinanzeige.");
-define("_ADSLIGHT_INTERESS","Andere Kleinanzeigen können gesendet werden, an ");
+define("_ADSLIGHT_INTERESS","Andere Kleinanzeigen kÃ¶nnen gesendet werden, an ");
 define("_ADSLIGHT_TEL2","Telefon :");
 define("_ADSLIGHT_BYMAIL","Email :");
 define("_ADSLIGHT_DISPO","L&auml;uft ab am");
@@ -234,7 +234,7 @@ define("_ADSLIGHT_VIEW_MY_ADS","Zeige alle meine Anzeigen  ");
 define("_ADSLIGHT_COMMENTS_HEAD","<h3>Kommentare &uuml;ber diesen verk&auml;ufer</h3>");
 define("_ADSLIGHT_PREMIUM_DAY","<b> wenn es nicht ge&auml;ndert wird.</b> ");
 define("_ADSLIGHT_PREMIUM_LONG_HEAD","<b>Die Anzeige wird sofort ver&ouml;ffentlicht!</b><br> ");
-define("_ADSLIGHT_PREMIUM_MEMBER", "<b>Als Premium User kann die Dauer der Anzeige bestimmt werden.<br /> Die Anzeige l&auml;uft </b>");
+define("_ADSLIGHT_PREMIUM_MEMBER","<b>Als Premium User kann die Dauer der Anzeige bestimmt werden.<br /> Die Anzeige l&auml;uft </b>");
 define("_ADSLIGHT_PREMIUM_MODERATED_HEAD","<b>Die Anzeige wird nach der Pr&uuml;fung freigeschaltet</b>");
 
 // ADDED FOR RATINGS
@@ -243,13 +243,13 @@ define("_ADSLIGHT_RATINGC","Bewertung: ");
 define("_ADSLIGHT_ONEVOTE","1 Stimme");
 define("_ADSLIGHT_NUMVOTES","%s Stimmen");
 define("_ADSLIGHT_RATETHIS","Bewerte diesen User");
-define("_ADSLIGHT_VOTEAPPRE","Die Stimme wurde gezählt.");
+define("_ADSLIGHT_VOTEAPPRE","Die Stimme wurde gezÃ¤hlt.");
 define("_ADSLIGHT_THANKURATE"," Danke f&uuml;r die Abstimmung bei %s.");
 define("_ADSLIGHT_VOTEFROMYOU","Abstimmungen helfen anderen Usern die richtige Kleinanzeige zu w&auml;hlen.");
 define("_ADSLIGHT_VOTEONCE","Pro Kleinanzeige Bitte nur einmal abstimmen.");
 define("_ADSLIGHT_RATINGSCALE","Die Bewertungsskala geht von 1 - 10, wobei 1 schlecht und 10 sehr gut ist.");
 define("_ADSLIGHT_BEOBJECTIVE","Bitte objektive abstimmen, wenn jeder 1 oder 10 stimmt ist das nicht aussagekr&auml;ftig.");
-define("_ADSLIGHT_DONOTVOTE","Es kann nicht für die eigene Kleinanzeige abgestimmt werden.");
+define("_ADSLIGHT_DONOTVOTE","Es kann nicht fÃ¼r die eigene Kleinanzeige abgestimmt werden.");
 define("_ADSLIGHT_RATEIT","Abstimmen");
 define("_ADSLIGHT_RATING","Abstimmung");
 define("_ADSLIGHT_VOTE","Bewerte");
@@ -298,14 +298,14 @@ define("_ADSLIGHT_CONTACT_BY_PM","Private Nachricht(PN)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Beide E-Mail oder PN");
 define("_ADSLIGHT_CONTACT_BY_PHONE","Telefonisch");
 define("_ADSLIGHT_ORBY"," oder ");
-define("_ADSLIGHT_PREMYOUHAVE", "Es sind %s Bilder im Album.");
-define("_ADSLIGHT_YOUHAVE", "Es sind %s Bilder im Album.");
-define("_ADSLIGHT_YOUCANHAVE", "Als Premium Mitglied sind bis zu %s Bilder erlaubt.");
-define("_ADSLIGHT_BMCANHAVE", "Als Standard Mitglied sind nur %s Bilder erlaubt.");
-define("_ADSLIGHT_UPGRADE_NOW", "Upgrade zum Premium Mitglied");
-define("_ADSLIGHT_DELETE", "L&ouml;schen");
-define("_ADSLIGHT_EDITDESC", "Edit description");
-define("_ADSLIGHT_TOKENEXPIRED", "Der Sicherheits-Token ist abgelaufen<br /> Bitte nochmal versuchen");
+define("_ADSLIGHT_PREMYOUHAVE","Es sind %s Bilder im Album.");
+define("_ADSLIGHT_YOUHAVE","Es sind %s Bilder im Album.");
+define("_ADSLIGHT_YOUCANHAVE","Als Premium Mitglied sind bis zu %s Bilder erlaubt.");
+define("_ADSLIGHT_BMCANHAVE","Als Standard Mitglied sind nur %s Bilder erlaubt.");
+define("_ADSLIGHT_UPGRADE_NOW","Upgrade zum Premium Mitglied");
+define("_ADSLIGHT_DELETE","L&ouml;schen");
+define("_ADSLIGHT_EDITDESC","Edit description");
+define("_ADSLIGHT_TOKENEXPIRED","Der Sicherheits-Token ist abgelaufen<br /> Bitte nochmal versuchen");
 define("_ADSLIGHT_DESC_EDITED","Die Bildbeschreibung wurde erfolgreich ge&auml;ndert.");
 define("_ADSLIGHT_DELETED","Bild wurde erfolgreich gel&ouml;scht");
 define("_ADSLIGHT_SUBMIT_PIC_TITLE","Ein Bild ins Album aufnehmen");
@@ -343,18 +343,18 @@ define("_ADSLIGHT_PAGES","Seite -");
 define("_ADSLIGHT_REALNAME","Name");
 define("_ADSLIGHT_VIEW_YOUR_LISTINGS","Zeige deine Kleinanzeigen");
 define("_ADSLIGHT_REPLIED_BY","Antwort von : ");
-define("_ADSLIGHT_DELETE_REPLY", "Antwort l&ouml;schen");
-define("_ADSLIGHT_NO_REPLIES", "Es gibt keine Antworten");
-define("_ADSLIGHT_THANKS", "Danke f&uuml;r die Benutzung von unseren Kleinanzeigen");
-define("_ADSLIGHT_WEBMASTER", "Webmaster");
-define("_ADSLIGHT_YOUR_AD", "Die Kleinanzeige");
+define("_ADSLIGHT_DELETE_REPLY","Antwort l&ouml;schen");
+define("_ADSLIGHT_NO_REPLIES","Es gibt keine Antworten");
+define("_ADSLIGHT_THANKS","Danke f&uuml;r die Benutzung von unseren Kleinanzeigen");
+define("_ADSLIGHT_WEBMASTER","Webmaster");
+define("_ADSLIGHT_YOUR_AD","Die Kleinanzeige");
 define("_ADSLIGHT_VU","Angesehen wurde diese Anzeige");
 define("_ADSLIGHT_TIMES","mal.");
 define("_ADSLIGHT_STOP","Die Kleinanzeige l&auml;uft ab");
 define("_ADSLIGHT_SOON","l&auml;uft bald ab.");
 define("_ADSLIGHT_MUSTLOGIN","Man muss angemeldet sein.");
-define("_ADSLIGHT_VIEW_AD", "Zeige deine Anzeige");
-define("_ADSLIGHT_MORE_PHOTOS", "Zeige mehr Bilder");
+define("_ADSLIGHT_VIEW_AD","Zeige deine Anzeige");
+define("_ADSLIGHT_MORE_PHOTOS","Zeige mehr Bilder");
 define("_ADSLIGHT_CANCEL","Abbrechen");
 
 //Added for 1.2 RC1
@@ -362,7 +362,7 @@ define("_ADSLIGHT_ADDED_TO_CAT","Es wurde eine neue Anzeige in dieser Kategorie 
 define("_ADSLIGHT_RECIEVING_NOTIF","Es wurden Benachritigungen dieser Art abboniert.");
 define("_ADSLIGHT_ERROR_NOTIF","Wenn dies Benachrichtigung ein Fehler ist oder keine weiteren gew&uuml;nscht sind, bitte die Benachrichtigungseinstellungen &auml;ndern:");
 define("_ADSLIGHT_FOLLOW_LINK","Hier klicken");
-define("_ADSLIGHT_YOU_CAN_VIEW_BELOW", "Hier klicken um die ganze Anzeige zu sehen");
+define("_ADSLIGHT_YOU_CAN_VIEW_BELOW","Hier klicken um die ganze Anzeige zu sehen");
 define("_ADSLIGHT_LISTING_NUMBER","Anzeigennummer:");
 define("_ADSLIGHT_NOREPLY","!!!  Auf diese E-Mail nicht Antworten, sie wurde autom. erstellt  !!!");
 define("_ADSLIGHT_CAPTCHA","Sicherheits Code :");
@@ -382,46 +382,46 @@ define("_ADSLIGHT_MI_ADSLIGHT_SMENU3","Suche");
 //viewads.php
 define("_ADSLIGHT_ALERTEABUS","Missbrauch melden");
 define("_ADSLIGHT_CONTACT_SUBMITTER","Kontakt");
-define("_ADSLIGHT_SENDFRIENDS", "E-Mail dies Kleinanzeigen");
+define("_ADSLIGHT_SENDFRIENDS","E-Mail dies Kleinanzeigen");
 
 //report-abuse.php
-define("_ADSLIGHT_REPORTSENDTO", "<b>Senden dies Kleinanzeigen:</b><br/><br/>Anzeige n&deg; ");
-define("_ADSLIGHT_REPORTANNSEND", " Vielen Dank f&uuml;r Ihre Hilfe !!<br/>Die Kleinanzeigen nur Admin gemeldet werden.");
-define("_ADSLIGHT_REPORTSUBJET", "[Alert] Eine Ank&uuml;ndigung &uuml;ber Junk ");
-define("_ADSLIGHT_REPORTMESSAGE", "Ist der Auffassung, dass diese Ank&uuml;ndigung illegal ist und Sie wissen wollten.");
+define("_ADSLIGHT_REPORTSENDTO","<b>Senden dies Kleinanzeigen:</b><br/><br/>Anzeige n&deg; ");
+define("_ADSLIGHT_REPORTANNSEND"," Vielen Dank f&uuml;r Ihre Hilfe !!<br/>Die Kleinanzeigen nur Admin gemeldet werden.");
+define("_ADSLIGHT_REPORTSUBJET","[Alert] Eine Ank&uuml;ndigung &uuml;ber Junk ");
+define("_ADSLIGHT_REPORTMESSAGE","Ist der Auffassung, dass diese Ank&uuml;ndigung illegal ist und Sie wissen wollten.");
 
 //index.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULL", "So f&uuml;gen Sie Kleinanzeigen<br />Dank f&uuml;r ");
-define("_ADSLIGHT_ADD_LISTING_SUB", "Register");
-define("_ADSLIGHT_ADD_LISTING_BULLOK", "Sie k&ouml;nnen hinzuf&uuml;gen oder<br />Kleinanzeigen: ");
-define("_ADSLIGHT_ADD_LISTING_SUBOK", "Klicken Sie hier");
+define("_ADSLIGHT_ADD_LISTING_BULL","So f&uuml;gen Sie Kleinanzeigen<br />Dank f&uuml;r ");
+define("_ADSLIGHT_ADD_LISTING_SUB","Register");
+define("_ADSLIGHT_ADD_LISTING_BULLOK","Sie k&ouml;nnen hinzuf&uuml;gen oder<br />Kleinanzeigen: ");
+define("_ADSLIGHT_ADD_LISTING_SUBOK","Klicken Sie hier");
 
 //index.php >> Title Menu //
-define("_ADSLIGHT_ADD_TITLEMENU1", "Edit/Entf&auml;llt dein Kleinanzeigen, und auch berichtet, wie [Vorbehalten]...");
-define("_ADSLIGHT_ADD_TITLEMENU2", "Hinzuf&uuml;gen Kleinanzeigen, Ansonsten k&ouml;nnen Sie durchsuchen den Kategorien.");
-define("_ADSLIGHT_ADD_TITLEMENU4", "Alle guten Tipps zum Schreiben von Anzeigen.");
-define("_ADSLIGHT_ADD_TITLEMENU5", "Suche Cyble-oder Forschungsaufenthalt in Ihrer N&auml;he.");
-define("_ADSLIGHT_ADD_TITLEMENU6", "Lesen und schreiben zu hinterlassen.");
-define("_ADSLIGHT_ADD_TITLEMENU7", "You have a / neuer Nachrichten.");
-define("_ADSLIGHT_ADD_TITLEMENU8", "Sie m&uuml;ssen angemeldet sein, um Ihre Nachrichten zu lesen.");
-define("_ADSLIGHT_ADD_TITLEMENU9", "Vous devez &ecirc;tre connect&eacute; pour voir votre profil.");
-define("_ADSLIGHT_ADD_TITLEMENU10", "voir ou modifier ici votre profil.");
+define("_ADSLIGHT_ADD_TITLEMENU1","Edit/Entf&auml;llt dein Kleinanzeigen, und auch berichtet, wie [Vorbehalten]...");
+define("_ADSLIGHT_ADD_TITLEMENU2","Hinzuf&uuml;gen Kleinanzeigen, Ansonsten k&ouml;nnen Sie durchsuchen den Kategorien.");
+define("_ADSLIGHT_ADD_TITLEMENU4","Alle guten Tipps zum Schreiben von Anzeigen.");
+define("_ADSLIGHT_ADD_TITLEMENU5","Suche Cyble-oder Forschungsaufenthalt in Ihrer N&auml;he.");
+define("_ADSLIGHT_ADD_TITLEMENU6","Lesen und schreiben zu hinterlassen.");
+define("_ADSLIGHT_ADD_TITLEMENU7","You have a / neuer Nachrichten.");
+define("_ADSLIGHT_ADD_TITLEMENU8","Sie m&uuml;ssen angemeldet sein, um Ihre Nachrichten zu lesen.");
+define("_ADSLIGHT_ADD_TITLEMENU9","Vous devez &ecirc;tre connect&eacute; pour voir votre profil.");
+define("_ADSLIGHT_ADD_TITLEMENU10","voir ou modifier ici votre profil.");
 
 //viewcats.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULLCATS", "Sie k&ouml;nnen hinzuf&uuml;gen oder <br />Kleinanzeigen in dieser Kategorie<br />");
-define("_ADSLIGHT_ADD_LISTING_BULLCATSOK", "So f&uuml;gen Sie ein oder<br />Kleinanzeigen in dieser Kategorie<br />Dank f&uuml;r ");
+define("_ADSLIGHT_ADD_LISTING_BULLCATS","Sie k&ouml;nnen hinzuf&uuml;gen oder <br />Kleinanzeigen in dieser Kategorie<br />");
+define("_ADSLIGHT_ADD_LISTING_BULLCATSOK","So f&uuml;gen Sie ein oder<br />Kleinanzeigen in dieser Kategorie<br />Dank f&uuml;r ");
 
-// Réservé
-define("_ADSLIGHT_RESERVED", "vorbehalten");
+// RÃ©servÃ©
+define("_ADSLIGHT_RESERVED","vorbehalten");
 
 // tips_writing_ad.php
-define("_ADSLIGHT_TIPSWRITE", "Alle guten Ratschl&auml;ge<br />So schreiben Sie Ihre Anzeigen");
-define("_ADSLIGHT_TIPSWRITE_TITLE", "Hinweise f&uuml;r das Schreiben Sie Ihre Anzeige");
+define("_ADSLIGHT_TIPSWRITE","Alle guten Ratschl&auml;ge<br />So schreiben Sie Ihre Anzeigen");
+define("_ADSLIGHT_TIPSWRITE_TITLE","Hinweise f&uuml;r das Schreiben Sie Ihre Anzeige");
 
-define("_ADSLIGHT_TIPSWRITE_TEXT", "<b>1. Ein oder mehrere Fotos</b><br /><br />
+define("_ADSLIGHT_TIPSWRITE_TEXT","<b>1. Ein oder mehrere Fotos</b><br /><br />
 Der erste Kontakt qu'auront Besucher mit Ihrer Anzeige, wird ein Bild oder Objekt, das Sie verkaufen.<br>Es wird dringend empfohlen, um ein Foto oder Fotos Ihres Artikels setzen.<br />
-Eine Kleinanzeige mit Foto-7-mal mehr als eine Anzeige ohne Bilder angeschaut! <br>Es gibt auch einen ersten Eindruck über den Zustand Ihres Artikels.<br /><br />
-<br>- Eine richtige Aufgabe wird immer attraktiver.<br>- Achten Sie auf die Qualität des Fotos. (Nicht zu dunkel)<br>- Rahmen das Thema so dass es sichtbar ist.<br />- Vermeiden Sie Bilder Fuzzy<br /><br /><b>2. Klare und ausf&uuml;hrliche</b><br /><br />
+Eine Kleinanzeige mit Foto-7-mal mehr als eine Anzeige ohne Bilder angeschaut! <br>Es gibt auch einen ersten Eindruck Ã¼ber den Zustand Ihres Artikels.<br /><br />
+<br>- Eine richtige Aufgabe wird immer attraktiver.<br>- Achten Sie auf die QualitÃ¤t des Fotos. (Nicht zu dunkel)<br>- Rahmen das Thema so dass es sichtbar ist.<br />- Vermeiden Sie Bilder Fuzzy<br /><br /><b>2. Klare und ausf&uuml;hrliche</b><br /><br />
 Nach der sorgf&auml;ltig vorbereiteten Bilder der Artikel, den Sie verkaufen. <br>Sie m&uuml;ssen jetzt schreiben die Anzeige.<br /><br />
 - Vermeiden Sie die Sprache &quot;SMS&quot;, ist es unerl&auml;sslich, dass die Ad-lesbar ist.<br />
 Andernfalls verlieren Sie die M&ouml;glichkeit, Ihre Artikel verkaufen.<br /><br />
@@ -435,8 +435,8 @@ Und denken Sie daran, ein gutes Gesch&auml;ft ist,<br /> wenn der K&auml;ufer un
 
 //version 1.053
 // maps.php
-define("_ADSLIGHT_MAPS_TITLE", "Suche nach Region");
-define("_ADSLIGHT_MAPS_TEXT", " W&auml;hlen Sie eine Region auf der Karte,<br />um die Anzeigen in einer Region.");
+define("_ADSLIGHT_MAPS_TITLE","Suche nach Region");
+define("_ADSLIGHT_MAPS_TEXT"," W&auml;hlen Sie eine Region auf der Karte,<br />um die Anzeigen in einer Region.");
 
 //viewads.php
 define("_ADSLIGHT_NOCLAS","Derzeit keine Anzeigen in dieser Kategorie ...");

@@ -41,7 +41,7 @@
 
 define("_ADSLIGHT_ADDON","Toevoegen");
 define("_ADSLIGHT_ANNONCES","Onze advertenties");
-define("_ADSLIGHT_LOGOLINK", "");
+define("_ADSLIGHT_LOGOLINK","");
 define("_ADSLIGHT_MAIN","Main");
 define("_ADSLIGHT_ADDFROM","Persoonlijke advertenties ");
 define("_ADSLIGHT_NEWTOD","Nieuwe advertenties zijn vandaag voor deze categorie toegevoegd");
@@ -237,7 +237,7 @@ define("_ADSLIGHT_VIEW_MY_ADS","Bekijk alle advertenties van ");
 define("_ADSLIGHT_COMMENTS_HEAD","<h3>Commentaar over deze adverteerder</h3>");
 define("_ADSLIGHT_PREMIUM_DAY","<b> dagen, als u het niet veranderd.</b> ");
 define("_ADSLIGHT_PREMIUM_LONG_HEAD","<b>Uw advertentie zal direct zichtbaar zijn</b> ");
-define("_ADSLIGHT_PREMIUM_MEMBER", "<b>Omdat u een premium aanbieder bent, kunt u aangeven hoelang uw advertentie zichtbaar is.<br /><br />Dit zal zijn </b>");
+define("_ADSLIGHT_PREMIUM_MEMBER","<b>Omdat u een premium aanbieder bent, kunt u aangeven hoelang uw advertentie zichtbaar is.<br /><br />Dit zal zijn </b>");
 define("_ADSLIGHT_PREMIUM_MODERATED_HEAD","<b>Uw advertentie zal worden bekeken</b>");
 
 // ADDED FOR RATINGS
@@ -301,14 +301,14 @@ define("_ADSLIGHT_CONTACT_BY_PM","Prive bericht(PB)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Beide, e-mail of PB");
 define("_ADSLIGHT_CONTACT_BY_PHONE","Alleen via telefoon");
 define("_ADSLIGHT_ORBY"," of via ");
-define("_ADSLIGHT_PREMYOUHAVE", "U heeft %s afbeelding in uw album.");
-define("_ADSLIGHT_YOUHAVE", "U heeft %s afbeeldingen in uw album.");
-define("_ADSLIGHT_YOUCANHAVE", "Als premium gebruiker kunt u %s afbeelding(en) gebruiken.");
-define("_ADSLIGHT_BMCANHAVE", "Als standaard gebruiker kunt u %s afbeelding gebruiken.");
-define("_ADSLIGHT_UPGRADE_NOW", "Waardeer op naar premium gebruiker");
-define("_ADSLIGHT_DELETE", "Verwijder");
-define("_ADSLIGHT_EDITDESC", "Bewerk omschrijving");
-define("_ADSLIGHT_TOKENEXPIRED", "Uw beveiligingscode is verlopen,<br />Probeer nogmaals");
+define("_ADSLIGHT_PREMYOUHAVE","U heeft %s afbeelding in uw album.");
+define("_ADSLIGHT_YOUHAVE","U heeft %s afbeeldingen in uw album.");
+define("_ADSLIGHT_YOUCANHAVE","Als premium gebruiker kunt u %s afbeelding(en) gebruiken.");
+define("_ADSLIGHT_BMCANHAVE","Als standaard gebruiker kunt u %s afbeelding gebruiken.");
+define("_ADSLIGHT_UPGRADE_NOW","Waardeer op naar premium gebruiker");
+define("_ADSLIGHT_DELETE","Verwijder");
+define("_ADSLIGHT_EDITDESC","Bewerk omschrijving");
+define("_ADSLIGHT_TOKENEXPIRED","Uw beveiligingscode is verlopen,<br />Probeer nogmaals");
 define("_ADSLIGHT_DESC_EDITED","Uw afbeelding beschrijving is juist bewerkt");
 define("_ADSLIGHT_DELETED","Afbeelding succesvol verwijderd");
 define("_ADSLIGHT_SUBMIT_PIC_TITLE","Verstuur een afbeelding naar uw album");
@@ -346,23 +346,23 @@ define("_ADSLIGHT_PAGES","Pagina -");
 define("_ADSLIGHT_REALNAME","Naam");
 define("_ADSLIGHT_VIEW_YOUR_LISTINGS","Bekijk uw advertenties");
 define("_ADSLIGHT_REPLIED_BY","Reactie door : ");
-define("_ADSLIGHT_DELETE_REPLY", "Verwijder deze reactie");
-define("_ADSLIGHT_NO_REPLIES", "Er zijn geen reacties");
-define("_ADSLIGHT_THANKS", "Bedankt voor het gebruik van ons systeem");
-define("_ADSLIGHT_WEBMASTER", "Webmaster");
-define("_ADSLIGHT_YOUR_AD", "Uw advertentie");
+define("_ADSLIGHT_DELETE_REPLY","Verwijder deze reactie");
+define("_ADSLIGHT_NO_REPLIES","Er zijn geen reacties");
+define("_ADSLIGHT_THANKS","Bedankt voor het gebruik van ons systeem");
+define("_ADSLIGHT_WEBMASTER","Webmaster");
+define("_ADSLIGHT_YOUR_AD","Uw advertentie");
 define("_ADSLIGHT_AT","op");
-define("_ADSLIGHT_VEDIT_AD", "bekijk of wijzig uw advertentie hier");
-define("_ADSLIGHT_ALMOST", "Uw advertentie verloopt binnenkort");
-define("_ADSLIGHT_EXPIRED", "is verlopen en verwijderd.");
-define("_ADSLIGHT_YOUR_AD_ON", "Uw advertentie op");
+define("_ADSLIGHT_VEDIT_AD","bekijk of wijzig uw advertentie hier");
+define("_ADSLIGHT_ALMOST","Uw advertentie verloopt binnenkort");
+define("_ADSLIGHT_EXPIRED","is verlopen en verwijderd.");
+define("_ADSLIGHT_YOUR_AD_ON","Uw advertentie op");
 define("_ADSLIGHT_VU","Uw advertentie is bekeken");
 define("_ADSLIGHT_TIMES","keer.");
 define("_ADSLIGHT_STOP","Uw advertentie is verlopen");
 define("_ADSLIGHT_SOON","verloopt binnekort.");
 define("_ADSLIGHT_MUSTLOGIN","U moet ingelogd zijn om op deze advertentie te mogen reageren.");
-define("_ADSLIGHT_VIEW_AD", "bekijk uw advertentie(s) op");
-define("_ADSLIGHT_MORE_PHOTOS", "Bekijk meer afbeeldingen");
+define("_ADSLIGHT_VIEW_AD","bekijk uw advertentie(s) op");
+define("_ADSLIGHT_MORE_PHOTOS","Bekijk meer afbeeldingen");
 define("_ADSLIGHT_CANCEL","Annuleer");
 
 //Added for 1.2 RC1
@@ -370,7 +370,7 @@ define("_ADSLIGHT_ADDED_TO_CAT","Er is een nieuwe advertentie toegevoegd aan de 
 define("_ADSLIGHT_RECIEVING_NOTIF","You have subscribed to receive notifications of this sort.");
 define("_ADSLIGHT_ERROR_NOTIF","If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:");
 define("_ADSLIGHT_FOLLOW_LINK","Hier is een link naar de advertentie");
-define("_ADSLIGHT_YOU_CAN_VIEW_BELOW", "U kunt de volledige advertentie bekijken via de onderstaande link");
+define("_ADSLIGHT_YOU_CAN_VIEW_BELOW","U kunt de volledige advertentie bekijken via de onderstaande link");
 define("_ADSLIGHT_LISTING_NUMBER","Advertentie nummer :");
 
 define("_ADSLIGHT_NOREPLY","!!!  reageer niet op deze email, u zal geen bericht terug krijgen  !!!");
@@ -393,43 +393,43 @@ define("_ADSLIGHT_MI_ADSLIGHT_SMENU3","Zoek");
 //viewads.php
 define("_ADSLIGHT_ALERTEABUS","Meld misbruik");
 define("_ADSLIGHT_CONTACT_SUBMITTER","Contact");
-define("_ADSLIGHT_SENDFRIENDS", "Verzend deze advertentie naar een vriend");
+define("_ADSLIGHT_SENDFRIENDS","Verzend deze advertentie naar een vriend");
 
 //report-abuse.php
-define("_ADSLIGHT_REPORTSENDTO", "<b>Rapporteer deze advertentie:</b><br/><br/>ad No. ");
-define("_ADSLIGHT_REPORTANNSEND", "Dank u voor uw hulp!<br/>De advertentie is net doorgegeven aan de admin.");
-define("_ADSLIGHT_REPORTSUBJET", "[Alert] Gerapporteerde Advertentie ");
-define("_ADSLIGHT_REPORTMESSAGE", "Vermoed dat deze advertentie niet correct is, en wilt u hiervan op de hoogte brengen.");
+define("_ADSLIGHT_REPORTSENDTO","<b>Rapporteer deze advertentie:</b><br/><br/>ad No. ");
+define("_ADSLIGHT_REPORTANNSEND","Dank u voor uw hulp!<br/>De advertentie is net doorgegeven aan de admin.");
+define("_ADSLIGHT_REPORTSUBJET","[Alert] Gerapporteerde Advertentie ");
+define("_ADSLIGHT_REPORTMESSAGE","Vermoed dat deze advertentie niet correct is, en wilt u hiervan op de hoogte brengen.");
 
 //index.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULL", "Een advertentie toe te voegen<br />dank u voor ");
-define("_ADSLIGHT_ADD_LISTING_SUB", "registreer");
-define("_ADSLIGHT_ADD_LISTING_BULLOK", "u kan toevoegen of<br />Advertenties: ");
-define("_ADSLIGHT_ADD_LISTING_SUBOK", "Klik hier");
+define("_ADSLIGHT_ADD_LISTING_BULL","Een advertentie toe te voegen<br />dank u voor ");
+define("_ADSLIGHT_ADD_LISTING_SUB","registreer");
+define("_ADSLIGHT_ADD_LISTING_BULLOK","u kan toevoegen of<br />Advertenties: ");
+define("_ADSLIGHT_ADD_LISTING_SUBOK","Klik hier");
 
 //index.php >> Title Menu //
-define("_ADSLIGHT_ADD_TITLEMENU1", "Bewerk of verwijder uw advertenties, Ook voor de melding [gereserveerd] ...");
-define("_ADSLIGHT_ADD_TITLEMENU2", "plaats een Advertentie.");
-define("_ADSLIGHT_ADD_TITLEMENU4", "Tips voor een juiste advertentie.");
-define("_ADSLIGHT_ADD_TITLEMENU5", "Zoek een advertentie in uw regio.");
-define("_ADSLIGHT_ADD_TITLEMENU6", "lees en verstuur persoonlijke mail.");
-define("_ADSLIGHT_ADD_TITLEMENU7", "U heeft een nieuw bericht.");
-define("_ADSLIGHT_ADD_TITLEMENU8", "U dient ingelogt te zijn om berichten te kunnen bekijken.");
-define("_ADSLIGHT_ADD_TITLEMENU9", "Login om uw profiel te kunnen bekijken of bewerken.");
-define("_ADSLIGHT_ADD_TITLEMENU10", "Bewerk of bekijk uw profiel.");
+define("_ADSLIGHT_ADD_TITLEMENU1","Bewerk of verwijder uw advertenties, Ook voor de melding [gereserveerd] ...");
+define("_ADSLIGHT_ADD_TITLEMENU2","plaats een Advertentie.");
+define("_ADSLIGHT_ADD_TITLEMENU4","Tips voor een juiste advertentie.");
+define("_ADSLIGHT_ADD_TITLEMENU5","Zoek een advertentie in uw regio.");
+define("_ADSLIGHT_ADD_TITLEMENU6","lees en verstuur persoonlijke mail.");
+define("_ADSLIGHT_ADD_TITLEMENU7","U heeft een nieuw bericht.");
+define("_ADSLIGHT_ADD_TITLEMENU8","U dient ingelogt te zijn om berichten te kunnen bekijken.");
+define("_ADSLIGHT_ADD_TITLEMENU9","Login om uw profiel te kunnen bekijken of bewerken.");
+define("_ADSLIGHT_ADD_TITLEMENU10","Bewerk of bekijk uw profiel.");
 
 //viewcats.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULLCATS", "U kan toevoegen of<br />advertenties in deze categorie<br />");
-define("_ADSLIGHT_ADD_LISTING_BULLCATSOK", "Om 1 of<br />advertenties in deze categorie<br />Dank u voor ");
+define("_ADSLIGHT_ADD_LISTING_BULLCATS","U kan toevoegen of<br />advertenties in deze categorie<br />");
+define("_ADSLIGHT_ADD_LISTING_BULLCATSOK","Om 1 of<br />advertenties in deze categorie<br />Dank u voor ");
 
 // Reserved
-define("_ADSLIGHT_RESERVED", "Gereserveerd");
+define("_ADSLIGHT_RESERVED","Gereserveerd");
 
 // tips_writing_ad.php
-define("_ADSLIGHT_TIPSWRITE", "Tous les bons conseils<br />pour bien r&eacute;diger vos annonces");
-define("_ADSLIGHT_TIPSWRITE_TITLE", "Les Conseils pour bien r&eacute;diger votre annonce");
+define("_ADSLIGHT_TIPSWRITE","Tous les bons conseils<br />pour bien r&eacute;diger vos annonces");
+define("_ADSLIGHT_TIPSWRITE_TITLE","Les Conseils pour bien r&eacute;diger votre annonce");
 
-define("_ADSLIGHT_TIPSWRITE_TEXT", "<b>1. Plaats foto's </b><br><br>
+define("_ADSLIGHT_TIPSWRITE_TEXT","<b>1. Plaats foto's </b><br><br>
 Le premier contact qu&rsquo;auront les visiteurs avec votre annonce, va &ecirc;tre une ou des photos de l'objet que vous allez vendre.<br>Il est vivement conseill&eacute; de mettre une ou des photos de votre objet.<br>
 Une petite annonce avec photo est 7 fois plus consult&eacute;e qu&rsquo;une annonce sans photo ! <br>Elle donne aussi une premi&egrave;re id&eacute;e de l&rsquo;&eacute;tat de votre objet.<br><br>
 <br>- Un objet propre est toujours plus attrayante.<br>- Soignez la qualit&eacute; de la photo. (Pas trop sombre)<br>- Cadrez l'objet de sorte qu&rsquo;il soit visible. <br>- &Eacute;vitez les photos &lsquo;floues&rsquo;<br><br><b>2. Claire et d&eacute;taill&eacute;e</b><br><br>
@@ -446,8 +446,8 @@ Et n'oubliez pas, une bonne affaire, <br>c'est lorsque l&rsquo;acheteur et le ve
 
 //version 1.053
 // maps.php
-define("_ADSLIGHT_MAPS_TITLE", "Zoeken op regio");
-define("_ADSLIGHT_MAPS_TEXT", "Selecteer een regio op de kaart<br />om de advertenties te zien in een regio.");
+define("_ADSLIGHT_MAPS_TITLE","Zoeken op regio");
+define("_ADSLIGHT_MAPS_TEXT","Selecteer een regio op de kaart<br />om de advertenties te zien in een regio.");
 
 //viewads.php
 define("_ADSLIGHT_NOCLAS","Op het moment zijn er geen advertenties.");

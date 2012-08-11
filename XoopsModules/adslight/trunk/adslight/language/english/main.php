@@ -41,7 +41,7 @@
 
 define("_ADSLIGHT_ADDON","Addon");
 define("_ADSLIGHT_ANNONCES","Classified Ads");
-define("_ADSLIGHT_LOGOLINK", "Free Xoops Module AdsLight classifieds Ads");
+define("_ADSLIGHT_LOGOLINK","Free Xoops Module AdsLight classifieds Ads");
 define("_ADSLIGHT_MAIN","Main");
 define("_ADSLIGHT_ADDFROM","Classified Advertisements");
 define("_ADSLIGHT_NEWTOD","new advertisements have been added in this category today");
@@ -237,7 +237,7 @@ define("_ADSLIGHT_VIEW_MY_ADS","View all ads from ");
 define("_ADSLIGHT_COMMENTS_HEAD","<h3>Comments about this seller</h3>");
 define("_ADSLIGHT_PREMIUM_DAY","<b> days, if you don't change it.</b> ");
 define("_ADSLIGHT_PREMIUM_LONG_HEAD","<b>Your Classified Ad will start immediately</b> ");
-define("_ADSLIGHT_PREMIUM_MEMBER", "<b>Since you are a Premium Member, you can choose how long your ad will last.<br /><br />It will last </b>");
+define("_ADSLIGHT_PREMIUM_MEMBER","<b>Since you are a Premium Member, you can choose how long your ad will last.<br /><br />It will last </b>");
 define("_ADSLIGHT_PREMIUM_MODERATED_HEAD","<b>Your Classified Ad will be queued for approval</b>");
 
 // ADDED FOR RATINGS
@@ -301,14 +301,14 @@ define("_ADSLIGHT_CONTACT_BY_PM","Private Message(PM)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Both E-mail or PM");
 define("_ADSLIGHT_CONTACT_BY_PHONE","By phone only");
 define("_ADSLIGHT_ORBY"," or by ");
-define("_ADSLIGHT_PREMYOUHAVE", "You have %s picture in your album.");
-define("_ADSLIGHT_YOUHAVE", "You have %s picture(s) in your album.");
-define("_ADSLIGHT_YOUCANHAVE", "As a Premium Member you can have up to %s picture(s).");
-define("_ADSLIGHT_BMCANHAVE", "As a Basic Member you can have only %s picture.");
-define("_ADSLIGHT_UPGRADE_NOW", "Upgrade to a Premium Member");
-define("_ADSLIGHT_DELETE", "Delete");
-define("_ADSLIGHT_EDITDESC", "Edit description");
-define("_ADSLIGHT_TOKENEXPIRED", "Your Security Token has Expired<br /> Try Again");
+define("_ADSLIGHT_PREMYOUHAVE","You have %s picture in your album.");
+define("_ADSLIGHT_YOUHAVE","You have %s picture(s) in your album.");
+define("_ADSLIGHT_YOUCANHAVE","As a Premium Member you can have up to %s picture(s).");
+define("_ADSLIGHT_BMCANHAVE","As a Basic Member you can have only %s picture.");
+define("_ADSLIGHT_UPGRADE_NOW","Upgrade to a Premium Member");
+define("_ADSLIGHT_DELETE","Delete");
+define("_ADSLIGHT_EDITDESC","Edit description");
+define("_ADSLIGHT_TOKENEXPIRED","Your Security Token has Expired<br /> Try Again");
 define("_ADSLIGHT_DESC_EDITED","Your image's description was edited succesfuly");
 define("_ADSLIGHT_DELETED","Image deleted succesfuly");
 define("_ADSLIGHT_SUBMIT_PIC_TITLE","Submit a Picture to Your Album");
@@ -346,23 +346,23 @@ define("_ADSLIGHT_PAGES","Page -");
 define("_ADSLIGHT_REALNAME","Name");
 define("_ADSLIGHT_VIEW_YOUR_LISTINGS","View Your Listings");
 define("_ADSLIGHT_REPLIED_BY","Reply by : ");
-define("_ADSLIGHT_DELETE_REPLY", "Delete This Reply");
-define("_ADSLIGHT_NO_REPLIES", "There are no replies");
-define("_ADSLIGHT_THANKS", "Thank You for using our Classified Ads");
-define("_ADSLIGHT_WEBMASTER", "Webmaster");
-define("_ADSLIGHT_YOUR_AD", "Your ad");
+define("_ADSLIGHT_DELETE_REPLY","Delete This Reply");
+define("_ADSLIGHT_NO_REPLIES","There are no replies");
+define("_ADSLIGHT_THANKS","Thank You for using our Classified Ads");
+define("_ADSLIGHT_WEBMASTER","Webmaster");
+define("_ADSLIGHT_YOUR_AD","Your ad");
 define("_ADSLIGHT_AT","at");
-define("_ADSLIGHT_VEDIT_AD", "View or edit your ad here");
-define("_ADSLIGHT_ALMOST", "Your ad is about to expire");
-define("_ADSLIGHT_EXPIRED", "has expired and has been deleted.");
-define("_ADSLIGHT_YOUR_AD_ON", "Your ad on");
+define("_ADSLIGHT_VEDIT_AD","View or edit your ad here");
+define("_ADSLIGHT_ALMOST","Your ad is about to expire");
+define("_ADSLIGHT_EXPIRED","has expired and has been deleted.");
+define("_ADSLIGHT_YOUR_AD_ON","Your ad on");
 define("_ADSLIGHT_VU","Your Ad has been viewed");
 define("_ADSLIGHT_TIMES","times.");
 define("_ADSLIGHT_STOP","Your Classified Ad has expired");
 define("_ADSLIGHT_SOON","is going to expire soon.");
 define("_ADSLIGHT_MUSTLOGIN","You must login to reply to this Ad.");
-define("_ADSLIGHT_VIEW_AD", "View Your ad at");
-define("_ADSLIGHT_MORE_PHOTOS", "View more photos");
+define("_ADSLIGHT_VIEW_AD","View Your ad at");
+define("_ADSLIGHT_MORE_PHOTOS","View more photos");
 define("_ADSLIGHT_CANCEL","Cancel");
 
 //Added for 1.2 RC1
@@ -370,7 +370,7 @@ define("_ADSLIGHT_ADDED_TO_CAT","A new listing has been added to the category ")
 define("_ADSLIGHT_RECIEVING_NOTIF","You have subscribed to receive notifications of this sort.");
 define("_ADSLIGHT_ERROR_NOTIF","If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:");
 define("_ADSLIGHT_FOLLOW_LINK","Here is a link to the new listing");
-define("_ADSLIGHT_YOU_CAN_VIEW_BELOW", "You can view the full ad at the link below");
+define("_ADSLIGHT_YOU_CAN_VIEW_BELOW","You can view the full ad at the link below");
 define("_ADSLIGHT_LISTING_NUMBER","Listing Number :");
 
 define("_ADSLIGHT_NOREPLY","!!!  Do not reply to this e-mail, you will not get a reply.  !!!");
@@ -393,43 +393,43 @@ define("_ADSLIGHT_MI_ADSLIGHT_SMENU3","Search");
 //viewads.php
 define("_ADSLIGHT_ALERTEABUS","Report Abuse");
 define("_ADSLIGHT_CONTACT_SUBMITTER","Contact");
-define("_ADSLIGHT_SENDFRIENDS", "Email this listing");
+define("_ADSLIGHT_SENDFRIENDS","Email this listing");
 
 //report-abuse.php
-define("_ADSLIGHT_REPORTSENDTO", "<b>Report this ad:</b><br/><br/>ad No. ");
-define("_ADSLIGHT_REPORTANNSEND", "Thank you for your help!<br/>The ad just be reported to Admin.");
-define("_ADSLIGHT_REPORTSUBJET", "[Alert] An ad undesirable ");
-define("_ADSLIGHT_REPORTMESSAGE", "Believes that this announcement is illegal and you wanted to know.");
+define("_ADSLIGHT_REPORTSENDTO","<b>Report this ad:</b><br/><br/>ad No. ");
+define("_ADSLIGHT_REPORTANNSEND","Thank you for your help!<br/>The ad just be reported to Admin.");
+define("_ADSLIGHT_REPORTSUBJET","[Alert] An ad undesirable ");
+define("_ADSLIGHT_REPORTMESSAGE","Believes that this announcement is illegal and you wanted to know.");
 
 //index.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULL", "To add a listing<br />Thank you for ");
-define("_ADSLIGHT_ADD_LISTING_SUB", "register");
-define("_ADSLIGHT_ADD_LISTING_BULLOK", "You can add or<br />Ads: ");
-define("_ADSLIGHT_ADD_LISTING_SUBOK", "Click here");
+define("_ADSLIGHT_ADD_LISTING_BULL","To add a listing<br />Thank you for ");
+define("_ADSLIGHT_ADD_LISTING_SUB","register");
+define("_ADSLIGHT_ADD_LISTING_BULLOK","You can add or<br />Ads: ");
+define("_ADSLIGHT_ADD_LISTING_SUBOK","Click here");
 
 //index.php >> Title Menu //
-define("_ADSLIGHT_ADD_TITLEMENU1", "Edit/delete your ads, or also reported as [Reserved] ...");
-define("_ADSLIGHT_ADD_TITLEMENU2", "Post a free ad, if you can browse the categories.");
-define("_ADSLIGHT_ADD_TITLEMENU4", "All good tips for writing ads.");
-define("_ADSLIGHT_ADD_TITLEMENU5", "Search Cyble or research in your area.");
-define("_ADSLIGHT_ADD_TITLEMENU6", "Read and send pm.");
-define("_ADSLIGHT_ADD_TITLEMENU7", "You have a new message.");
-define("_ADSLIGHT_ADD_TITLEMENU8", "You must be logged in to read your messages.");
-define("_ADSLIGHT_ADD_TITLEMENU9", "Vous devez &ecirc;tre connect&eacute; pour voir votre profil.");
-define("_ADSLIGHT_ADD_TITLEMENU10", "voir ou modifier ici votre profil.");
+define("_ADSLIGHT_ADD_TITLEMENU1","Edit/delete your ads, or also reported as [Reserved] ...");
+define("_ADSLIGHT_ADD_TITLEMENU2","Post a free ad, if you can browse the categories.");
+define("_ADSLIGHT_ADD_TITLEMENU4","All good tips for writing ads.");
+define("_ADSLIGHT_ADD_TITLEMENU5","Search Cyble or research in your area.");
+define("_ADSLIGHT_ADD_TITLEMENU6","Read and send pm.");
+define("_ADSLIGHT_ADD_TITLEMENU7","You have a new message.");
+define("_ADSLIGHT_ADD_TITLEMENU8","You must be logged in to read your messages.");
+define("_ADSLIGHT_ADD_TITLEMENU9","Vous devez &ecirc;tre connect&eacute; pour voir votre profil.");
+define("_ADSLIGHT_ADD_TITLEMENU10","voir ou modifier ici votre profil.");
 
 //viewcats.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULLCATS", "You can add or<br />ads in this category<br />");
-define("_ADSLIGHT_ADD_LISTING_BULLCATSOK", "To add one or<br />ads in this category<br />Thank you for ");
+define("_ADSLIGHT_ADD_LISTING_BULLCATS","You can add or<br />ads in this category<br />");
+define("_ADSLIGHT_ADD_LISTING_BULLCATSOK","To add one or<br />ads in this category<br />Thank you for ");
 
 // Reserved
-define("_ADSLIGHT_RESERVED", "Reserved");
+define("_ADSLIGHT_RESERVED","Reserved");
 
 // tips_writing_ad.php
-define("_ADSLIGHT_TIPSWRITE", "All good advice<br />write your ads for many");
-define("_ADSLIGHT_TIPSWRITE_TITLE", "The Tips on writing your ad");
+define("_ADSLIGHT_TIPSWRITE","All good advice<br />write your ads for many");
+define("_ADSLIGHT_TIPSWRITE_TITLE","The Tips on writing your ad");
 
-define("_ADSLIGHT_TIPSWRITE_TEXT", "<b>1. Une ou des photos</b><br><br>
+define("_ADSLIGHT_TIPSWRITE_TEXT","<b>1. Une ou des photos</b><br><br>
 Le premier contact qu&rsquo;auront les visiteurs avec votre annonce, va &ecirc;tre une ou des photos de l'objet que vous allez vendre.<br>Il est vivement conseill&eacute; de mettre une ou des photos de votre objet.<br>
 Une petite annonce avec photo est 7 fois plus consult&eacute;e qu&rsquo;une annonce sans photo ! <br>Elle donne aussi une premi&egrave;re id&eacute;e de l&rsquo;&eacute;tat de votre objet.<br><br>
 <br>- Un objet propre est toujours plus attrayante.<br>- Soignez la qualit&eacute; de la photo. (Pas trop sombre)<br>- Cadrez l'objet de sorte qu&rsquo;il soit visible. <br>- &Eacute;vitez les photos &lsquo;floues&rsquo;<br><br><b>2. Claire et d&eacute;taill&eacute;e</b><br><br>
@@ -446,8 +446,8 @@ Et n'oubliez pas, une bonne affaire, <br>c'est lorsque l&rsquo;acheteur et le ve
 
 //version 1.053
 // maps.php
-define("_ADSLIGHT_MAPS_TITLE", "Search by region");
-define("_ADSLIGHT_MAPS_TEXT", "Select a region on the map<br />to see the ads in a region.");
+define("_ADSLIGHT_MAPS_TITLE","Search by region");
+define("_ADSLIGHT_MAPS_TEXT","Select a region on the map<br />to see the ads in a region.");
 
 //viewads.php
 define("_ADSLIGHT_NOCLAS","There are currently no advertisements<br />in this category ...");

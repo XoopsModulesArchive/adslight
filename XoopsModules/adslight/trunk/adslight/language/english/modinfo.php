@@ -52,18 +52,18 @@ define("_MI_ADSLIGHT_BNAME2","Top Listings");
 define("_MI_ADSLIGHT_BNAME2_DESC","Top Listings Block");
 
 // Names of admin menu items
-define("_MI_ADSLIGHT_ADMENU0", "Terminal");
-define("_MI_ADSLIGHT_ADMENU1", "Category Management");
-define("_MI_ADSLIGHT_ADMENU2", "Permissions");
-define("_MI_ADSLIGHT_ADMENU3", "Blocks");
-define("_MI_ADSLIGHT_ADMENU4", "Preferences");
-define("_MI_ADSLIGHT_ADMENU5", "Options");
-define("_MI_ADSLIGHT_ADMENU6", "Import");
-define("_MI_ADSLIGHT_ADMENU7", "About");
-define("_MI_ADSLIGHT_ADMENU8", "Docs");
-define("_MI_ADSLIGHT_ADMENU9", "Go to Module");
-define("_MI_ADSLIGHT_ADMENU10", "Updated");
-define("_MI_ADSLIGHT_ADMENU11", "Support Forum");
+define("_MI_ADSLIGHT_ADMENU0","Terminal");
+define("_MI_ADSLIGHT_ADMENU1","Category Management");
+define("_MI_ADSLIGHT_ADMENU2","Permissions");
+define("_MI_ADSLIGHT_ADMENU3","Blocks");
+define("_MI_ADSLIGHT_ADMENU4","Preferences");
+define("_MI_ADSLIGHT_ADMENU5","Options");
+define("_MI_ADSLIGHT_ADMENU6","Import");
+define("_MI_ADSLIGHT_ADMENU7","About");
+define("_MI_ADSLIGHT_ADMENU8","Docs");
+define("_MI_ADSLIGHT_ADMENU9","Go to Module");
+define("_MI_ADSLIGHT_ADMENU10","Updated");
+define("_MI_ADSLIGHT_ADMENU11","Support Forum");
 
 define("_MI_ADSLIGHT_CONFSAVE","Configuration saved");
 define("_MI_ADSLIGHT_CANPOST","Anonymous user can post Listings :");
@@ -107,20 +107,20 @@ define("_MI_ADSLIGHT_DBUPDATED", 'The database has been updated.');
 define("_MI_ADSLIGHT_GPERM_G_ADD" , "Can add" ) ;
 define("_MI_ADSLIGHT_CAT2GROUPDESC" , "Check categories which you allow to access" ) ;
 define("_MI_ADSLIGHT_GROUPPERMDESC" , "Select group(s) allowed to submit listings." ) ;
-define("_MI_ADSLIGHT_GROUPPERM", "Submit Permissions");
-define("_MI_ADSLIGHT_SUBMITFORM", "Ads Submit Permissions");
-define("_MI_ADSLIGHT_SUBMITFORM_DESC", "Select, who can submit Ads");
-define("_MI_ADSLIGHT_VIEWFORM", "View Ads Permissions");
-define("_MI_ADSLIGHT_VIEWFORM_DESC", "Select, who can view Ads");
-define("_MI_ADSLIGHT_VIEW_RESUMEFORM_DESC", "Select, who can view resumes");
-define("_MI_ADSLIGHT_SUPPORT", "Support this software");
-define("_MI_ADSLIGHT_OP", "Read my opinion");
-define("_MI_ADSLIGHT_PREMIUM", "Ads Premium");
-define("_MI_ADSLIGHT_PREMIUM_DESC", "Who can select days listing will last");
+define("_MI_ADSLIGHT_GROUPPERM","Submit Permissions");
+define("_MI_ADSLIGHT_SUBMITFORM","Ads Submit Permissions");
+define("_MI_ADSLIGHT_SUBMITFORM_DESC","Select, who can submit Ads");
+define("_MI_ADSLIGHT_VIEWFORM","View Ads Permissions");
+define("_MI_ADSLIGHT_VIEWFORM_DESC","Select, who can view Ads");
+define("_MI_ADSLIGHT_VIEW_RESUMEFORM_DESC","Select, who can view resumes");
+define("_MI_ADSLIGHT_SUPPORT","Support this software");
+define("_MI_ADSLIGHT_OP","Read my opinion");
+define("_MI_ADSLIGHT_PREMIUM","Ads Premium");
+define("_MI_ADSLIGHT_PREMIUM_DESC","Who can select days listing will last");
 
 define("_MI_ADSLIGHT_CATEGORY_NOTIFY", 'Category'); 
 define("_MI_ADSLIGHT_CATEGORY_NOTIFYDSC", 'Notification options that apply to the current category.');
-define("_MI_ADSLIGHT_NOTIFY", "Listing"); 
+define("_MI_ADSLIGHT_NOTIFY","Listing"); 
 define("_MI_ADSLIGHT_NOTIFYDSC", 'Notification options that apply to the current listing.');	
 define("_MI_ADSLIGHT_GLOBAL_NOTIFY", 'Whole Module ');
 define("_MI_ADSLIGHT_GLOBAL_NOTIFYDSC", 'Global advert notification options.');
@@ -197,8 +197,8 @@ define("_MI_ADSLIGHT_MAIN_CAT","Allow users to add listings in the main categori
 define("_MI_ADSLIGHT_MAIN_CAT_DESC","or just allow adding listings in sub-categoreies");
 define("_MI_ADSLIGHT_ADMIN_EDITOR","Editor to use for admin:");
 define("_MI_ADSLIGHT_LIST_ADMIN_EDITORS","Select the editor to use on the admin side.");
-define("_MI_ADSLIGHT_CAT_DESC", "Category Description");
-define("_MI_ADSLIGHT_DESC_CAT_DESC", "Add a description for each category.");
+define("_MI_ADSLIGHT_CAT_DESC","Category Description");
+define("_MI_ADSLIGHT_DESC_CAT_DESC","Add a description for each category.");
 define("_MI_ADSLIGHT_MUST_ADD_CAT","You must add a category first.");
 define("_MI_ADSLIGHT_BNAME3","Recent Listings w/Photo");
 define("_MI_ADSLIGHT_BNAME3_DESC","Recent Listings w/Photo Block");
@@ -212,17 +212,17 @@ define("_MI_ADSLIGHT_SMENU2","Submit");
 define("_MI_ADSLIGHT_SMENU3","Search"); 
 
 // support.php 
-define("_MI_ADSLIGHT_SUPPORT01", " If you wish to suggest an improvement:<br /><br />- A correction<br />- A translation<br />- A suggestion<br />- Report a Bug<br />");
-define("_MI_ADSLIGHT_SUPPORT02", "Join us at the Support Forum AdsLight");
-define("_MI_ADSLIGHT_SUPPORT03", "> Support Forum AdsLight <");
+define("_MI_ADSLIGHT_SUPPORT01"," If you wish to suggest an improvement:<br /><br />- A correction<br />- A translation<br />- A suggestion<br />- Report a Bug<br />");
+define("_MI_ADSLIGHT_SUPPORT02","Join us at the Support Forum AdsLight");
+define("_MI_ADSLIGHT_SUPPORT03","> Support Forum AdsLight <");
 
 // Bloc Carte de France
-define("_MI_ADSLIGHT_MAPFRANCE", "Map of France");
-define("_MI_ADSLIGHT_MAPFRANCE_DESC", "In your area");
+define("_MI_ADSLIGHT_MAPFRANCE","Map of France");
+define("_MI_ADSLIGHT_MAPFRANCE_DESC","In your area");
 
 // Bloc Ajouter une annonce
-define("_MI_ADSLIGHT_ADDMENU", "Add Ad");
-define("_MI_ADSLIGHT_ADDMENU_DESC", "Menu");
+define("_MI_ADSLIGHT_ADDMENU","Add Ad");
+define("_MI_ADSLIGHT_ADDMENU_DESC","Menu");
 
 // version Adslight 1.0.2
 // Active RewriteUrl
@@ -248,33 +248,33 @@ define("_MI_ADSLIGHT_ADSLIGHT_USE_BANNER","Use code banner Xoops");
 define("_MI_ADSLIGHT_ADSLIGHT_USE_BANNER_DESC","allows you to insert banners Xoops between proposals.<br />If you choose Yes<br />NO insert code here");
 
 // Version 1.0.5
-// Code Adscence Catégories
-define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE", "Pub code on pages categories");
-define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE_DESC", "Google adsence code or code of a banner:<br/>Format: width = 300 height = 250");
+// Code Adscence CatÃ©gories
+define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE","Pub code on pages categories");
+define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE_DESC","Google adsence code or code of a banner:<br/>Format: width = 300 height = 250");
 
 // adslight_theme_set
-define("_MI_ADSLIGHT_THEMESET", "Choice of template set");
+define("_MI_ADSLIGHT_THEMESET","Choice of template set");
 
-// Méta Description / keywords Categories
+// MÃ©ta Description / keywords Categories
 define("_MI_ADSLIGHT_CAT_META","Allow the seizure Meta description, Meta keywords categories?");
 define("_MI_ADSLIGHT_CAT_META_DESCRIPTION","If you set this option to 'Yes',<br/> 
 You can write data meta keywords and description for each category<br/>( Recommend to a better ranking. )");
 
 // Version 1.0.51
 // tips_writing_ad.php
-define("_MI_ADSLIGHT_USE_TIPS_WRITE", "Customize page info / advice?");
-define("_MI_ADSLIGHT_USEDESC_TIPS_WRITE", "If you select 'yes', you can write below the title and text of the page info / advice");
-define("_MI_ADSLIGHT_TITLE_TIPS_WRITE", "Page Title information / advice");
-define("_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE", "Write here the title that will appear on the page info / advice");
-define("_MI_ADSLIGHT_TEXT_TIPS_WRITE", "Text of the page info / advice");
-define("_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE", "Enter the text that appears here on the page info / advice");
+define("_MI_ADSLIGHT_USE_TIPS_WRITE","Customize page info / advice?");
+define("_MI_ADSLIGHT_USEDESC_TIPS_WRITE","If you select 'yes', you can write below the title and text of the page info / advice");
+define("_MI_ADSLIGHT_TITLE_TIPS_WRITE","Page Title information / advice");
+define("_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE","Write here the title that will appear on the page info / advice");
+define("_MI_ADSLIGHT_TEXT_TIPS_WRITE","Text of the page info / advice");
+define("_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE","Enter the text that appears here on the page info / advice");
 
 // Version 1.0.53
 // adslight_maps
-define("_MI_ADSLIGHT_MAPSSET", "Select the card from your country");
-define("_MI_ADSLIGHT_MAPSSET_DESC", "If you want to create the map of your country.<br />Thank you to read the module docs.");
-define("_MI_ADSLIGHT_MAPSW_TITLE", "Width of the map");
-define("_MI_ADSLIGHT_MAPSH_TITLE", "Height map");
+define("_MI_ADSLIGHT_MAPSSET","Select the card from your country");
+define("_MI_ADSLIGHT_MAPSSET_DESC","If you want to create the map of your country.<br />Thank you to read the module docs.");
+define("_MI_ADSLIGHT_MAPSW_TITLE","Width of the map");
+define("_MI_ADSLIGHT_MAPSH_TITLE","Height map");
 
 
 ?>
