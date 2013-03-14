@@ -1,6 +1,6 @@
-<style type='text/css' media='all'>
-  @import url(<{$imgscss}>);
-</style>
+<{if $adslight_active_menu == 1 }>
+<{include file='db:adslight_menu.html'}>
+<{/if}>
 <br />
 <table cellspacing="0" class="outer" style="width:100%;">
 <tr><td class="head"><{$nav_main}></td></tr>
@@ -8,8 +8,8 @@
 </td></tr>
 </table>
 <br />
-<{if $istheirs == "1"}><{if $rate !='0'}><b><{$lang_user_rating}></b> <{$rating}> (<{$user_votes}>)<{/if}><{else}>
-<{if $rate !='0'}><b><{$lang_user_rating}></b> <{$rating}> (<{$user_votes}>)<br />> <a href="rate-user.php?usid=<{$usid}>" rel="nofollow"><{$lang_ratethisuser}></a><{/if}>
+<{if $istheirs == "1"}><{if $rate !='0'}><strong><{$lang_user_rating}></strong> <{$rating}> (<{$user_votes}>)<{/if}><{else}>
+<{if $rate !='0'}><strong><{$lang_user_rating}></strong> <{$rating}> (<{$user_votes}>)<br />> <a href="rate-user.php?usid=<{$usid}>" rel="nofollow"><{$lang_ratethisuser}></a><{/if}>
 <{/if}>
 <br /><br /><{$nav_page}><br /><br />
 <table cellspacing="0" class="outer" style="width:100%;">
@@ -30,14 +30,13 @@
         </tr>
         <{foreach item=item from=$items}>
 	<tr class=<{cycle values="odd,even"}>>
-
-		<{if $isadmin}><td><{$item.adminlink}></td><{/if}>
+	<{if $isadmin}><td><{$item.adminlink}></td><{/if}>
 		<td width="105" align="left"><{if $item.photo}><{$item.photo}><{else}><{$item.no_photo}><{/if}></td>
 		<{if $istheirs}><{if $permit}><td align="left"><{$item.status}></td><{/if}><{/if}>
-        	<td align="left"><a href="viewads.php?lid=<{$item.id}>"><b><{$item.title}></b></a>&nbsp;<{$item.new}><br/>
-        	<{$item.type}><br/>
-        	<b><{$item.price}></b>&nbsp;<{$money_sign}>&nbsp;<{$item.typeprice}><br/><br/>
-        	<{if $item.sold}><{$item.sold}><{/if}><br/>
+        	<td align="left"><a href="viewads.php?lid=<{$item.id}>"><strong><{$item.title}></strong></a>&nbsp;<{$item.new}><br />
+        	<{$item.type}><br />
+        	<strong><{$item.price}></strong>&nbsp;<{$money_sign}>&nbsp;<{$item.typeprice}><br /><br />
+        	<{if $item.sold}><{$item.sold}><{/if}><br />
         	</td>
 		<{if $istheirs}><{if $permit}><td align="left"><{$item.modify_link}></td><{/if}>
 					<{/if}>
@@ -53,7 +52,7 @@
 		
 	</tr>
 </table>
-<br /><br /><{$nav_page}><br /><br /><a href="http://www.i-luc.fr/adslight/"><img src="<{$xoops_url}>/modules/adslight/images/logo_mini.png" alt="<{$adslight_logolink}>" title="<{$adslight_logolink}>" align="right" border="0"></a>
+<br /><br /><{$nav_page}><br /><br />
 <div style="text-align: center; padding: 3px; margin:3px;">
 	<{$comments_head}>
 </div>
@@ -61,7 +60,6 @@
   <{$commentsnav}>
   <{$lang_notice}>
 </div>
-
 <div style="margin:3px; padding: 3px;">
 <{if $comment_mode == "flat"}>
   <{include file="db:system_comments_flat.html"}>

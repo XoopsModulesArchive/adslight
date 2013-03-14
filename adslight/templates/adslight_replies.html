@@ -2,8 +2,8 @@
 	<{if $has_replies}>
 	<table border="1" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-	<td class="head"><b><{$nav_main}></b></td></tr><tr>
-        <td class="head"><b><{$title_head}>&nbsp;&nbsp;<{$title}></b></td></tr></table>
+	<td class="head"><strong><{$nav_main}></strong></td></tr><tr>
+        <td class="head"><strong><{$title_head}>&nbsp;&nbsp;<{$title}></strong></td></tr></table>
 	<br /><br /><{$nav_page}><br /><br />
 
         <{foreach item=item from=$items}>
@@ -23,5 +23,5 @@
 	<{else}>
 	<table border="1" cellpadding="0" cellspacing="0" width="100%" height="200px">
         <tr>
-	<td class="head"><b><{$no_more_replies}></b></td></tr></table>
+	<td class="head"><strong><{$no_more_replies}></strong></td></tr></table>
 	<{/if}>

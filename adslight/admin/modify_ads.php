@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include 'admin_header.php';
 
@@ -177,10 +159,21 @@ function ModifyAds($lid)
 			<td>"._AM_ADSLIGHT_TOWN." </td><td><input type=\"text\" name=\"town\" size=\"40\" value=\"$town\"></td>
 			</tr><tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_COUNTRY." </td><td><input type=\"text\" name=\"country\" size=\"40\" value=\"$country\"></td>
-			</tr>
-			<tr class='head' border='1'>
-			<td>"._AM_ADSLIGHT_CONTACTBY." </td><td><input type=\"text\" name=\"contactby\" size=\"40\" value=\"$contactby\"></td>
-			</tr>";
+			</tr></tr><tr class='head' border='1'>";
+	
+	if ($contactby == 4) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_EMAIL; }
+	if ($contactby == 3) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PM; }
+	if ($contactby == 2) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_BOTH; }
+	if ($contactby == 1) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PHONE; }
+	
+	echo " <td class='head'>"._AM__ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
+	<option value=\"".$contactby."\">".$contactselect."</option>
+	<option value=\"4\">"._AM_ADSLIGHT_CONTACT_BY_EMAIL."</option>
+	<option value=\"3\">"._AM_ADSLIGHT_CONTACT_BY_PM."</option>
+	<option value=\"2\">"._AM_ADSLIGHT_CONTACT_BY_BOTH."</option>
+	<option value=\"1\">"._AM_ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
+	
+			
 
 				echo "<tr><td class='head'>"._AM_ADSLIGHT_STATUS."</td><td class='head'><input type=\"radio\" name=\"status\" value=\"0\"";
 				if ($status == "0") {
@@ -207,13 +200,13 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE." </td><td><select name=\"type\">";
 		
-		$result5=$xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
-		while(list($nom_type) = $xoopsDB->fetchRow($result5)) {
+		$result5=$xoopsDB->query("select nom_type, id_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
+		while(list($nom_type, $id_type) = $xoopsDB->fetchRow($result5)) {
     	    	    $sel = "";
-		    if ($nom_type == $type) {
+		    if ($id_type == $type) {
 			$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_type\" $sel>$nom_type</option>";
+		    echo "<option value=\"$id_type\" $sel>$nom_type</option>";
 		}
 		    echo "</select></td></tr>";
 			
@@ -221,23 +214,27 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE_USURE." </td><td><select name=\"typeusure\">";
 		
-		$result6=$xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
-		while(list($nom_usure) = $xoopsDB->fetchRow($result6)) {
+		$result6=$xoopsDB->query("select nom_usure, id_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
+		while(list($nom_usure, $id_usure) = $xoopsDB->fetchRow($result6)) {
     	    $sel = "";
-		    if ($nom_usure == $typeusure) {
+		    if ($id_usure == $typeusure) {
 			$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_usure\" $sel>$nom_usure</option>";
+		    echo "<option value=\"$id_usure\" $sel>$nom_usure</option>";
 		}
 		    echo "</select></td></tr>";
 
 			echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
 
-			$result = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
-			echo " <select name=\"typeprice\"><option value=\"$typeprice\">$typeprice</option>";	
-			while(list($nom_price) = $xoopsDB->fetchRow($result)) {
-				$nom_price = $myts->htmlSpecialChars($nom_price);
-			echo "<option value=\"$nom_price\">$nom_price</option>";
+			$resultx = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
+			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nonprice</option>";	
+			while(list($nom_price, $id_price) = $xoopsDB->fetchRow($resultx)) {
+			$sel = "";
+		    if ($id_price == $typeprice) {
+			$sel = "selected";
+		    }
+			
+			echo "<option value=\"$id_price\" $sel>$nom_price</option>";
 	  		}
 			echo "</select></td>";
 		

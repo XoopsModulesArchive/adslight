@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
  
 include_once("../../../include/cp_header.php");
 include 'header.php';
@@ -75,7 +57,7 @@ echo '<table width=100 border="0" class="outer"><tr>
            <img src="'.XOOPS_URL.'/modules/'.$xoopsModule->getVar('dirname').'/'. $versioninfo->getInfo('image').'" alt="" hspace="10" vspace="0" /></a>
 		</td></tr>
 		<tr class="even"><td>
-		    <div style="padding: 5px;"><strong>'.$versioninfo->getInfo('name').'version'.$versioninfo->getInfo('version').'</strong></div>
+		    <div style="padding: 5px;"><b>'.$versioninfo->getInfo('name').' version '.$versioninfo->getInfo('version').'</b></div>
 			<label>'._AM_ADSLIGHT_ABOUT_RELEASEDATE.':</label><text>' . $versioninfo->getInfo( 'release' ) . '</text><br />
 			<label>'._AM_ADSLIGHT_ABOUT_AUTHOR.':</label><text>'.$versioninfo->getInfo('author').'</text><br />
 			<label>'._AM_ADSLIGHT_ABOUT_CREDITS.':</label><text>'.$versioninfo->getInfo('credits').'</text><br />
@@ -89,16 +71,35 @@ echo '<table width=100 border="0" class="outer" ><tr>
 
     //// iLuc ///
 echo "<tr class='odd'><td><br />
-		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_NAME . ":</label><text><b>iLuc</b></text><br />
-		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.i-luc.fr\" target=\"_blank\" >www.i-luc.fr</a></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_NAME . ":</label><text><b>Luc Bizet</b></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.luc-bizet.fr\" target=\"_blank\" >www.luc-bizet.fr</a></text><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_VERSION . ":</label><text>AdsLight [Author]</text><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_DESC . ":</label><text>Improvements, corrections, reDesign for a lighter module : 'AdsLight'</text><br />
 		<br /></td></tr>";
+
+    //// Simon Roberts ///
+echo "<tr class='odd'><td><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_NAME . ":</label><text><b>Simon Roberts</b></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.chronolabs.coop\" target=\"_blank\" >www.chronolabs.coop</a></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.xoops.org\" target=\"_blank\" >XOOPS Support Website EN</a></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_VERSION . ":</label><text>AdsLight 1.x</text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_DESC . ":</label><text>Plugin Xpayment</text><br />
+		<br /></td></tr>";
+		
+	//// TXMod Xoops ///
+echo "<tr class='odd'><td><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_NAME . ":</label><text><b>TXMod Xoops</b></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.txmodxoops.org \" target=\"_blank\" >www.txmodxoops.org</a></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_VERSION . ":</label><text>AdsLight 1.x</text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_DESC . ":</label><text>Traduzione italiana</text><br />
+		<br /></td></tr>";			
+		
 
 
     //// Patrick Seegers ///
 echo "<tr class='even'><td><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_NAME . ":</label><text><b>Patrick Seegers</b></text><br />
+		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"www.vanuitdenhelder.nl\" target=\"_blank\" >Vanuit Den Helder</a></text><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_WEBSITE . ":</label><text><a href=\"http://www.xoops.nl\" target=\"_blank\" >Nederlandstalige XOOPS Support Website</a></text><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_VERSION . ":</label><text>AdsLight 1.056</text><br />
 		<label>" . _AM_ADSLIGHT_PERSONS_PARTICIP_DESC . ":</label><text>Dutch Vertaling</text><br />

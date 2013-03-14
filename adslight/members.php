@@ -1,42 +1,24 @@
 <?php
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include "header.php";
 include(XOOPS_ROOT_PATH."/modules/adslight/include/functions.php");
@@ -87,9 +69,15 @@ if ($xoopsUser && $xoopsUser->isAdmin($xoopsModule->mid())) {
 	$xoopsTpl->assign('replies_head', _ADSLIGHT_REPLIES);
 	$xoopsTpl->assign('expires_head', _ADSLIGHT_EXPIRES_ON);
 	$xoopsTpl->assign('all_user_listings', _ADSLIGHT_ALL_USER_LISTINGS);
-	$xoopsTpl->assign('nav_main', "<a href=\"index.php\">"._ADSLIGHT_MAIN."</a>");
+	$xoopsTpl->assign('nav_main', '<a href="index.php">'._ADSLIGHT_MAIN.'</a>');
 	$xoopsTpl->assign('mydirname', $mydirname);
-	$xoopsTpl->assign('imgscss', XOOPS_URL."/modules/adslight/style/adslight.css");
+	
+	$xoopsTpl->assign('xoops_module_header', '<link rel="stylesheet" href="'.XOOPS_URL.'/modules/adslight/style/adslight.css" type="text/css" media="all" />');
+	
+	$xoopsTpl->assign('adslight_active_menu', $xoopsModuleConfig['adslight_active_menu']);
+	$xoopsTpl->assign('adslight_active_rss', $xoopsModuleConfig['adslight_active_rss']);
+	$xoTheme -> addMeta ( 'meta', 'robots', 'noindex, nofollow');
+	
 	$show = 4;
 	$min = isset($_GET['min']) ? intval($_GET['min']) : 0;
 	if (!isset($max)) {
@@ -127,7 +115,7 @@ $countresult=$xoopsDB->query("select COUNT(*) FROM ".$xoopsDB->prefix("adslight_
 
 
 
-$sql="select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, date, email, submitter, usid, town, country, contactby, premium, valid, photo, photo2, photo3, hits, item_rating, item_votes, user_rating, user_votes, comments FROM ".$xoopsDB->prefix("adslight_listing")." WHERE usid = ".mysql_real_escape_string($usid)." AND valid='Yes' $cat_perms ORDER BY $orderby";
+$sql="select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, date, email, submitter, usid, town, country, contactby, premium, valid, photo, hits, item_rating, item_votes, user_rating, user_votes, comments FROM ".$xoopsDB->prefix("adslight_listing")." WHERE usid = ".mysql_real_escape_string($usid)." AND valid='Yes' $cat_perms ORDER BY $orderby";
 $result=$xoopsDB->query($sql,$show,$min);
     } else {
 
@@ -136,7 +124,7 @@ $countresult=$xoopsDB->query("select COUNT(*) FROM ".$xoopsDB->prefix("adslight_
 		list($trow) = $xoopsDB->fetchRow($countresult);
 
 
-$sql="select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, date, email, submitter, usid, town, country, contactby, premium, valid, photo, photo2, photo3, hits, item_rating, item_votes, user_rating, user_votes, comments FROM ".$xoopsDB->prefix("adslight_listing")." WHERE usid = ".mysql_real_escape_string($usid)." AND valid='Yes' AND status!='1' $cat_perms ORDER BY $orderby";
+$sql="select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, date, email, submitter, usid, town, country, contactby, premium, valid, photo, hits, item_rating, item_votes, user_rating, user_votes, comments FROM ".$xoopsDB->prefix("adslight_listing")." WHERE usid = ".mysql_real_escape_string($usid)." AND valid='Yes' AND status!='1' $cat_perms ORDER BY $orderby";
 $result=$xoopsDB->query($sql,$show,$min);
 }
 
@@ -162,14 +150,14 @@ $trows = $trow;
 	$xoopsTpl->assign('lang_popularitymost', _ADSLIGHT_POPULARITYMTOL);
      
 		}
-while(list($lid, $cid, $title, $status, $expire, $type, $desctext, $tel, $price, $typeprice, $date, $email, $submitter, $usid, $town, $country, $contactby, $premium, $valid, $photo, $photo2, $photo3, $hits, $item_rating, $item_votes, $user_rating, $user_votes, $comments) = $xoopsDB->fetchRow($result)) {
+while(list($lid, $cid, $title, $status, $expire, $type, $desctext, $tel, $price, $typeprice, $date, $email, $submitter, $usid, $town, $country, $contactby, $premium, $valid, $photo, $hits, $item_rating, $item_votes, $user_rating, $user_votes, $comments) = $xoopsDB->fetchRow($result)) {
 
 
-		$newitem = "";
-		$newcount = $xoopsModuleConfig["adslight_countday"];
+		$newitem = '';
+		$newcount = $xoopsModuleConfig['adslight_countday'];
 		$startdate = (time()-(86400 * $newcount));
 		if ($startdate < $date) {
-		$newitem = "<img src=\"".XOOPS_URL."/modules/adslight/images/newred.gif\" />";
+		$newitem = '<img src="'.XOOPS_URL.'/modules/adslight/images/newred.gif" alt="New" />';
 			}
 
 
@@ -221,7 +209,7 @@ $modify_link = "<a href='modify.php?op=ModAd&amp;lid=".addslashes($lid)."'><img 
 		$price = number_format($price, 2, ",", " ");
 //  For other countries uncomment the below line and comment out the above line
 //		$price = number_format($price);
-		$xoopsTpl->assign('price', '<b>'._ADSLIGHT_PRICE . "</b>$price".$xoopsModuleConfig["adslight_money"]." - $typeprice");
+		$xoopsTpl->assign('price', '<strong>'._ADSLIGHT_PRICE . "</strong>$price".$xoopsModuleConfig["adslight_money"]." - $typeprice");
 		$xoopsTpl->assign('price_head', _ADSLIGHT_PRICE );
 		$xoopsTpl->assign('money_sign', "".$xoopsModuleConfig["adslight_money"]."");
 		$xoopsTpl->assign('price_typeprice', $typeprice);
@@ -248,7 +236,7 @@ if ($user_votes == 1) {
 	}
 		$sold = "";
 		if ($status == 2) {
-		$sold = "<font color=\"red\"><b>[ "._ADSLIGHT_RESERVED." ]</b></font>";
+		$sold = _ADSLIGHT_RESERVEDMEMBER;
 		}
 
 
@@ -258,10 +246,10 @@ $updir = $xoopsModuleConfig["adslight_link_upload"];
 		$resultp = $xoopsDB->query($sql);
 		while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
 		if ($photo) {
-			$photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\"></a>";
+			$photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
 				}
 			}
-		$no_photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"images/nophoto.jpg\" align=\"left\" width=\"100px\" alt=\"$title\"></a>";
+		$no_photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"images/nophoto.jpg\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
 
 	$xoopsTpl->append('items', array('id' => $lid, 'cid' => $cid, 'title' => $myts->htmlSpecialChars($title), 'status' => $myts->htmlSpecialChars($status_is), 'expire' => $myts->htmlSpecialChars($expire), 'type' => $myts->htmlSpecialChars($type), 'desctext' => $myts->displayTarea($desctext), 'tel' => $myts->htmlSpecialChars($tel), 'price' => $myts->htmlSpecialChars($price), 'typeprice' => $myts->htmlSpecialChars($typeprice), 'date' => $myts->htmlSpecialChars($date), 'email' => $myts->htmlSpecialChars($email), 'submitter' => $myts->htmlSpecialChars($submitter), 'usid' => $myts->htmlSpecialChars($usid), 'town' => $myts->htmlSpecialChars($town), 'country' => $myts->htmlSpecialChars($country), 'contactby' => $myts->htmlSpecialChars($contactby), 'premium' => $myts->htmlSpecialChars($premium), 'valid' => $myts->htmlSpecialChars($valid), 'hits' => $hits, 'rlid' => $myts->htmlSpecialChars($rlid), 'rdate' => $myts->htmlSpecialChars($rdate), 'rsubmitter' => $myts->htmlSpecialChars($rsubmitter), 'message' => $myts->htmlSpecialChars($message), 'remail' => $myts->htmlSpecialChars($remail), 'rrows' => $rrows, 'expires' => $myts->htmlSpecialChars($date2), 'view_now' => $view_now, 'modify_link' => $modify_link, 'photo' => $photo, 'no_photo' => $no_photo, 'adminlink' => $adminlink, 'new' => $newitem, 'sold' => $sold));
 }
@@ -273,14 +261,14 @@ $updir = $xoopsModuleConfig["adslight_link_upload"];
     if ($linkpages!=1 && $linkpages!=0) {
        $prev = $min - $show;
        if ($prev>=0) {
-            $pagenav .= "<a href='members.php?usid=$usid&min=$prev&show=$show'><b><u>&laquo;</u></b></a> ";
+            $pagenav .= "<a href='members.php?usid=$usid&min=$prev&show=$show'><strong><u>&laquo;</u></strong></a> ";
         }
         $counter = 1;
         $currentpage = ($max / $show);
         while ( $counter<=$linkpages ) {
             $mintemp = ($show * $counter) - $show;
             if ($counter == $currentpage) {
-                $pagenav .= "<b>($counter)</b> ";
+                $pagenav .= "<strong>($counter)</strong> ";
             } else {
                 $pagenav .= "<a href='members.php?usid=$usid&min=$mintemp&show=$show'>$counter</a> ";
             }
@@ -288,8 +276,8 @@ $updir = $xoopsModuleConfig["adslight_link_upload"];
         }
         if ( $trows>$max ) {
             $pagenav .= "<a href='members.php?usid=$usid&min=$max&show=$show'>";
-            $pagenav .= "<b><u>&raquo;</u></b></a>";
-        		}$xoopsTpl->assign('nav_page', "<b>"._ADSLIGHT_PAGES."</b>&nbsp;&nbsp; $pagenav");
+            $pagenav .= "<strong><u>&raquo;</u></strong></a>";
+        		}$xoopsTpl->assign('nav_page', "<strong>"._ADSLIGHT_PAGES."</strong>&nbsp;&nbsp; $pagenav");
  		}
 	}
 
