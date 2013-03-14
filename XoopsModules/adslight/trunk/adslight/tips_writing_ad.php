@@ -1,41 +1,24 @@
 <?php
-// AdsLight  version 1.051 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include("header.php");
 require_once( XOOPS_ROOT_PATH."/modules/adslight/include/gtickets.php" ) ;
@@ -73,41 +56,26 @@ function tips_writing()
 	global $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $xoopsUser, $xoopsTpl, $myts, $mytree, $meta, $mid, $mydirname, $main_lang, $prem_perm;
 	
 	$GLOBALS['xoopsOption']['template_main'] = "adslight_tips_writing_ad.html";
-	
 	include XOOPS_ROOT_PATH."/header.php";
 	
-	$ads_use_tipswrite = $xoopsModuleConfig['adslight_use_tipswrite'];
-	$adslight_writetitle = $xoopsModuleConfig['adslight_tips_writetitle'];
-	$adslight_writetexte = $xoopsModuleConfig['adslight_tips_writetxt'];
-
 	$xoopsTpl->assign('xmid', $xoopsModule->getVar('mid'));
-	$xoopsTpl->assign('add_from', constant("_ADSLIGHT_ADDFROM")." ".$xoopsConfig['sitename']);
-	$xoopsTpl->assign('add_from_title', constant("_ADSLIGHT_ADDFROM") );
-	$xoopsTpl->assign('add_from_sitename', $xoopsConfig['sitename']);
-	$xoopsTpl->assign('search_listings', constant("_ADSLIGHT_SEARCH_LISTINGS") );
-	$xoopsTpl->assign('all_words', constant("_ADSLIGHT_ALL_WORDS") );
-	$xoopsTpl->assign('any_words', constant("_ADSLIGHT_ANY_WORDS") );
-	$xoopsTpl->assign('exact_match', constant("_ADSLIGHT_EXACT_MATCH") );
-	$xoopsTpl->assign('only_pix', constant("_ADSLIGHT_ONLYPIX") );
-	$xoopsTpl->assign('search', constant("_ADSLIGHT_SEARCH") );
-	$xoopsTpl->assign('add_title_menu1', constant("_ADSLIGHT_ADD_TITLEMENU1") );
-	$xoopsTpl->assign('add_title_menu2', constant("_ADSLIGHT_ADD_TITLEMENU2") );
-	$xoopsTpl->assign('add_title_menu4', constant("_ADSLIGHT_ADD_TITLEMENU4") );
-	$xoopsTpl->assign('add_title_menu5', constant("_ADSLIGHT_ADD_TITLEMENU5") );
-	$xoopsTpl->assign('add_title_menu6', constant("_ADSLIGHT_ADD_TITLEMENU6") );
-	$xoopsTpl->assign('add_title_menu7', constant("_ADSLIGHT_ADD_TITLEMENU7") );
-	$xoopsTpl->assign('add_title_menu8', constant("_ADSLIGHT_ADD_TITLEMENU8") );
-	$xoopsTpl->assign('add_title_menu9', constant("_ADSLIGHT_ADD_TITLEMENU9") );
-	$xoopsTpl->assign('add_title_menu10', constant("_ADSLIGHT_ADD_TITLEMENU10") );
-	$xoopsTpl->assign('adslight_logolink', constant("_ADSLIGHT_LOGOLINK") );
 	$xoopsTpl->assign('permit', $prem_perm);
-	$xoopsTpl->assign('imgscss', XOOPS_URL."/modules/adslight/style/adslight.css");
-	$xoopsTpl->assign('adlight_tipswrite', constant("_ADSLIGHT_TIPSWRITE") );
-	$xoopsTpl->assign('adlight_tipswrite_title', constant("_ADSLIGHT_TIPSWRITE_TITLE") );
-	$xoopsTpl->assign('adlight_tipswrite_text', constant("_ADSLIGHT_TIPSWRITE_TEXT") );
-	$xoopsTpl->assign('adslight_writetexte', $adslight_writetexte);
-    $xoopsTpl->assign('adslight_writetitle', $adslight_writetitle);
-    $xoopsTpl->assign('ads_use_tipswrite', $ads_use_tipswrite);
+	$xoopsTpl->assign('add_from', _ADSLIGHT_ADDFROM." ".$xoopsConfig['sitename']);
+	$xoopsTpl->assign('add_from_title', _ADSLIGHT_ADDFROM);
+	$xoopsTpl->assign('add_from_sitename', $xoopsConfig['sitename']);
+	$xoopsTpl->assign('only_pix', _ADSLIGHT_ONLYPIX);
+	$xoopsTpl->assign('adslight_logolink', _ADSLIGHT_LOGOLINK);
+	$xoopsTpl->assign('bullinfotext', _ADSLIGHT_TIPSWRITE);
+	$xoopsTpl->assign('adslight_writetexte', $xoopsModuleConfig['adslight_tips_writetxt']);
+    $xoopsTpl->assign('adslight_writetitle', $xoopsModuleConfig['adslight_tips_writetitle']);
+    $xoopsTpl->assign('ads_use_tipswrite', $xoopsModuleConfig['adslight_use_tipswrite']);
+    
+    $xoopsTpl->assign('xoops_module_header', '<link rel="stylesheet" href="'.XOOPS_URL.'/modules/adslight/style/adslight.css" type="text/css" media="all" />');
+	$xoTheme -> addMeta ( 'meta', 'robots', 'noindex, nofollow');
+	
+		// adslight 2
+	$xoopsTpl->assign('adslight_active_menu', $xoopsModuleConfig['adslight_active_menu']);
+	$xoopsTpl->assign('adslight_active_rss', $xoopsModuleConfig['adslight_active_rss']);
     
     if ($xoopsUser) {
 	$member_usid = $xoopsUser->getVar('uid');

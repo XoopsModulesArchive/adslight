@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include 'admin_header.php';
 
@@ -56,40 +38,23 @@ function Index()
 	$mytree = new ClassifiedsTree($xoopsDB->prefix("adslight_categories"),"cid","pid");
 	
     include 'header.php';
-    require_once("adsligh_rsslib.php");
+  //  require_once("adsligh_rsslib.php");
     
     xoops_cp_header();
     loadModuleAdminMenu(0, "");
     
-    
-
 echo "<table width=\"50%\" border=\"0\" cellspacing=\"8\" cellpadding=\"0\">
       <tr>
 		<td valign=\"top\">";
-		
-/// Test Xml ///    
-$resultat_xml = XOOPS_ROOT_PATH."/modules/adslight/datas.xml";
-$adslight_xml = $xoopsModuleConfig['adslight_maps_set'];
 
-$page2 = implode("", file("$resultat_xml"));
-if(ereg("$adslight_xml",$page2))
-{ } else { 
-  
-  echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
-  echo "<img src='../images/admin/page_table_close_32.png' border=0 alt=\"._AM_ADSLIGHT_XMLNOTOK.\" /></td><td>";
-  echo "&nbsp;<font color='#FE0101'><b>"._AM_ADSLIGHT_XMLNOTOK."</b></font><br />";
-  echo "&nbsp;<a href='index.php?op=CopyXml'>"._AM_ADSLIGHT_XMLUPGRADE."</a></td></tr></table>";
-  
-  }
-    
-
+/*		
 /// Test Release ///    
 $resultat_site = "http://www.i-luc.fr/release/release.html";
 $page1 = implode("", file("$resultat_site"));
-if(ereg("1.061",$page1))
+if(ereg("1.07",$page1))
 { echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
   echo "<img src='../images/admin/info_button_32.png' border=0 alt=\"._AM_ADSLIGHT_RELEASEOK.\" /></td><td>"; 
-  echo "<font color='#00B4C4'><b>"._AM_ADSLIGHT_RELEASEOK." 1.061</b></font>";
+  echo "<font color='#00B4C4'><b>"._AM_ADSLIGHT_RELEASEOK."- AdsLigh 1.07</b></font>";
   echo "</td></tr></table><br />";
   
 } else { 
@@ -97,9 +62,11 @@ if(ereg("1.061",$page1))
   echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
   echo "<img src='../images/admin/error_button_32.png' border=0 alt=\"._AM_ADSLIGHT_RELEASEDOWNLOAD.\" /></td><td>";
   echo "<font color='#FE0101'><b>"._AM_ADSLIGHT_RELEASEISNOTOK."</b></font><br />";
-  echo "<a href='http://www.i-luc.fr/adslight/modules/TDMDownloads/visit.php?cid=1&lid=3'>"._AM_ADSLIGHT_RELEASEDOWNLOAD."</a></td></tr></table><br />";
+  echo "<a href='http://www.i-luc.fr/adslight/modules/TDMDownloads/visit.php?cid=1&lid=3'>"._AM_ADSLIGHT_RELEASEDOWNLOAD." > AdsLight 1.08</a></td></tr></table><br />";
   
   }
+  */
+  
       
 ///////// Il y a [..] Annonces en attente d'être approuvées //////  
 	$result = $xoopsDB->query("select lid from ".$xoopsDB->prefix("adslight_listing")." WHERE valid='no'");
@@ -141,6 +108,37 @@ if(ereg("1.061",$page1))
 		 			
 		  	</table><br />';
 		  	
+		  	echo '<table width="50%" border="0" class="outer">
+    	  		<tr colspan="2"><th align="left">'._AM_ADSLIGHT_ADSMENU_PLUGIN.'</th></tr>
+            	
+		 		<tr class="odd">
+		 		<td>
+		 		<strong>Plugin Waiting Module :</strong> <a href="http://sourceforge.net/projects/adslight/files/Plugins%20AdsLight/Plugin%20Waiting%20Module/">Download</a><br /><br />
+		 		<strong>Plugin Sitemap Module :</strong> <a href="http://sourceforge.net/projects/adslight/files/Plugins%20AdsLight/Plugin%20Sitemap%20Module/">Download</a><br /><br />
+				<strong>Plugin Waiting Rssfit :</strong> <a href="http://sourceforge.net/projects/adslight/files/Plugins%20AdsLight/Plugin%20Waiting%20Rssfit/">Download</a><br /><br />
+				<strong>Plugin Xpayment :</strong> <a href="https://sourceforge.net/projects/adslight/files/Plugins%20AdsLight/Plugin%20xpayment%20Module/">Download</a><br /><br />
+		 		</td>
+		  		</tr>
+		  		<tr class="even">
+		 		<td>
+		 		<a href="mailto:adslight.translate@gmail.com?subject=Plugin for AdsLight">Envoyer un Plugin</a> | 
+		 		<a href="mailto:adslight.translate@gmail.com?subject=Translate for AdsLight">Envoyer une Traduction</a>
+		 		</td>
+		  		</tr>
+		  		
+		  		</table><br />';
+		  	
+		  	echo '<table width="50%" border="0" class="outer">
+    	  		<tr colspan="2"><th align="left">'._AM_ADSLIGHT_ADSMENU_NEW.'</th></tr>
+            	
+		 		<tr class="odd">
+		 		<td>'._AM_ADSLIGHT_ADSMENU_NEWTXT.'</td>
+		  		
+		  		</tr>
+		  		</table><br />';
+		  	
+		  	
+	/*	  	
  ////	RSS AdsLight Forum
     	  
     	  echo '<table width="50%" border="0" class="outer">
@@ -172,8 +170,8 @@ if(ereg("1.061",$page1))
 		 
 			echo '</table><br />
     	  
-    	  
-       	</td>
+*/    	  
+       echo '</td>
     	  <td valign="top">';
     	  
 ////// Right Menu Admin
@@ -244,12 +242,12 @@ $Num4 = mysql_num_rows(mysql_query("select * from ".$xoopsDB->prefix("xoopscomme
             	<th align="left">'._AM_ADSLIGHT_DOWNLOADS_TITLE.'</th></tr>
             	
 		  		<tr class="odd"><td><img src="../images/admin/brick.png" border=0 />
-		  		<a href="http://www.i-luc.fr/adslight/modules/TDMDownloads/viewcat.php?cid=5">'._AM_ADSLIGHT_DOWNLOADS_PLUGINS.'</a>
+		  		<a href="http://sourceforge.net/projects/adslight/files/Plugins%20AdsLight/">'._AM_ADSLIGHT_DOWNLOADS_PLUGINS.'</a>
 		  		</td></tr>
 		  		
-		  		<tr class="even"><td><img src="../images/admin/world.png" border=0 />
+		  		<!-- <tr class="even"><td><img src="../images/admin/world.png" border=0 />
 		  		<a href="http://www.i-luc.fr/adslight/modules/TDMDownloads/index.php">'._AM_ADSLIGHT_DOWNLOADS_MAPS.'</a>
-		  		</td></tr>
+		  		</td></tr> -->
 		 			
 		  		</table><br />';
 
@@ -275,14 +273,14 @@ $Num4 = mysql_num_rows(mysql_query("select * from ".$xoopsDB->prefix("xoopscomme
 		  		<a href="mailto:adslight.translate@gmail.com?subject=Correction AdsLight">'._AM_ADSLIGHT_DEVLLP_MAPFLASH.'</a>
 		  		</td></tr>
 		  
-		  		<tr class="odd"><td><img src="../images/admin/group.png" border=0 />
+		  	<!--	<tr class="odd"><td><img src="../images/admin/group.png" border=0 />
 		  		<a href="'.XOOPS_URL.'/modules/adslight/admin/support_forum.php">'._AM_ADSLIGHT_DEVLLP_FORUM.'</a>
-		  		</td></tr>
+		  		</td></tr> -->
 		 			
 		  		</table><br />';
 		  		
 		/// Faire un don
-		  echo '<table width=100 border="0" class="outer">
+	/*	  echo '<table width=100 border="0" class="outer">
 		  
 		  		<tr><th align="left">'._AM_ADSLIGHT_DONATE_TITLE.'</th></tr>
             	
@@ -294,7 +292,7 @@ $Num4 = mysql_num_rows(mysql_query("select * from ".$xoopsDB->prefix("xoopscomme
 		 		'._AM_ADSLIGHT_DONATE_LOGO.'
 		 		</center></td></tr>
 		 			
-		  		</table><br />';	
+		  		</table><br />';	*/
 				
 				
 ////// AND Right Menu Admin /////       
@@ -311,9 +309,9 @@ $Num4 = mysql_num_rows(mysql_query("select * from ".$xoopsDB->prefix("xoopscomme
 
 #  function CopyXml
 #####################################################
-function CopyXml($lid)
+function CopyXml()
 {
-     global $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $xoopsUser, $xoopsTpl, $myts, $mytree, $meta, $mid, $mydirname, $main_lang, $prem_perm;
+     global $xoopsModuleConfig;
      
      
     $adslight_maps = $xoopsModuleConfig['adslight_maps_set'];
@@ -351,7 +349,7 @@ switch ($op) {
 
     
     case "CopyXml":
-    CopyXml($lid);
+    CopyXml();
     break;
 
     default:

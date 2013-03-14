@@ -1,47 +1,29 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By iluc user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.limonads.com
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 
 define("_ADSLIGHT_ADDON","Dodaj");
 define("_ADSLIGHT_ANNONCES","Mali oglasi  ");
-define("_ADSLIGHT_LOGOLINK","Xoops Modul AdsLight za besplatne oglase");
+define("_ADSLIGHT_LOGOLINK", "Xoops Modul AdsLight za besplatne oglase");
 define("_ADSLIGHT_MAIN","Glavna stranica");
 define("_ADSLIGHT_ADDFROM","Mali Oglasi  ");
 define("_ADSLIGHT_NEWTOD","Danas novi Oglasi u ovoj kategoriji");
@@ -161,7 +143,7 @@ define("_ADSLIGHT_NAMEFR","Email tvoga prijatelja :");
 define("_ADSLIGHT_MAILFR","Email tvoga prijatelja :");
 define("_ADSLIGHT_SENDFR","Po&scaron;alji");
 define("_ADSLIGHT_ANNSEND","Mali Oglas je poslat");
-define("_ADSLIGHT_SUBJET","Halo, moÂ¾da te interesuje ovaj Mali Oglas");
+define("_ADSLIGHT_SUBJET","Halo, mo¾da te interesuje ovaj Mali Oglas");
 define("_ADSLIGHT_HELLO","Halo");
 define("_ADSLIGHT_MESSAGE","Mislio(la) sam da te mo&#382;da ovaj Oglasinteresuje.");
 define("_ADSLIGHT_INTERESS","Ostale male Oglase mo&#382;e&scaron; poslati na ");
@@ -234,7 +216,7 @@ define("_ADSLIGHT_VIEW_MY_ADS","Prika&#382;i sve moje Oglase  ");
 define("_ADSLIGHT_COMMENTS_HEAD","<h3>Komentari o ovome prodava&#269;u</h3>");
 define("_ADSLIGHT_PREMIUM_DAY","<b> ako nije promijenjeno.</b> ");
 define("_ADSLIGHT_PREMIUM_LONG_HEAD","<b>Oglasi se odmah objavljuju!</b><br> ");
-define("_ADSLIGHT_PREMIUM_MEMBER","<b>kao Premium &#269;lan sam(a) odredi koliko treba Oglas da bude objavljen.<br /> Oglas traje do </b>");
+define("_ADSLIGHT_PREMIUM_MEMBER", "<b>kao Premium &#269;lan sam(a) odredi koliko treba Oglas da bude objavljen.<br /> Oglas traje do </b>");
 define("_ADSLIGHT_PREMIUM_MODERATED_HEAD","<b>Oglas se posle provjere objavljuje</b>");
 
 // ADDED FOR RATINGS
@@ -298,14 +280,14 @@ define("_ADSLIGHT_CONTACT_BY_PM","Privatne poruke)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Oboje E-Mail i P.pruka");
 define("_ADSLIGHT_CONTACT_BY_PHONE","Telefona");
 define("_ADSLIGHT_ORBY"," ili ");
-define("_ADSLIGHT_PREMYOUHAVE","Trenutno je %s slika u Albumu.");
-define("_ADSLIGHT_YOUHAVE","Trenutno je %s slika u Albumu.");
-define("_ADSLIGHT_YOUCANHAVE","Kao Premium &#269;lan tebi je %s slika dozvoljeno.");
-define("_ADSLIGHT_BMCANHAVE","Kao registrovanom &#269;lanu tebi je %s slika dozvoljeno.");
-define("_ADSLIGHT_UPGRADE_NOW","Upgrade u Premium &#269;lanstvo");
-define("_ADSLIGHT_DELETE","Izbri&scaron;i");
-define("_ADSLIGHT_EDITDESC","Uredi opis");
-define("_ADSLIGHT_TOKENEXPIRED","Vrijeme za neaktivno ulogovanje je isteklo<br /> Molimo te uloguj se i probaj ponovo");
+define("_ADSLIGHT_PREMYOUHAVE", "Trenutno je %s slika u Albumu.");
+define("_ADSLIGHT_YOUHAVE", "Trenutno je %s slika u Albumu.");
+define("_ADSLIGHT_YOUCANHAVE", "Kao Premium &#269;lan tebi je %s slika dozvoljeno.");
+define("_ADSLIGHT_BMCANHAVE", "Kao registrovanom &#269;lanu tebi je %s slika dozvoljeno.");
+define("_ADSLIGHT_UPGRADE_NOW", "Upgrade u Premium &#269;lanstvo");
+define("_ADSLIGHT_DELETE", "Izbri&scaron;i");
+define("_ADSLIGHT_EDITDESC", "Uredi opis");
+define("_ADSLIGHT_TOKENEXPIRED", "Vrijeme za neaktivno ulogovanje je isteklo<br /> Molimo te uloguj se i probaj ponovo");
 define("_ADSLIGHT_DESC_EDITED","Opis slike je uspje&scaron;no izmijenjen.");
 define("_ADSLIGHT_DELETED","Slika je uspje&scaron;no izbrisana");
 define("_ADSLIGHT_SUBMIT_PIC_TITLE","Sliku u Album unesi");
@@ -343,18 +325,18 @@ define("_ADSLIGHT_PAGES","Stranica -");
 define("_ADSLIGHT_REALNAME","Ime");
 define("_ADSLIGHT_VIEW_YOUR_LISTINGS","Vidi tvoje Oglase");
 define("_ADSLIGHT_REPLIED_BY","Odgovor od : ");
-define("_ADSLIGHT_DELETE_REPLY","Odgovor izbri&scaron;i");
-define("_ADSLIGHT_NO_REPLIES","Trenutno nema odgovora");
-define("_ADSLIGHT_THANKS","Hvala ti na kori&scaron;tenju na&scaron;ih Malih Oglasa");
-define("_ADSLIGHT_WEBMASTER","Webmaster");
-define("_ADSLIGHT_YOUR_AD","Mali Oglas");
+define("_ADSLIGHT_DELETE_REPLY", "Odgovor izbri&scaron;i");
+define("_ADSLIGHT_NO_REPLIES", "Trenutno nema odgovora");
+define("_ADSLIGHT_THANKS", "Hvala ti na kori&scaron;tenju na&scaron;ih Malih Oglasa");
+define("_ADSLIGHT_WEBMASTER", "Webmaster");
+define("_ADSLIGHT_YOUR_AD", "Mali Oglas");
 define("_ADSLIGHT_VU","ukupno je oglas gledalo");
 define("_ADSLIGHT_TIMES","puta.");
 define("_ADSLIGHT_STOP","Mali Oglas isti&#269;e dana");
 define("_ADSLIGHT_SOON","uskoro isti&#269;e.");
 define("_ADSLIGHT_MUSTLOGIN","Mora&scaron; biti ulogovan(a).");
-define("_ADSLIGHT_VIEW_AD","Vidi tvoj Oglas");
-define("_ADSLIGHT_MORE_PHOTOS","Vidi vi&scaron;e slika");
+define("_ADSLIGHT_VIEW_AD", "Vidi tvoj Oglas");
+define("_ADSLIGHT_MORE_PHOTOS", "Vidi vi&scaron;e slika");
 define("_ADSLIGHT_CANCEL","Odustani");
 
 //Added for 1.2 RC1
@@ -362,7 +344,7 @@ define("_ADSLIGHT_ADDED_TO_CAT","Objavljen je novi oglas u ovoj kategoriji ");
 define("_ADSLIGHT_RECIEVING_NOTIF","Obavijest ove vrste je abonirana.");
 define("_ADSLIGHT_ERROR_NOTIF","Ako ti ova vrsta obavijesti nije potrebna isklju&#269;i je u opciji obavje&scaron;tavanja ovdje:");
 define("_ADSLIGHT_FOLLOW_LINK","Klikni ovdje");
-define("_ADSLIGHT_YOU_CAN_VIEW_BELOW","Klikni ovdje i vidi kompletan Oglas");
+define("_ADSLIGHT_YOU_CAN_VIEW_BELOW", "Klikni ovdje i vidi kompletan Oglas");
 define("_ADSLIGHT_LISTING_NUMBER","Broj Oglasa:");
 define("_ADSLIGHT_NOREPLY","!!!  Molimo te na ovaj E-Mail ne odgovaraj, on je automatski ti poslat  !!!");
 define("_ADSLIGHT_CAPTCHA","Sigurnosni Code :");
@@ -382,43 +364,43 @@ define("_ADSLIGHT_MI_ADSLIGHT_SMENU3","Tra&#382;i");
 //viewads.php
 define("_ADSLIGHT_ALERTEABUS","Zloupotrebu prijavi");
 define("_ADSLIGHT_CONTACT_SUBMITTER","Kontakt");
-define("_ADSLIGHT_SENDFRIENDS","Po&scaron;alji prijatelju");
+define("_ADSLIGHT_SENDFRIENDS", "Po&scaron;alji prijatelju");
 
 //report-abuse.php
-define("_ADSLIGHT_REPORTSENDTO","<b>Po&scaron;alji ovaj Oglas:</b><br/><br/>Broj Oglasa ");
-define("_ADSLIGHT_REPORTANNSEND"," Hvala ti na pomo&#263;i !!<br/>Obavijesti Admina.");
-define("_ADSLIGHT_REPORTSUBJET","[Alert] Prijavi Junk ");
-define("_ADSLIGHT_REPORTMESSAGE","Smatram da ovakvi Oglas nije po&#382;eljan na stranici.");
+define("_ADSLIGHT_REPORTSENDTO", "<b>Po&scaron;alji ovaj Oglas:</b><br/><br/>Broj Oglasa ");
+define("_ADSLIGHT_REPORTANNSEND", " Hvala ti na pomo&#263;i !!<br/>Obavijesti Admina.");
+define("_ADSLIGHT_REPORTSUBJET", "[Alert] Prijavi Junk ");
+define("_ADSLIGHT_REPORTMESSAGE", "Smatram da ovakvi Oglas nije po&#382;eljan na stranici.");
 
 //index.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULL","Dodaj Mali Oglas<br />vala ");
-define("_ADSLIGHT_ADD_LISTING_SUB","Registar");
-define("_ADSLIGHT_ADD_LISTING_BULLOK","Dodaj svoj<br />Mali Oglas: ");
-define("_ADSLIGHT_ADD_LISTING_SUBOK","Klikni ovdje");
+define("_ADSLIGHT_ADD_LISTING_BULL", "Dodaj Mali Oglas<br />vala ");
+define("_ADSLIGHT_ADD_LISTING_SUB", "Registar");
+define("_ADSLIGHT_ADD_LISTING_BULLOK", "Dodaj svoj<br />Mali Oglas: ");
+define("_ADSLIGHT_ADD_LISTING_SUBOK", "Klikni ovdje");
 
 //index.php >> Title Menu //
-define("_ADSLIGHT_ADD_TITLEMENU1","Uredi/Izbri&scaron;i Mali Oglas, i prijavi oglas...");
-define("_ADSLIGHT_ADD_TITLEMENU2","Dodaj Mali Oglas, ili pretra&#382;i kategoriju.");
-define("_ADSLIGHT_ADD_TITLEMENU4","Svi dobri savjeti za pisanje Oglasa.");
-define("_ADSLIGHT_ADD_TITLEMENU5","Tra&#382;i Oglas ili Oglase u blizini tvoga mjesta boravka.");
-define("_ADSLIGHT_ADD_TITLEMENU6","Pisanje i &#269;itanje ostavi u tragu.");
-define("_ADSLIGHT_ADD_TITLEMENU7","Ima&scaron; poruku");
-define("_ADSLIGHT_ADD_TITLEMENU8","Uloguj se i vidi poruku.");
-define("_ADSLIGHT_ADD_TITLEMENU9","Uloguj se da vidi profil.");
-define("_ADSLIGHT_ADD_TITLEMENU10","Vidi i uredi svoj profil ovdje.");
+define("_ADSLIGHT_ADD_TITLEMENU1", "Uredi/Izbri&scaron;i Mali Oglas, i prijavi oglas...");
+define("_ADSLIGHT_ADD_TITLEMENU2", "Dodaj Mali Oglas, ili pretra&#382;i kategoriju.");
+define("_ADSLIGHT_ADD_TITLEMENU4", "Svi dobri savjeti za pisanje Oglasa.");
+define("_ADSLIGHT_ADD_TITLEMENU5", "Tra&#382;i Oglas ili Oglase u blizini tvoga mjesta boravka.");
+define("_ADSLIGHT_ADD_TITLEMENU6", "Pisanje i &#269;itanje ostavi u tragu.");
+define("_ADSLIGHT_ADD_TITLEMENU7", "Ima&scaron; poruku");
+define("_ADSLIGHT_ADD_TITLEMENU8", "Uloguj se i vidi poruku.");
+define("_ADSLIGHT_ADD_TITLEMENU9", "Uloguj se da vidi profil.");
+define("_ADSLIGHT_ADD_TITLEMENU10", "Vidi i uredi svoj profil ovdje.");
 
 //viewcats.php >> Infos Bulle //
-define("_ADSLIGHT_ADD_LISTING_BULLCATS","Dodaj Oglas ili <br />dodaj Oglas u ovu Kategoriju<br />");
-define("_ADSLIGHT_ADD_LISTING_BULLCATSOK","Dodaj Oglas ili <br />dodaj Oglas u ovu Kategoriju<br />Hvala ");
+define("_ADSLIGHT_ADD_LISTING_BULLCATS", "Dodaj Oglas ili <br />dodaj Oglas u ovu Kategoriju<br />");
+define("_ADSLIGHT_ADD_LISTING_BULLCATSOK", "Dodaj Oglas ili <br />dodaj Oglas u ovu Kategoriju<br />Hvala ");
 
-// RÃ©servÃ©
-define("_ADSLIGHT_RESERVED","rezervisano");
+// Réservé
+define("_ADSLIGHT_RESERVED", "rezervisano");
 
 // tips_writing_ad.php
-define("_ADSLIGHT_TIPSWRITE","Svi dobri savjeti<br />Ovako napi&scaron;i Oglas");
-define("_ADSLIGHT_TIPSWRITE_TITLE","savjet za objavu oglasa");
+define("_ADSLIGHT_TIPSWRITE", "Svi dobri savjeti<br />Ovako napi&scaron;i Oglas");
+define("_ADSLIGHT_TIPSWRITE_TITLE", "savjet za objavu oglasa");
 
-define("_ADSLIGHT_TIPSWRITE_TEXT","<b>1. Jedna ili vi&scaron;e slika</b><br /><br />
+define("_ADSLIGHT_TIPSWRITE_TEXT", "<b>1. Jedna ili vi&scaron;e slika</b><br /><br />
 Prvo &scaron;to posjetioca privla&#269;i u Oglasu je slika onoga &scaron;to nudi&scaron; u svome Oglasu.<br>Da bi prodao(la) svoj Artikal potrebna je obavezno slika, jedna ili vi&scaron;e jo&scaron; je bolje.<br />
 Statiti&#269;ki se Oglasi sa slikama se-7-puta vi&scaron;e gledaju nego bez slika! <br>Posjetilac je sigurniji &scaron;ta kupuje i br&#382;e se odlu&#269;i da kupi tvoj Artikal u tvom oglasu.<br /><br />
 <br>- Najpotrebnije informacije o Artiklu prave tvoj Artikal aktaktrivnije.<br>- Slika mora biti jako kvalitativna i vidna. (Nepo&#382;eljno je da slika bude tamna)<br>- Okvire slika ne pravite.<br />- Izbjegavaj ubacivanje mutnih i nejasnih slika<br /><br /><b>2. Jasan opis Oglasa</b><br /><br />
@@ -435,10 +417,18 @@ I ne zaboravi u poslu trgovine je uvijek uspjeh,<br />ako su trovac i prodava&#2
 
 //version 1.053
 // maps.php
-define("_ADSLIGHT_MAPS_TITLE","Tra&#382;i po Regionu");
-define("_ADSLIGHT_MAPS_TEXT"," Izaberi Region na Karti,<br />da vidi&scaron; Oglase iz tog Regiona.");
+define("_ADSLIGHT_MAPS_TITLE", "Tra&#382;i po Regionu");
+define("_ADSLIGHT_MAPS_TEXT", " Izaberi Region na Karti,<br />da vidi&scaron; Oglase iz tog Regiona.");
 
 //viewads.php
 define("_ADSLIGHT_NOCLAS","Trenutno nema Oglasa u ovoj Kategoriji<br />u ovoj Kategoriji ...");
 
+//version 1.063
+// viawcats.php
+
+define("_ADSLIGHT_ADD_LISTING_NOTADDSINTHISCAT", "Nema oglasa u ovoj kategoriji.<br />");
+define("_ADSLIGHT_ADD_LISTING_NOTADDSSUBMIT", "Dodaj oglas");
+
+//version 1.064
+define("_ADSLIGHT_CATPLUS", "<br/>&#187;&nbsp;Vi&#353;e ...");
 ?>

@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By iluc user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.limonads.com
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 define("_AM_ADSLIGHT_CONF","Einstellungen");
 define("_AM_ADSLIGHT_ADDON","Addons");
@@ -44,8 +26,8 @@ define("_AM_ADSLIGHT_ANNDEL","W&auml;hle Anzeige zum l&ouml;schen");
 define("_AM_ADSLIGHT_ADDCATPRINC","Hauptkategorie hinzuf&uuml;gen");
 define("_AM_ADSLIGHT_CATNAME","Name :");
 define("_AM_ADSLIGHT_ADDSUBCAT","Unterkategorie hinzuf&uuml;gen");
-define("_AM_ADSLIGHT_DELSUBCAT","L&ouml;schen einer Kategorie");
-define("_AM_ADSLIGHT_MODIFSUBCAT","Kategorie bearbeiten");
+define("_AM_ADSLIGHT_DELSUBCAT", "L&ouml;schen einer Kategorie");
+define("_AM_ADSLIGHT_MODIFSUBCAT", "Kategorie bearbeiten");
 define("_AM_ADSLIGHT_ADD","Hinzuf&uuml;gen");
 define("_AM_ADSLIGHT_CATDEL","Kategorie wurde gel&ouml;scht");
 define("_AM_ADSLIGHT_OUI","Ja");
@@ -138,12 +120,12 @@ define("_AM_ADSLIGHT_NBDISPLSUBCAT","zeige Unterkategorien :");
 define("_AM_ADSLIGHT_IF","wenn");
 define("_AM_ADSLIGHT_ISAT","ist an");
 define("_AM_ADSLIGHT_VIEWNEWCLASS","zeige neue Anzeigen :");
-define("_AM_ADSLIGHT_PERMADDNG","Hinzuf&uuml;gen %s nicht genehmigt f&uuml;r %s for group %s");
-define("_AM_ADSLIGHT_PERMADDOK"," %s Berechtigungen zu %s f&uuml;r Benutzergruppen %s");
+define("_AM_ADSLIGHT_PERMADDNG", "Hinzuf&uuml;gen %s nicht genehmigt f&uuml;r %s for group %s");
+define("_AM_ADSLIGHT_PERMADDOK", " %s Berechtigungen zu %s f&uuml;r Benutzergruppen %s");
 define("_AM_ADSLIGHT_PERMRESETNG","Berechtigungen f&uuml;r Benutzergruppen k&ouml;nnen nicht zur&uuml;ckgesetzt werden %s");
-define("_AM_ADSLIGHT_PERMADDNGP","Es m&uuml;ssen alle Artikel ausgew&auml;hlt werden.");
-define("_AM_ADSLIGHT_EXPIRE","Anzeige endet in (Tagen)");
-define("_AM_ADSLIGHT_DBUPDATED","Datenbank wurde aktualisiert.");
+define("_AM_ADSLIGHT_PERMADDNGP", "Es m&uuml;ssen alle Artikel ausgew&auml;hlt werden.");
+define("_AM_ADSLIGHT_EXPIRE", "Anzeige endet in (Tagen)");
+define("_AM_ADSLIGHT_DBUPDATED", "Datenbank wurde aktualisiert.");
 define("_AM_ADSLIGHT_CONTACT_BY_EMAIL","E-mail");
 define("_AM_ADSLIGHT_CONTACT_BY_PM","Private Nachricht(PN)");
 define("_AM_ADSLIGHT_CONTACT_BY_BOTH","Beides E-Mail oder PN");
@@ -163,14 +145,14 @@ define("_AM_ADSLIGHT_UPDATEMODULE","<b>Update Module</b>");
 define("_AM_ADSLIGHT_UPGRADEFAILED","Update fehlgeschlagen");
 define("_AM_ADSLIGHT_UPGRADEFAILED0","Update");
 define("_AM_ADSLIGHT_UPGR_ACCESS_ERROR","Zugriffsfehler");
-define("_AM_ADSLIGHT_THANKS","Danke f&uuml;r die Benutzung von unseren Kleinanzeigen");
-define("_AM_ADSLIGHT_WEBMASTER","Webmaster");
-define("_AM_ADSLIGHT_YOUR_AD","Die Kleinanzeige");
+define("_AM_ADSLIGHT_THANKS", "Danke f&uuml;r die Benutzung von unseren Kleinanzeigen");
+define("_AM_ADSLIGHT_WEBMASTER", "Webmaster");
+define("_AM_ADSLIGHT_YOUR_AD", "Die Kleinanzeige");
 define("_AM_ADSLIGHT_AT","bei");
-define("_AM_ADSLIGHT_VEDIT_AD","Hier kann die Anzeige bearbeitet oder angezeigt werden");
-define("_AM_ADSLIGHT_YOUR_AD_ON","Die Anzeige auf");
-define("_AM_ADSLIGHT_APPROVED","wurde best&auml;tigt.");
-define("_AM_ADSLIGHT_EXPIRED","ist abgelaufen und wurde gel&ouml;scht.");
+define("_AM_ADSLIGHT_VEDIT_AD", "Hier kann die Anzeige bearbeitet oder angezeigt werden");
+define("_AM_ADSLIGHT_YOUR_AD_ON", "Die Anzeige auf");
+define("_AM_ADSLIGHT_APPROVED", "wurde best&auml;tigt.");
+define("_AM_ADSLIGHT_EXPIRED", "ist abgelaufen und wurde gel&ouml;scht.");
 
 define("_AM_ADSLIGHT_CHECKER", 'Directory Checker');
 define("_AM_ADSLIGHT_DIRPERMS", 'Andere Ordnerberechtigung nach beschreibbar ! => ');
@@ -183,9 +165,9 @@ define("_AM_ADSLIGHT_DATE","Erstellungsdatum");
 define("_AM_ADSLIGHT_DESC","Beschreibung");
 define("_AM_ADSLIGHT_FREECAT","Dieses ist eine freie Kategorie");
 define("_AM_ADSLIGHT_MODERATE_CAT","Kategorie Moderieren");
-define("_AM_ADSLIGHT_VISIT_LINK","Hier klicken um die ganze Anzeige zu sehen:");
-define("_AM_ADSLIGHT_LISTING_NUMBER","Anzeigen Nummer ");
-define("_AM_ADSLIGHT_YOU_CAN_VIEW_BELOW","Hier klicken um die ganze Anzeige zu sehen");
+define("_AM_ADSLIGHT_VISIT_LINK", "Hier klicken um die ganze Anzeige zu sehen:");
+define("_AM_ADSLIGHT_LISTING_NUMBER", "Anzeigen Nummer ");
+define("_AM_ADSLIGHT_YOU_CAN_VIEW_BELOW", "Hier klicken um die ganze Anzeige zu sehen");
 define("_AM_ADSLIGHT_NOREPLY","!!!  Keine E-Mail an diese Adresse schicken, es wird keine Antwort erstellt.  !!!");
 define("_AM_ADSLIGHT_ADDED_TO_CAT","Eine neue Anzeige wurde in dieser Kategorie erstellt ");
 define("_AM_ADSLIGHT_RECIEVING_NOTIF","Es wurden Benachritigungen dieser Art abboniert");
@@ -201,11 +183,11 @@ define("_AM_ADSLIGHT_INCOMPLETE","Unvollst&auml;ndige");
 
 // Ajouter par iLuc //
 //Condition de paiement
-define("_AM_ADSLIGHT_ADDUSURE","Tragen Typ hinzuf&uuml;gen");
-define("_AM_ADSLIGHT_MODUSURE","Tragen Typ bearbeiten");
-define("_AM_ADSLIGHT_ADDUSURE2","Die Art des VerschleiÃ¿es wurde hinzugef&uuml;gt");
-define("_AM_ADSLIGHT_USUREMOD","Der VerschleiÃ¿ Muster wurde ge&auml;ndert");
-define("_AM_ADSLIGHT_USUREDEL","Die Art des VerschleiÃ¿es wurde gel&ouml;scht ");
+define("_AM_ADSLIGHT_ADDUSURE", "Tragen Typ hinzuf&uuml;gen");
+define("_AM_ADSLIGHT_MODUSURE", "Tragen Typ bearbeiten");
+define("_AM_ADSLIGHT_ADDUSURE2", "Die Art des Verschleiÿes wurde hinzugef&uuml;gt");
+define("_AM_ADSLIGHT_USUREMOD", "Der Verschleiÿ Muster wurde ge&auml;ndert");
+define("_AM_ADSLIGHT_USUREDEL", "Die Art des Verschleiÿes wurde gel&ouml;scht ");
 
 //about.php
 define("_AM_ADSLIGHT_ABOUT_AUTHOR","Autor");
@@ -227,39 +209,39 @@ define("_AM_ADSLIGHT_PERSONS_PARTICIP_DESC","&#x0153;berblick");
 define("_AM_ADSLIGHT_GPERM_G_ADD" , "Hinzuf&uuml;gen k&ouml;nnen" ) ;
 define("_AM_ADSLIGHT_CAT2GROUPDESC" , "Pr&uuml;fen Sie die Kategorien, die Sie zugreifen k&ouml;nnen" ) ;
 define("_AM_ADSLIGHT_GROUPPERMDESC" , "W&auml;hlen Sie Gruppen erlaubt, um Anzeigen zu &uuml;bermitteln." ) ;
-define("_AM_ADSLIGHT_GROUPPERM","Genehmigung vorlegen ");
-define("_AM_ADSLIGHT_SUBMITFORM","Permission to file ein Inserat aufgeben");
-define("_AM_ADSLIGHT_SUBMITFORM_DESC","W&auml;hlen Sie, welche Anzeigen geschaltet werden k&ouml;nnen");
-define("_AM_ADSLIGHT_VIEWFORM","Berechtigungen zum Anzeigen Anzeigen");
-define("_AM_ADSLIGHT_VIEWFORM_DESC","W&auml;hlen Sie die Gruppen, die Inserate sehen k&ouml;nnen");
-define("_AM_ADSLIGHT_VIEW_RESUMEFORM_DESC","W&auml;hlen Sie, die Zusammenfassungen zeigen k&ouml;nnen");
-define("_AM_ADSLIGHT_SUPPORT","Unterst&uuml;tzung dieses Programms");
-define("_AM_ADSLIGHT_OP","Lesen Meiner Meinung nach");
-define("_AM_ADSLIGHT_PREMIUM_DESC","W&auml;hlen Sie Gruppen, die die Dauer der Werbung w&auml;hlen, wird");
+define("_AM_ADSLIGHT_GROUPPERM", "Genehmigung vorlegen ");
+define("_AM_ADSLIGHT_SUBMITFORM", "Permission to file ein Inserat aufgeben");
+define("_AM_ADSLIGHT_SUBMITFORM_DESC", "W&auml;hlen Sie, welche Anzeigen geschaltet werden k&ouml;nnen");
+define("_AM_ADSLIGHT_VIEWFORM", "Berechtigungen zum Anzeigen Anzeigen");
+define("_AM_ADSLIGHT_VIEWFORM_DESC", "W&auml;hlen Sie die Gruppen, die Inserate sehen k&ouml;nnen");
+define("_AM_ADSLIGHT_VIEW_RESUMEFORM_DESC", "W&auml;hlen Sie, die Zusammenfassungen zeigen k&ouml;nnen");
+define("_AM_ADSLIGHT_SUPPORT", "Unterst&uuml;tzung dieses Programms");
+define("_AM_ADSLIGHT_OP", "Lesen Meiner Meinung nach");
+define("_AM_ADSLIGHT_PREMIUM_DESC", "W&auml;hlen Sie Gruppen, die die Dauer der Werbung w&auml;hlen, wird");
 
 //Release Test
-define("_AM_ADSLIGHT_RELEASEOK","Sie sind mit der neuesten Version des Moduls.");
-define("_AM_ADSLIGHT_RELEASEISNOTOK","Das Modul ist veraltet, eine neue Version verf&uuml;gbar ist.");
-define("_AM_ADSLIGHT_RELEASEDOWNLOAD","Herunterladen.");
+define("_AM_ADSLIGHT_RELEASEOK", "Sie sind mit der neuesten Version des Moduls.");
+define("_AM_ADSLIGHT_RELEASEISNOTOK", "Das Modul ist veraltet, eine neue Version verf&uuml;gbar ist.");
+define("_AM_ADSLIGHT_RELEASEDOWNLOAD", "Herunterladen.");
 define("_AM_ADSLIGHT_NBR_PHOTO","Foto(s)");
 
 //Version 1.05
-// MÃ©ta Description / keywords Categories
+// Méta Description / keywords Categories
 define("_AM_ADSLIGHT_CAT_META_DESCRIPTION","<b>Meta Description:</b><br/>Zur besseren Optimierung,</b>f&uuml;gen Sie hier eine genaue Beschreibung Ihrer Klasse. ");
 define("_AM_ADSLIGHT_CAT_META_KEYWORDS","<b>Meta-Keywords:</b><br/>Zur besseren Optimierung,</b>Schl&uuml;sselw&ouml;rter hinzuf&uuml;gen, hier in Bezug auf die c&eacute;t&eacute;gorie.<br/><b><font color=\"#ff3300\">einzelne W&ouml;rter durch Kommas</font></b>. ( english, espagne, france,...)");
 
 //Version 1.053
 // Test Maps Xml
-define("_AM_ADSLIGHT_XMLNOTOK","Die XML-Datei f&uuml;r die Karte, ist nicht vorhanden, oder auch nicht mit der Karte in den Einstellungen ausgew&auml;hlt.");
-define("_AM_ADSLIGHT_XMLUPGRADE","Aktualisierung der XML-Datei");
+define("_AM_ADSLIGHT_XMLNOTOK", "Die XML-Datei f&uuml;r die Karte, ist nicht vorhanden, oder auch nicht mit der Karte in den Einstellungen ausgew&auml;hlt.");
+define("_AM_ADSLIGHT_XMLUPGRADE", "Aktualisierung der XML-Datei");
 
 //Version 1.054
 // Support_forum.php
-define("_AM_ADSLIGHT_SUPPORTFORUM_TITLE","List Support-Forum");
-define("_AM_ADSLIGHT_SUPPORTFORUM_WEBLINKS","Link");
-define("_AM_ADSLIGHT_SUPPORTFORUM_CONTRYLANG","Sprache");
-define("_AM_ADSLIGHT_SUPPORTFORUM_DESC","Beschreibung");
-define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE","&Uuml;bersetzung");
+define("_AM_ADSLIGHT_SUPPORTFORUM_TITLE", "List Support-Forum");
+define("_AM_ADSLIGHT_SUPPORTFORUM_WEBLINKS", "Link");
+define("_AM_ADSLIGHT_SUPPORTFORUM_CONTRYLANG", "Sprache");
+define("_AM_ADSLIGHT_SUPPORTFORUM_DESC", "Beschreibung");
+define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE", "&Uuml;bersetzung");
 
 ////////////////////////////
 //// Version 1.06 //////////
@@ -267,65 +249,65 @@ define("_AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE","&Uuml;bersetzung");
 // ../admin/index.php
 
 // Stat
-define("_AM_ADSLIGHT_STAT_TITLE","Statistik");
-define("_AM_ADSLIGHT_STAT_NUM1","Anzeigen");
-define("_AM_ADSLIGHT_STAT_NUM2","Kategorien");
-define("_AM_ADSLIGHT_STAT_NUM3","Benutzer");
-define("_AM_ADSLIGHT_STAT_NUM4","Kommentare");
+define("_AM_ADSLIGHT_STAT_TITLE", "Statistik");
+define("_AM_ADSLIGHT_STAT_NUM1", "Anzeigen");
+define("_AM_ADSLIGHT_STAT_NUM2", "Kategorien");
+define("_AM_ADSLIGHT_STAT_NUM3", "Benutzer");
+define("_AM_ADSLIGHT_STAT_NUM4", "Kommentare");
 
 
 // Option Menu
-define("_AM_ADSLIGHT_USERMENU_TITLE","Optionen");
-define("_AM_ADSLIGHT_USERMENU_SENDMAIL"," E-Mail senden");
-define("_AM_ADSLIGHT_USERMENU_COMMENT"," Kommentare");
-define("_AM_ADSLIGHT_USERMENU_BAMMIER"," Banners");
+define("_AM_ADSLIGHT_USERMENU_TITLE", "Optionen");
+define("_AM_ADSLIGHT_USERMENU_SENDMAIL", " E-Mail senden");
+define("_AM_ADSLIGHT_USERMENU_COMMENT", " Kommentare");
+define("_AM_ADSLIGHT_USERMENU_BAMMIER", " Banners");
 
 // Menu Category
-define("_AM_ADSLIGHT_CATMENU_TITLE","Kategorien");
-define("_AM_ADSLIGHT_CATMENU_CATEGORY"," Kategorien hinzuf&#252;gen");
-define("_AM_ADSLIGHT_CATMENU_MODIFCAT"," Category Management");
+define("_AM_ADSLIGHT_CATMENU_TITLE", "Kategorien");
+define("_AM_ADSLIGHT_CATMENU_CATEGORY", " Kategorien hinzuf&#252;gen");
+define("_AM_ADSLIGHT_CATMENU_MODIFCAT", " Category Management");
 
 // Menu Annonces
-define("_AM_ADSLIGHT_ADSMENU_TITLE","Anzeigen");
-define("_AM_ADSLIGHT_ADSMENU_VALIDADS"," validieren Anzeigen");
-define("_AM_ADSLIGHT_ADSMENU_VIEWADS"," Anzeigen einsehen");
-define("_AM_ADSLIGHT_ADS_MODIFADS"," Anzeige bearbeiten");
+define("_AM_ADSLIGHT_ADSMENU_TITLE", "Anzeigen");
+define("_AM_ADSLIGHT_ADSMENU_VALIDADS", " validieren Anzeigen");
+define("_AM_ADSLIGHT_ADSMENU_VIEWADS", " Anzeigen einsehen");
+define("_AM_ADSLIGHT_ADS_MODIFADS", " Anzeige bearbeiten");
 
 // Menu Downloads
-define("_AM_ADSLIGHT_DOWNLOADS_TITLE","Downloading");
-define("_AM_ADSLIGHT_DOWNLOADS_PLUGINS"," Plugins");
-define("_AM_ADSLIGHT_DOWNLOADS_MAPS"," Maps");
+define("_AM_ADSLIGHT_DOWNLOADS_TITLE", "Downloading");
+define("_AM_ADSLIGHT_DOWNLOADS_PLUGINS", " Plugins");
+define("_AM_ADSLIGHT_DOWNLOADS_MAPS", " Maps");
 
 // Menu Devellopment
-define("_AM_ADSLIGHT_DEVLLP_TITLE","Entwicklung");
-define("_AM_ADSLIGHT_DEVLLP_HACK"," Schlagen einen Hack");
-define("_AM_ADSLIGHT_DEVLLP_TRANSLATE"," vorschlagen, eine &#220;bersetzung");
-define("_AM_ADSLIGHT_DEVLLP_CORRECTION"," vorschlagen, eine Korrektur");
-define("_AM_ADSLIGHT_DEVLLP_MAPFLASH"," vorschlagen, eine Karte (.swf)");
-define("_AM_ADSLIGHT_DEVLLP_FORUM"," Forum");
+define("_AM_ADSLIGHT_DEVLLP_TITLE", "Entwicklung");
+define("_AM_ADSLIGHT_DEVLLP_HACK", " Schlagen einen Hack");
+define("_AM_ADSLIGHT_DEVLLP_TRANSLATE", " vorschlagen, eine &#220;bersetzung");
+define("_AM_ADSLIGHT_DEVLLP_CORRECTION", " vorschlagen, eine Korrektur");
+define("_AM_ADSLIGHT_DEVLLP_MAPFLASH", " vorschlagen, eine Karte (.swf)");
+define("_AM_ADSLIGHT_DEVLLP_FORUM", " Forum");
 
 // Menu Faire un Don
-define("_AM_ADSLIGHT_DONATE_TITLE"," Machen Sie eine Spende");
-define("_AM_ADSLIGHT_DONATE","AdsLight ist kein kommerzielles Projekt, ihre<br />Verwendung ist kostenlos und wird auch so bleiben.<br />Sie k&#246;nnen, wenn Sie es w&#252;nschen,<br />Machen Sie eine Spende um mich zu unterst&#252;tzen.<br />");
+define("_AM_ADSLIGHT_DONATE_TITLE", " Machen Sie eine Spende");
+define("_AM_ADSLIGHT_DONATE", "AdsLight ist kein kommerzielles Projekt, ihre<br />Verwendung ist kostenlos und wird auch so bleiben.<br />Sie k&#246;nnen, wenn Sie es w&#252;nschen,<br />Machen Sie eine Spende um mich zu unterst&#252;tzen.<br />");
 
 
 ////RSS Forum
-define("_AM_ADSLIGHT_MENURSSFORUM_TITLE","Hilfe-Forum AdsLight");
-define("_AM_ADSLIGHT_MENURSSFORUM_URL","http://www.i-luc.fr/adslight/modules/newbb/rss.php?f=64");
+define("_AM_ADSLIGHT_MENURSSFORUM_TITLE", "Hilfe-Forum AdsLight");
+define("_AM_ADSLIGHT_MENURSSFORUM_URL", "http://www.i-luc.fr/adslight/modules/newbb/rss.php?f=64");
 
-define("_AM_ADSLIGHT_MENURSSFORUM_LINK1","http://www.i-luc.fr/adslight/modules/newbb/#googtrans/auto/de");
-define("_AM_ADSLIGHT_MENURSSFORUM_GOFORUM","Zum Forum");
+define("_AM_ADSLIGHT_MENURSSFORUM_LINK1", "http://www.i-luc.fr/adslight/modules/newbb/viewforum.php?forum=64/#googtrans/auto/de");
+define("_AM_ADSLIGHT_MENURSSFORUM_GOFORUM", "Zum Forum");
 
-define("_AM_ADSLIGHT_MENURSSFORUM_LINK2","http://www.i-luc.fr/adslight/modules/profile/register.php#googtrans/auto/de");
-define("_AM_ADSLIGHT_MENURSSFORUM_SUBSCRIT","zeichnen");
+define("_AM_ADSLIGHT_MENURSSFORUM_LINK2", "http://www.i-luc.fr/adslight/modules/profile/register.php#googtrans/auto/de");
+define("_AM_ADSLIGHT_MENURSSFORUM_SUBSCRIT", "zeichnen");
 
 ////	RSS AdsLight News
-define("_AM_ADSLIGHT_MENURSS_TITLE","Nachrichten AdsLight");
+define("_AM_ADSLIGHT_MENURSS_TITLE", "Nachrichten AdsLight");
  
 // ../admin/view_ads.php
-define("_AM_ADSLIGHT_ADSVALIDE","Anzeigen deaktiviert");
-define("_AM_ADSLIGHT_NOANNVALADS","Es liegen noch keine Anzeigen");
-
+define("_AM_ADSLIGHT_ADSVALIDE", "Anzeigen deaktiviert");
+define("_AM_ADSLIGHT_NOANNVALADS", "Es liegen noch keine Anzeigen");
+define("_AM_ADSLIGHT_USURE", "Verschlei&#223;");
 
 // Logo Paypall Donate
 define("_AM_ADSLIGHT_DONATE_LOGO", '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">

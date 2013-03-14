@@ -1,41 +1,25 @@
 <?php
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
+
 include "header.php";
 include(XOOPS_ROOT_PATH."/modules/adslight/include/functions.php");
 $myts =& MyTextSanitizer::getInstance(); // MyTextSanitizer object
@@ -144,14 +128,14 @@ include XOOPS_ROOT_PATH."/header.php";
 		
        $prev = $min - $show;
        if ($prev>=0) {
-            $pagenav .= "<a href='replies.php?lid=$lid&min=$prev&show=$show'><b><u>&laquo;</u></b></a> ";
+            $pagenav .= "<a href='replies.php?lid=$lid&min=$prev&show=$show'><strong><u>&laquo;</u></strong></a> ";
         }
         $counter = 1;
         $currentpage = ($max / $show);
         while ( $counter<=$linkpages ) {
             $mintemp = ($show * $counter) - $show;
             if ($counter == $currentpage) {
-                $pagenav .= "<b>($counter)</b> ";
+                $pagenav .= "<strong>($counter)</strong> ";
             } else {
                 $pagenav .= "<a href='replies.php?lid=$lid&min=$mintemp&show=$show'>$counter</a> ";
             }
@@ -159,8 +143,8 @@ include XOOPS_ROOT_PATH."/header.php";
         }
         if ( $trows>$max ) {
             $pagenav .= "<a href='replies.php?lid=$lid&min=$max&show=$show'>";
-            $pagenav .= "<b><u>&raquo;</u></b></a>";
-        		}$xoopsTpl->assign('nav_page', "<b>"._ADSLIGHT_REPLY."</b>&nbsp;&nbsp; $pagenav");
+            $pagenav .= "<strong><u>&raquo;</u></strong></a>";
+        		}$xoopsTpl->assign('nav_page', "<strong>"._ADSLIGHT_REPLY."</strong>&nbsp;&nbsp; $pagenav");
  		}
 	}
 

@@ -1,45 +1,30 @@
 <?php
-// AdsLight  version 1.052 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
+
 	$mydirname = basename( dirname( dirname( __FILE__ ) ) ) ;
 	$main_lang =  '_' . strtoupper( $mydirname ) ;
 	require_once( XOOPS_ROOT_PATH."/modules/adslight/include/gtickets.php" ) ;
-$myts =& MyTextSanitizer::getInstance();
+	include_once XOOPS_ROOT_PATH.'/class/xoopstree.php';
+	$myts =& MyTextSanitizer::getInstance();
 
 
 function ExpireAd()
@@ -49,9 +34,9 @@ function ExpireAd()
 
 	$datenow = time();
 
-	$result5 = $xoopsDB->query("select lid, title, expire, type, desctext, date, email, submitter, photo, photo2, photo3, valid, hits, comments, remind FROM ".$xoopsDB->prefix("adslight_listing")." WHERE valid='Yes'");
+	$result5 = $xoopsDB->query("select lid, title, expire, type, desctext, date, email, submitter, photo, valid, hits, comments, remind FROM ".$xoopsDB->prefix("adslight_listing")." WHERE valid='Yes'");
 
-	while(list($lids, $title, $expire, $type, $desctext, $dateann, $email, $submitter, $photo, $photo2, $photo3, $valid, $hits, $comments, $remind) = $xoopsDB->fetchRow($result5)) {
+	while(list($lids, $title, $expire, $type, $desctext, $dateann, $email, $submitter, $photo, $valid, $hits, $comments, $remind) = $xoopsDB->fetchRow($result5)) {
 
 		$title = $myts->htmlSpecialChars($title);
 		$expire = $myts->htmlSpecialChars($expire);
@@ -230,7 +215,7 @@ function adslight_getTotalItems($sel_id, $status=""){
 	$count = 0;
 	$arr = array();
 	if(in_array($sel_id, $categories)) {
-		$query = "select count(*) from ".$xoopsDB->prefix("adslight_listing")." where cid=".intval($sel_id)." and valid='Yes' and status!='1'";
+		$query = "select SQL_CACHE count(*) from ".$xoopsDB->prefix("adslight_listing")." where cid=".intval($sel_id)." and valid='Yes' and status!='1'";
 		
 		$result = $xoopsDB->query($query);
 		list($thing) = $xoopsDB->fetchRow($result);
@@ -239,7 +224,7 @@ function adslight_getTotalItems($sel_id, $status=""){
 		$size = count($arr);
 		for($i=0;$i<$size;$i++){
 			if(in_array($arr[$i], $categories)) {
-				$query2 = "select count(*) from ".$xoopsDB->prefix("adslight_listing")." where cid=".intval($arr[$i])." and valid='Yes' and status!='1'";
+				$query2 = "select SQL_CACHE count(*) from ".$xoopsDB->prefix("adslight_listing")." where cid=".intval($arr[$i])." and valid='Yes' and status!='1'";
 				
 				$result2 = $xoopsDB->query($query2);
 				list($thing) = $xoopsDB->fetchRow($result2);
@@ -305,7 +290,7 @@ global $mydirname;
 	echo "if (!document.images)\n";
 	echo "return\n";
 	echo "document.images.avatar.src=\n";
-	echo "'".XOOPS_URL."/modules/adslight/images/cat/' + document.imcat.img.options[document.imcat.img.selectedIndex].value\n";
+	echo "'".XOOPS_URL."/uploads/AdsLight/img_cat/' + document.imcat.img.options[document.imcat.img.selectedIndex].value\n";
 	echo "}\n\n";
 	echo "//-->\n";
 	echo "</script>\n";
@@ -609,6 +594,52 @@ function adslight_getCatNameFromId($cid) {
 
            return $title;
        }
-       
+function adslight_gocategory() {
+global $xoopsDB;
+	
+	$xt = new XoopsTree($xoopsDB->prefix("adslight_categories"),'cid','pid');
+	$jump = XOOPS_URL."/modules/adslight/viewcats.php?cid=";
+	ob_start();
+	$xt->makeMySelBox('title','title',0,1, 'pid', "location=\"".$jump."\"+this.options[this.selectedIndex].value");
+	$block['selectbox'] = ob_get_contents();
+	ob_end_clean();
+
+    return $block;
+}
+
+// ADSLIGHT Version 2 //
+// Fonction rss.php RSS par categories
+function returnAllAdsRss(){
+	global $xoopsDB, $xoopsModuleConfig, $xoopsUser;
+	
+	$cid = !isset($_GET['cid'])? NULL : $_GET['cid'];
+	
+	$result = array() ;
+	
+	$sql = "SELECT lid, title, price, date, town FROM ".$xoopsDB->prefix("adslight_listing")." WHERE valid='yes' AND cid=".mysql_real_escape_string($cid)." ORDER BY date DESC" ;	
+	
+	$resultValues = $xoopsDB->query($sql) ;
+	while(($resultTemp = mysql_fetch_array($resultValues))!==FALSE){
+		
+		array_push($result, $resultTemp);
+	}
+	return($result);
+}
+
+// Fonction fluxrss.php RSS Global
+function returnAllAdsFluxRss(){
+	global $xoopsDB, $xoopsModuleConfig, $xoopsUser;
+	
+	$result = array() ;
+	
+	$sql = "SELECT lid, title, price, desctext, date, town FROM ".$xoopsDB->prefix("adslight_listing")." WHERE valid='yes' ORDER BY date DESC LIMIT 0,15" ;	
+	
+	$resultValues = $xoopsDB->query($sql) ;
+	while(($resultTemp = mysql_fetch_array($resultValues))!==FALSE){
+		
+		array_push($result, $resultTemp);
+	}
+	return($result);
+}       
 
 ?>

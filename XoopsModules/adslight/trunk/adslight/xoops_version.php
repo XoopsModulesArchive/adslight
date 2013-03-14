@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 	if (!defined('XOOPS_ROOT_PATH')){ exit(); }
 	
@@ -65,13 +47,14 @@ global $xoopsConfig;
     $adslight_sql = 'sql/english/mysql.sql';
  }
 
-$modversion['name'] = 'adslight';
-$modversion['version'] = '1.061';
+$modversion['name'] = 'AdsLight';
+$modversion['version'] = '2,1 Beta';
 $modversion['description'] = _MI_ADSLIGHT_DESC ;
-$modversion['credits'] = 'adslight';
-$modversion['author'] = 'iLuc **';
+$modversion['credits'] = 'AdsLight';
+$modversion['author'] = 'Luc Bizet **';
 $modversion['license'] = 'GPL';
-$modversion['official'] = '1.061';
+$modversion['license_file'] = 'http://www.gnu.org/licenses/gpl.html';
+$modversion['official'] = '2,1 Beta';
 $modversion['image'] = 'images/adslight.png';
 $modversion['dirname'] = 'adslight';
 $modversion['sqlfile']['mysql'] = $adslight_sql;
@@ -79,8 +62,8 @@ $modversion['onInstall'] = 'include/install.php';
 $modversion['onUpdate'] = 'include/update_function.php';
 
 
-$modversion["release"] = '10-05-2010';
-$modversion['support_site_url']	= 'http://www.i-luc.fr/adslight/';
+$modversion["release"] = '25-05-2011';
+$modversion['support_site_url']	= 'http://#';
 $modversion['support_site_name'] = 'AdsLight';
 
 // Tables crée depuis le fichier sql
@@ -145,6 +128,15 @@ $modversion['templates'][12]['description'] = '';
 $modversion['templates'][13]['file'] = 'adslight_maps.html';
 $modversion['templates'][13]['description'] = '';
 
+$modversion['templates'][14]['file'] = 'adslight_menu.html';
+$modversion['templates'][14]['description'] = '';
+
+$modversion['templates'][15]['file'] = 'adslight_bookmark.html';
+$modversion['templates'][15]['description'] = '';
+
+$modversion['templates'][16]['file'] = 'adslight_xpayment_form.html';
+$modversion['templates'][16]['description'] = '';
+
 // Blocs
 $modversion['blocks'][1]['file'] = 'ads.php';
 $modversion['blocks'][1]['name'] = _MI_ADSLIGHT_BNAME1;
@@ -180,7 +172,8 @@ $modversion['blocks'][4]['template'] = 'adslight_block_add.html';
 $modversion['blocks'][5]['file'] = 'maps.php';
 $modversion['blocks'][5]['name'] = _MI_ADSLIGHT_MAPFRANCE;
 $modversion['blocks'][5]['description'] = _MI_ADSLIGHT_MAPFRANCE_DESC;
-$modversion['blocks'][5]['show_func'] = 'adslight_show';
+$modversion['blocks'][5]['show_func'] = 'adslight_maps_show';
+$modversion['blocks'][5]['edit_func'] = 'adslight_maps_edit';
 $modversion['blocks'][5]['template'] = 'adslight_block_maps.html';
 
 // Menu
@@ -218,6 +211,13 @@ $modversion['comments']['callback']['update'] = 'adslight_com_update';
 
 // Préférences
 $modversion['hasconfig'] = 1;
+
+$modversion['config'][0]['name'] = 'adslight_currency';
+$modversion['config'][0]['title'] = '_MI_ADSLIGHT_CURRENCY';
+$modversion['config'][0]['description'] = '' ;
+$modversion['config'][0]['formtype'] = 'textbox' ;
+$modversion['config'][0]['valuetype'] = 'text' ;
+$modversion['config'][0]['default'] = 'EUR' ;
 
 $modversion['config'][1]['name'] = 'adslight_money';
 $modversion['config'][1]['title'] = '_MI_ADSLIGHT_MONEY';
@@ -579,19 +579,59 @@ $modversion['config'][47]['valuetype'] = 'int' ;
 $modversion['config'][47]['default'] = '0' ;
 $modversion['config'][47]['options'] = array();
 
-$modversion['config'][48]['name'] = 'adslight_tips_writetitle';
-$modversion['config'][48]['title'] = '_MI_ADSLIGHT_TITLE_TIPS_WRITE';
-$modversion['config'][48]['description'] = '_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE';
-$modversion['config'][48]['formtype'] = 'textbox' ;
-$modversion['config'][48]['valuetype'] = 'text' ;
-$modversion['config'][48]['default'] = 'Les conseils';
+$modversion['config'][48]['name'] = 'adslight_active_menu';
+$modversion['config'][48]['title'] = '_MI_ADSLIGHT_ACTIVE_MENU';
+$modversion['config'][48]['description'] = '_MI_ADSLIGHT_USEDESC_ACTIVEMENU';
+$modversion['config'][48]['formtype'] = 'yesno' ;
+$modversion['config'][48]['valuetype'] = 'int' ;
+$modversion['config'][48]['default'] = '1' ;
+$modversion['config'][48]['options'] = array();
 
-$modversion['config'][49]['name'] = 'adslight_tips_writetxt';
-$modversion['config'][49]['title'] = '_MI_ADSLIGHT_TEXT_TIPS_WRITE';
-$modversion['config'][49]['description'] = '_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE';
-$modversion['config'][49]['formtype'] = 'textarea';
-$modversion['config'][49]['valuetype'] = 'text';
-$modversion['config'][49]['default'] = 'Votre texte ici';
+$modversion['config'][49]['name'] = 'adslight_active_rss';
+$modversion['config'][49]['title'] = '_MI_ADSLIGHT_ACTIVE_RSS';
+$modversion['config'][49]['description'] = '_MI_ADSLIGHT_USEDESC_ACTIVERSS';
+$modversion['config'][49]['formtype'] = 'yesno' ;
+$modversion['config'][49]['valuetype'] = 'int' ;
+$modversion['config'][49]['default'] = '1' ;
+$modversion['config'][49]['options'] = array();
+
+$modversion['config'][50]['name'] = 'adslight_active_bookmark';
+$modversion['config'][50]['title'] = '_MI_ADSLIGHT_ACTIVE_BOOKMARK';
+$modversion['config'][50]['description'] = '_MI_ADSLIGHT_USEDESC_ACTIVEBOOKMARK';
+$modversion['config'][50]['formtype'] = 'yesno' ;
+$modversion['config'][50]['valuetype'] = 'int' ;
+$modversion['config'][50]['default'] = '1' ;
+$modversion['config'][50]['options'] = array();
+
+$modversion['config'][51]['name'] = 'adslight_style_bookmark';
+$modversion['config'][51]['title'] = '_MI_ADSLIGHT_STBOOKMARK';
+$modversion['config'][51]['description'] = '_MI_ADSLIGHT_DESC_STBOOKMARK' ;
+$modversion['config'][51]['formtype'] = 'select' ;
+$modversion['config'][51]['valuetype'] = 'int' ;
+$modversion['config'][51]['default'] = '1' ;
+$modversion['config'][51]['options'] = array('1'=>1, '2'=>2, '3'=>3) ;
+
+$modversion['config'][52]['name'] = 'adslight_tips_writetitle';
+$modversion['config'][52]['title'] = '_MI_ADSLIGHT_TITLE_TIPS_WRITE';
+$modversion['config'][52]['description'] = '_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE';
+$modversion['config'][52]['formtype'] = 'textbox' ;
+$modversion['config'][52]['valuetype'] = 'text' ;
+$modversion['config'][52]['default'] = 'Les conseils';
+
+$modversion['config'][53]['name'] = 'adslight_tips_writetxt';
+$modversion['config'][53]['title'] = '_MI_ADSLIGHT_TEXT_TIPS_WRITE';
+$modversion['config'][53]['description'] = '_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE';
+$modversion['config'][53]['formtype'] = 'textarea';
+$modversion['config'][53]['valuetype'] = 'text';
+$modversion['config'][53]['default'] = 'Votre texte ici';
+
+$modversion['config'][54]['name'] = 'adslight_active_xpayment';
+$modversion['config'][54]['title'] = '_MI_ADSLIGHT_ACTIVE_XPAYMENT';
+$modversion['config'][54]['description'] = '_MI_ADSLIGHT_TEXTDESC_XPAYMENT';
+$modversion['config'][54]['formtype'] = 'yesno' ;
+$modversion['config'][54]['valuetype'] = 'int' ;
+$modversion['config'][54]['default'] = '0' ;
+$modversion['config'][54]['options'] = array();
 
 //Notifications
 $modversion['hasNotification'] = 1;

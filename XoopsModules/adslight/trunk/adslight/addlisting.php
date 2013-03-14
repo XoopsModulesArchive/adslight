@@ -1,49 +1,30 @@
 <?php
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 include "header.php";
 $myts =& MyTextSanitizer::getInstance();// MyTextSanitizer object
 require_once XOOPS_ROOT_PATH."/modules/adslight/include/gtickets.php";
 include_once XOOPS_ROOT_PATH."/modules/adslight/class/classifiedstree.php";
 include_once XOOPS_ROOT_PATH."/class/module.errorhandler.php";
 include "include/functions.php";
-include_once XOOPS_ROOT_PATH."/class/captcha/xoopscaptcha.php"; 
-
 
 $erh = new ErrorHandler; //ErrorHandler object
 
@@ -85,12 +66,6 @@ $erh = new ErrorHandler; //ErrorHandler object
 	if ( ! $xoopsGTicket->check( true , 'token' ) ) {
 		redirect_header(XOOPS_URL.'/',3,$xoopsGTicket->getErrors());
 	}
-
-    xoops_load("xoopscaptcha");
-    $xoopsCaptcha = XoopsCaptcha::getInstance();
-    if( !$xoopsCaptcha->verify() ) {
-        redirect_header( XOOPS_URL . "/modules/adslight/index.php", 2, $xoopsCaptcha->getMessage() );
-    }
 
 
 if ($_POST["title"]=="") {
@@ -227,9 +202,9 @@ if ($addphotonow) {
 	$member_email =$xoopsUser->getVar("email", "E");
 	$member_uname =$xoopsUser->getVar("uname", "E");
 
-	$result = $xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
-	$result1 = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
-	$result3 = $xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by id_usure");
+	$result = $xoopsDB->query("select id_type, nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
+	$result1 = $xoopsDB->query("select id_price, nom_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
+	$result3 = $xoopsDB->query("select id_usure, nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by id_usure");
 
 	ob_start();
 	$form = new XoopsThemeForm(_ADSLIGHT_ADD_LISTING, 'submitform', 'addlisting.php');
@@ -305,13 +280,13 @@ if ($premium == 1) {
 	
 /// Type d'annonce
     $type_form= new XoopsFormSelect(_ADSLIGHT_TYPE, "type", "", "1");
-	while (list($nom_type) = $xoopsDB->fetchRow($result)) {
-	$type_form->addOption($nom_type, $nom_type);
+	while (list($nom_type, $id_type) = $xoopsDB->fetchRow($result)) {
+	$type_form->addOption($nom_type, $id_type);
 	}
 /// Etat de l'objet		
 	$usure_form= new XoopsFormSelect(_ADSLIGHT_TYPE_USURE, "typeusure", "", "1");
-	while (list($nom_usure) = $xoopsDB->fetchRow($result3)) {
-	$usure_form->addOption($nom_usure, $nom_usure);
+	while (list($nom_usure, $id_usure) = $xoopsDB->fetchRow($result3)) {
+	$usure_form->addOption($nom_usure, $id_usure);
 	}
 	
 	$form->addElement($type_form, true);
@@ -320,23 +295,24 @@ if ($premium == 1) {
 	$form->addElement(new XoopsFormText(_ADSLIGHT_TITLE2, "title", 40, 50, ""), true);
 	$form->addElement(adslight_getEditor(_ADSLIGHT_DESC, "desctext", "", "100%", "300px",""), true);
 	$form->addElement(new XoopsFormText(_ADSLIGHT_PRICE2 , "price", 40, 50, ""), true);
-	
+/// Type de prix	
 	$sel_form= new XoopsFormSelect(_ADSLIGHT_PRICETYPE, "typeprice", "", "1");
-	while (list($nom_price) = $xoopsDB->fetchRow($result1)) {
-	$sel_form->addOption($nom_price, $nom_price);
+	while (list($nom_price, $id_price) = $xoopsDB->fetchRow($result1)) {
+	$sel_form->addOption($nom_price, $id_price);
 	}
+	
 	$form->addElement($sel_form);
 	$contactby_form= new XoopsFormSelect(_ADSLIGHT_CONTACTBY, "contactby", "", "1");
-	$contactby_form->addOption(_ADSLIGHT_CONTACT_BY_EMAIL, _ADSLIGHT_CONTACT_BY_EMAIL);
-	$contactby_form->addOption(_ADSLIGHT_CONTACT_BY_PM, _ADSLIGHT_CONTACT_BY_PM);
-	$contactby_form->addOption(_ADSLIGHT_CONTACT_BY_BOTH, _ADSLIGHT_CONTACT_BY_BOTH);
-	$contactby_form->addOption(_ADSLIGHT_CONTACT_BY_PHONE, _ADSLIGHT_CONTACT_BY_PHONE);
+	$contactby_form->addOption(1, _ADSLIGHT_CONTACT_BY_EMAIL);
+	$contactby_form->addOption(2, _ADSLIGHT_CONTACT_BY_PM);
+	$contactby_form->addOption(3, _ADSLIGHT_CONTACT_BY_BOTH);
+	$contactby_form->addOption(4, _ADSLIGHT_CONTACT_BY_PHONE);
 	$form->addElement($contactby_form, true);
 	$form->addElement(new XoopsFormRadioYN(_ADSLIGHT_ADD_PHOTO_NOW, 'addphotonow', 1));
 
-if ($xoopsModuleConfig["adslight_use_captcha"] == '1') {
-	$form->addElement(new XoopsFormCaptcha(_ADSLIGHT_CAPTCHA, "xoopscaptcha", false), true);
-}
+//if ($xoopsModuleConfig["adslight_use_captcha"] == '1') {
+//	$form->addElement(new XoopsFormCaptcha(_ADSLIGHT_CAPTCHA, "xoopscaptcha", false), true);
+//}
 
 if ($premium != "0") {
 	$form->addElement(new XoopsFormHidden("premium","yes"), false);

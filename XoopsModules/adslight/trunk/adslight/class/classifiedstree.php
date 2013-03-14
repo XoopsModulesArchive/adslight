@@ -1,41 +1,24 @@
 <?php
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 			
 class ClassifiedsTree
 {
@@ -71,6 +54,7 @@ function getFirstChild($sel_id, $order="")
 		if ( $order != '' ) {
 			$sql .= " ORDER BY $order";
 		}
+		
 		$result = $this->db->query($sql);
 		$count = $this->db->getRowsNum($result);
 		if ( $count==0 ) {
@@ -236,10 +220,10 @@ function getNicePathFromId($sel_id, $title, $funcURL, $path="")
 		list($parentid,$name) = $this->db->fetchRow($result);
 		$myts =& MyTextSanitizer::getInstance();
 		$name = $myts->htmlSpecialChars($name);
-
+		
 		$arrow = '<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="&raquo;" />';
 
-		$path = '&nbsp;&nbsp;'.$arrow.'&nbsp;&nbsp;<a href="'.$funcURL.''.$this->id.'='.mysql_real_escape_string($sel_id).'">'.$name.'</a>'.$path.'';
+		$path = '&nbsp;&nbsp;'.$arrow.'&nbsp;&nbsp;<a title="'._ADSLIGHT_ANNONCES.' '.$name.'" href="'.$funcURL.''.$this->id.'='.mysql_real_escape_string($sel_id).'">'.$name.'</a>'.$path.'';
 		
 		if ( $parentid == 0 ) {
 			return $path;
@@ -276,6 +260,7 @@ function getAllChild($sel_id=0,$order='',$parray = array())
 		if ( $order != '' ) {
 			$sql .= ' ORDER BY '.$order.'';
 		}
+		
 		$result = $this->db->query($sql);
 		$count = $this->db->getRowsNum($result);
 		if ( $count == 0 ) {
@@ -330,19 +315,17 @@ function makeAdSelBox($title,$order="",$preset_id=0, $none=0, $sel_name="", $onc
 		$result = $xoopsDB->query($sql);
 		while ( list($catid, $name, $ordre) = $xoopsDB->fetchRow($result) ) {
 		
-		    echo '<br/>&nbsp;&nbsp;&nbsp;
-		    <a href="category.php?op=AdsNewCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a>&nbsp;&nbsp;&nbsp;
-			<a href="category.php?op=AdsModCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/modif.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a>&nbsp;&nbsp;&nbsp;
-			<a href="category.php?op=AdsDelCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/del.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'"></a>';
-            
+  
             echo '<table width="100%" border="0" class="outer"><tr>
-            	<th align="left">&nbsp;'.$name.'&nbsp;&nbsp;</th>
-				<th align="center" width="10%"></th>
-				<th align="center" width="10%"></th>
-				<th align="center" width="10%"></th>
+            	<th align="left">';
+            if ($xoopsModuleConfig['adslight_csortorder'] == 'ordre') { echo '('.$ordre.')'; }
+            echo '&nbsp;&nbsp;'.$name.'&nbsp;&nbsp;</th>
+				<th align="center" width="10%"><a href="category.php?op=AdsNewCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.png" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></th>
+				<th align="center" width="10%"><a href="category.php?op=AdsModCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/modif.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></th>
+				<th align="center" width="10%"><a href="category.php?op=AdsDelCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/del.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'"></a></th>
 				</tr>';
 			
-			if ($xoopsModuleConfig['adslight_csortorder'] == 'ordre') { echo '('.$ordre.')'; }
+			
 			
 			$arr = $this->getChildTreeMapArray($catid, $order);
 			$class = 'odd';
@@ -352,14 +335,14 @@ function makeAdSelBox($title,$order="",$preset_id=0, $none=0, $sel_name="", $onc
 				$option['prefix'] = str_replace("."," &nbsp;&nbsp;-&nbsp;",$option['prefix']);
 				$catpath = $option['prefix']."&nbsp;&nbsp;".$myts->htmlSpecialChars($option[$title]);
 				$ordreS = $option['ordre'];
-				
+				if ($xoopsModuleConfig["adslight_csortorder"] == 'ordre') { echo '('.$ordreS.')'; }	
 				echo ''.$catpath.'</a></td>
-					<td align="center"><a href="category.php?op=AdsNewCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></td>
+					<td align="center"><a href="category.php?op=AdsNewCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.png" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></td>
 					<td align="center"><a href="category.php?op=AdsModCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/modif.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></td>
 					<td align="center"><a href="category.php?op=AdsDelCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/del.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'"></a></td>';
 				 
 				$class = ($class == 'even') ? 'odd' : 'even';
-				if ($xoopsModuleConfig["adslight_csortorder"] == 'ordre') { echo '('.$ordreS.')'; }				
+							
 				
 			} 
 			echo '</td></tr></table><br />';

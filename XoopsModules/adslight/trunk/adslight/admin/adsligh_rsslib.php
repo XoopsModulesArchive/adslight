@@ -1,21 +1,23 @@
 <?php
 /*
-	RSS Extractor and Displayer
-	(c) 2007-2010  Scriptol.com - Licence Mozilla 1.1.
-	rsslib.php
-	
-	Requirements:
-	- PHP 5.
-	- A RSS feed.
-	
-	Using the library:
-	Insert this code into the page that displays the RSS feed:
-	
-	<?php
-	require_once("rsslib.php");
-	echo RSS_Display("http://www.xul.fr/rss.xml", 15);
-	? >
-	
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
 */
 
 $RSS_Content = array();

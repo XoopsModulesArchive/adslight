@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.052 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include("header.php");
 $mydirname = basename( dirname( __FILE__ ) ) ;
@@ -93,7 +75,7 @@ function ListingDel($lid, $ok)
 			} else {
 				echo "<table width='100%' border='0' cellspacing='1' cellpadding='8'><tr class='bg4'><td valign='top'>\n";
 				echo "<br /><center>";
-				echo "<b>"._ADSLIGHT_SURDELANN."</b><br /><br />";
+				echo "<strong>"._ADSLIGHT_SURDELANN."</strong><br /><br />";
 			}
 			echo "[ <a href=\"modify.php?op=ListingDel&amp;lid=".addslashes($lid)."&amp;ok=1\">"._ADSLIGHT_OUI."</a> | <a href=\"index.php\">"._ADSLIGHT_NON."</a> ]<br /><br />";
 			echo "</td></tr></table>";
@@ -118,7 +100,7 @@ function DelReply($r_lid, $ok)
 			} else {
 				echo "<table width='100%' border='0' cellspacing='1' cellpadding='8'><tr class='bg4'><td valign='top'>\n";
 				echo "<br /><center>";
-				echo "<b>"._ADSLIGHT_SURDELANN."</b><br /><br />";
+				echo "<strong>"._ADSLIGHT_SURDELANN."</strong><br /><br />";
 			}
 			echo "[ <a href=\"modify.php?op=DelReply&amp;r_lid=".addslashes($r_lid)."&amp;ok=1\">"._ADSLIGHT_OUI."</a> | <a href=\"members.php?usid=".addslashes($usid)."\">"._ADSLIGHT_NON."</a> ]<br /><br />";
 			echo "</td></tr></table>";
@@ -193,12 +175,18 @@ function ModAd($lid)
 	echo "<td class=\"head\">"._ADSLIGHT_SENDBY." </td><td class=\"head\"><input type=\"hidden\" name=\"submitter\" value=\"$submitter\">$submitter</td>";
 	}
 	echo "</tr><tr>";
+	
+	if ($contactby == 4) { $contactselect = _ADSLIGHT_CONTACT_BY_EMAIL; }
+	if ($contactby == 3) { $contactselect = _ADSLIGHT_CONTACT_BY_PM; }
+	if ($contactby == 2) { $contactselect = _ADSLIGHT_CONTACT_BY_BOTH; }
+	if ($contactby == 1) { $contactselect = _ADSLIGHT_CONTACT_BY_PHONE; }
+	
 	echo " <td class='head'>"._ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
-	<option value=\"".$contactby."\">".$contactby."</option>
-	<option value=\""._ADSLIGHT_CONTACT_BY_EMAIL."\">"._ADSLIGHT_CONTACT_BY_EMAIL."</option>
-	<option value=\""._ADSLIGHT_CONTACT_BY_PM."\">"._ADSLIGHT_CONTACT_BY_PM."</option>
-	<option value=\""._ADSLIGHT_CONTACT_BY_BOTH."\">"._ADSLIGHT_CONTACT_BY_BOTH."</option>
-	<option value=\""._ADSLIGHT_CONTACT_BY_PHONE."\">"._ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
+	<option value=\"".$contactby."\">".$contactselect."</option>
+	<option value=\"4\">"._ADSLIGHT_CONTACT_BY_EMAIL."</option>
+	<option value=\"3\">"._ADSLIGHT_CONTACT_BY_PM."</option>
+	<option value=\"2\">"._ADSLIGHT_CONTACT_BY_BOTH."</option>
+	<option value=\"1\">"._ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
 
 	if ($xoopsModuleConfig["adslight_diff_email"] == '1') {
 			
@@ -236,11 +224,18 @@ function ModAd($lid)
 	echo "<tr>
 	<td class=\"head\">"._ADSLIGHT_TITLE2." </td><td class=\"head\"><input type=\"text\" name=\"title\" size=\"50\" value=\"$title\" /></td>
 	</tr>";
-	echo "<tr><td class=\"head\">"._ADSLIGHT_PRICE2." </td><td class=\"head\">". $xoopsModuleConfig["adslight_money"]."<input type=\"text\" name=\"price\" size=\"20\" value=\"$price\" />";
-	$result3 = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
-	echo " <select name=\"typeprice\"><option value=\"$typeprice\">$typeprice</option>";
-	while(list($nom_price) = $xoopsDB->fetchRow($result3)) {
-	echo "<option value=\"$nom_price\">$nom_price</option>";
+	echo "<tr><td class=\"head\">"._ADSLIGHT_PRICE2." </td><td class=\"head\"><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\" /> ". $xoopsModuleConfig["adslight_money"];
+	
+	
+	
+	$result3 = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
+	echo " <select name=\"typeprice\">";
+	while(list($nom_price, $id_price) = $xoopsDB->fetchRow($result3)) {
+	$sel = "";
+	if ($id_price == $typeprice) {
+	$sel = "selected";
+	}
+	echo "<option value=\"$id_price\" $sel>$nom_price</option>";
 	}
 	echo "</select></td></tr>";
 	$module_id = $xoopsModule->getVar('mid');
@@ -266,17 +261,20 @@ function ModAd($lid)
 	<td width='30%' class='head'>"._ADSLIGHT_HOW_LONG." </td><td class='head'><input type=\"text\" name=\"expire\" size=\"3\" maxlength=\"3\" value=\"$expire\" />  "._ADSLIGHT_DAY."</td>
 	</tr>";
 	}
+	
+
+	
 /// Type d'annonce	
 	echo "<tr>
 	<td class=\"head\">"._ADSLIGHT_TYPE." </td><td class=\"head\"><select name=\"type\">";
 		
-	$result5=$xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
-	while(list($nom_type) = $xoopsDB->fetchRow($result5)) {
+	$result5=$xoopsDB->query("select nom_type, id_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
+	while(list($nom_type, $id_type) = $xoopsDB->fetchRow($result5)) {
 	$sel = "";
-	if ($nom_type == $type) {
+	if ($id_type == $type) {
 	$sel = "selected";
 	}
-	echo "<option value=\"$nom_type\" $sel>$nom_type</option>";
+	echo "<option value=\"$id_type\" $sel>$nom_type</option>";
 	}
 	echo "</select></td></tr>";
 
@@ -284,13 +282,13 @@ function ModAd($lid)
 	echo "<tr>
 	<td class=\"head\">"._ADSLIGHT_TYPE_USURE." </td><td class=\"head\"><select name=\"typeusure\">";
 		
-	$result6=$xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
-	while(list($nom_usure) = $xoopsDB->fetchRow($result6)) {
+	$result6=$xoopsDB->query("select nom_usure, id_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
+	while(list($nom_usure, $id_usure) = $xoopsDB->fetchRow($result6)) {
 	$sel = "";
-	if ($nom_usure == $typeusure) {
+	if ($id_usure == $typeusure) {
 	$sel = "selected";
 	}
-	echo "<option value=\"$nom_usure\" $sel>$nom_usure</option>";
+	echo "<option value=\"$id_usure\" $sel>$nom_usure</option>";
 	}
 	echo "</select></td></tr>";	
 	

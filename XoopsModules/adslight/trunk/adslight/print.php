@@ -1,41 +1,24 @@
 <?php
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
+
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.luc-bizet.fr
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 include("header.php");
 require_once( XOOPS_ROOT_PATH."/modules/adslight/include/gtickets.php" ) ;
@@ -64,6 +47,8 @@ function PrintAd($lid)
     echo "
     <html>
     <head><title>".$xoopsConfig['sitename']."</title>
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+	<meta http-equiv=\”robots\” content=\"noindex, nofollow, noarchive\" />
 	<link rel=\"StyleSheet\" href=\"../../themes/".$currenttheme."/style/style.css\" type=\"text/css\">
 	</head>
     <body bgcolor=\"#FFFFFF\" text=\"#000000\">
@@ -89,25 +74,25 @@ function PrintAd($lid)
 	    <tr>
       <td>"._ADSLIGHT_CLASSIFIED." (No. $lid ) <br />"._ADSLIGHT_FROM." $submitter <br /><br />";
 	
-	echo " <b>$type :</b> <i>$title</i><br />";
+	echo " <strong>$type :</strong> <i>$title</i><br />";
 	if ($price > 0) {
-		echo"<b>"._ADSLIGHT_PRICE2."</b> $price ". $xoopsModuleConfig["adslight_money"]."  - $typeprice<br />";
+		echo"<strong>"._ADSLIGHT_PRICE2."</strong> $price ". $xoopsModuleConfig["adslight_money"]."  - $typeprice<br />";
 	}
 	if ($photo) {     
-		echo "<tr><td><left><img class=\"thumb\" src=\"".XOOPS_URL."/uploads/AdsLight/$url\" width=\"130px\" border=0></center>";
+		echo "<tr><td><left><img class=\"thumb\" src=\"".XOOPS_URL."/uploads/AdsLight/$url\" width=\"130px\" border=0 /></center>";
 	}
 	echo "</td>
 	      </tr>
     <tr>
-      <td><b>"._ADSLIGHT_DESC."</b><br /><br /><div style=\"text-align:justify;\">$desctext</div><p>";
+      <td><strong>"._ADSLIGHT_DESC."</strong><br /><br /><div style=\"text-align:justify;\">$desctext</div><p>";
 	if ($tel) {
-		echo "<br /><b>"._ADSLIGHT_TEL."</b> $tel";
+		echo "<br /><strong>"._ADSLIGHT_TEL."</strong> $tel";
 	}
 	if ($town) {
-		echo "<br /><b>"._ADSLIGHT_TOWN."</b> $town";
+		echo "<br /><strong>"._ADSLIGHT_TOWN."</strong> $town";
 	}
 	if ($country) {
-		echo "<br /><b>"._ADSLIGHT_COUNTRY."</b> $country";
+		echo "<br /><strong>"._ADSLIGHT_COUNTRY."</strong> $country";
 	}
 	echo "<hr />";
 	echo ""._ADSLIGHT_NOMAIL." <br />".XOOPS_URL."/modules/adslight/viewads.php?lid=".addslashes($lid)."<br />";
@@ -117,7 +102,7 @@ function PrintAd($lid)
 	</table>";
 	echo "<br /><br /></td></tr></table></td></tr></table>
     <br /><br /><center>
-    "._ADSLIGHT_EXTRANN." <b>".$xoopsConfig['sitename']."</b><br />
+    "._ADSLIGHT_EXTRANN." <strong>".$xoopsConfig['sitename']."</strong><br />
     <a href=\"".XOOPS_URL."/modules/adslight/\">".XOOPS_URL."/modules/adslight/</a>
     </td></tr></table>
     </body>

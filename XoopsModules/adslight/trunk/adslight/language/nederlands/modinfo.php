@@ -1,42 +1,24 @@
 <?php
+/*
+-------------------------------------------------------------------------
+                     ADSLIGHT 2 : Module for Xoops                           
 
-// AdsLight  version 1.0.60 $Id$    //
-// ------------------------------------------------------------------------- //
-//                     AdsLight Module for Xoops                             //
-// ------------------------------------------------------------------------- //
-//         Redesigned and ameliorate By iluc user at www.frxoops.org         //
-//          Find it or report problems at www.i-luc.fr/adslight/             //
-//      Started with the Classifieds module and made MANY changes            //
-// ------------------------------------------------------------------------- //
-//              Original credits below Version History                       //
-// ------------------------------------------------------------------------- //
-//                    Classified Module for Xoops                            //
-//  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com            //
-//      Started with the MyAds module and made MANY changes                  //
-// ------------------------------------------------------------------------- //
-// Original Author: Pascal Le Boustouller                                    //
-// Author Website : pascal.e-xoops@perso-search.com                          //
-// Licence Type   : GPL                                                      //
-// ------------------------------------------------------------------------- //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
+        Redesigned and ameliorate By iluc user at www.frxoops.org
+		Started with the Classifieds module and made MANY changes 
+        Website : http://www.limonads.com
+        Contact : adslight.translate@gmail.com
+-------------------------------------------------------------------------
+             Original credits below Version History                       
+##########################################################################
+#                    Classified Module for Xoops                         #
+#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
+#      Started with the MyAds module and made MANY changes               #
+##########################################################################
+ Original Author: Pascal Le Boustouller                                   
+ Author Website : pascal.e-xoops@perso-search.com                         
+ Licence Type   : GPL                                                     
+------------------------------------------------------------------------- 
+*/
 
 // The name of this module
 define("_MI_ADSLIGHT_NAME ","Marktplaats");
@@ -52,18 +34,18 @@ define("_MI_ADSLIGHT_BNAME2","Top Advertenties");
 define("_MI_ADSLIGHT_BNAME2_DESC","Top Advertentielijst");
 
 // Names of admin menu items
-define("_MI_ADSLIGHT_ADMENU0","Hoofdmenu");
-define("_MI_ADSLIGHT_ADMENU1","Categorie beheer");
-define("_MI_ADSLIGHT_ADMENU2","Rechten");
-define("_MI_ADSLIGHT_ADMENU3","Blokken");
-define("_MI_ADSLIGHT_ADMENU4","Voorkeuren");
-define("_MI_ADSLIGHT_ADMENU5","Opties");
-define("_MI_ADSLIGHT_ADMENU6","Importeren");
-define("_MI_ADSLIGHT_ADMENU7","Over");
-define("_MI_ADSLIGHT_ADMENU8","Documenten");
-define("_MI_ADSLIGHT_ADMENU9","ga naar de module");
-define("_MI_ADSLIGHT_ADMENU10","Updated");
-define("_MI_ADSLIGHT_ADMENU11","Support Forum");
+define("_MI_ADSLIGHT_ADMENU0", "Hoofdmenu");
+define("_MI_ADSLIGHT_ADMENU1", "Categorie beheer");
+define("_MI_ADSLIGHT_ADMENU2", "Rechten");
+define("_MI_ADSLIGHT_ADMENU3", "Blokken");
+define("_MI_ADSLIGHT_ADMENU4", "Voorkeuren");
+define("_MI_ADSLIGHT_ADMENU5", "Opties");
+define("_MI_ADSLIGHT_ADMENU6", "Importeren");
+define("_MI_ADSLIGHT_ADMENU7", "Over");
+define("_MI_ADSLIGHT_ADMENU8", "Documenten");
+define("_MI_ADSLIGHT_ADMENU9", "ga naar de module");
+define("_MI_ADSLIGHT_ADMENU10", "Updated");
+define("_MI_ADSLIGHT_ADMENU11", "Support Forum");
 
 
 define("_MI_ADSLIGHT_CONFSAVE","Configuratie bewaard");
@@ -108,20 +90,20 @@ define("_MI_ADSLIGHT_DBUPDATED", 'De database is geupdated.');
 define("_MI_ADSLIGHT_GPERM_G_ADD" , "Kan toevoegen" ) ;
 define("_MI_ADSLIGHT_CAT2GROUPDESC" , "Comtroleer categorieen waar je toegang toe hebt" ) ;
 define("_MI_ADSLIGHT_GROUPPERMDESC" , "Selecteer group(en) welke advertenties mogen toevoegen." ) ;
-define("_MI_ADSLIGHT_GROUPPERM","Verzend rechten");
-define("_MI_ADSLIGHT_SUBMITFORM","Advertentie verzend rechten");
-define("_MI_ADSLIGHT_SUBMITFORM_DESC","Selecteer, who can submit Ads");
-define("_MI_ADSLIGHT_VIEWFORM","View Ads Permissions");
-define("_MI_ADSLIGHT_VIEWFORM_DESC","Select, wie advertenties kan bekijken");
-define("_MI_ADSLIGHT_VIEW_RESUMEFORM_DESC","Select, who can view resumes");
-define("_MI_ADSLIGHT_SUPPORT","Ondersteun this software");
-define("_MI_ADSLIGHT_OP","Lees mijn opinie");
-define("_MI_ADSLIGHT_PREMIUM","Advertentie Premium");
-define("_MI_ADSLIGHT_PREMIUM_DESC","Wie mag het aantal 'te tonen' dagen wijzigen?");
+define("_MI_ADSLIGHT_GROUPPERM", "Verzend rechten");
+define("_MI_ADSLIGHT_SUBMITFORM", "Advertentie verzend rechten");
+define("_MI_ADSLIGHT_SUBMITFORM_DESC", "Selecteer wie advertienties kunnen toevoegen");
+define("_MI_ADSLIGHT_VIEWFORM", "Bekijk advertentierechten");
+define("_MI_ADSLIGHT_VIEWFORM_DESC", "Select, wie advertenties kan bekijken");
+define("_MI_ADSLIGHT_VIEW_RESUMEFORM_DESC", "Selecteer wie verlengde advertenties kan bekijken");
+define("_MI_ADSLIGHT_SUPPORT", "Ondersteun this software");
+define("_MI_ADSLIGHT_OP", "Lees mijn opinie");
+define("_MI_ADSLIGHT_PREMIUM", "Advertentie Premium");
+define("_MI_ADSLIGHT_PREMIUM_DESC", "Wie mag het aantal 'te tonen' dagen wijzigen?");
 
 define("_MI_ADSLIGHT_CATEGORY_NOTIFY", 'Categorie'); 
 define("_MI_ADSLIGHT_CATEGORY_NOTIFYDSC", 'Notificatie opties welke betrekking hebben op de huidige categorie.');
-define("_MI_ADSLIGHT_NOTIFY","Advertenties"); 
+define("_MI_ADSLIGHT_NOTIFY", "Advertenties"); 
 define("_MI_ADSLIGHT_NOTIFYDSC", 'Notificatie opties welke betrekking hebben op de huidige advertentie.');	
 define("_MI_ADSLIGHT_GLOBAL_NOTIFY", 'Gehele module ');
 define("_MI_ADSLIGHT_GLOBAL_NOTIFYDSC", 'Globale notificatie opties.');
@@ -178,18 +160,18 @@ define("_MI_ADSLIGHT_ORIGW_TITLE" , "Maximum orgineel afbeeldings breedte");
 define("_MI_ADSLIGHT_ORIGW_DESC" , "Maximaal orgineel afbeeldings breedte in pixels<br />Betekent dat het orgineel deze breedte <br />niet mag overschrijven<br />anders zal deze niet worden geuploaded");
 define("_MI_ADSLIGHT_ORIGH_TITLE" , "Maximum orgineel afbeeldings hoogte");
 define("_MI_ADSLIGHT_ORIGH_DESC" , "Maximaal orgineel afbeeldings hoogte in pixels<br />Betekent dat het orgineel deze hoogte <br />niet mag overschrijven<br />anders zal deze niet worden geuploaded");
-define("_MI_ADSLIGHT_UPLOAD_TITLE" , "Path Uploads");
-define("_MI_ADSLIGHT_UPLOAD_DESC" , "Path to your uploads directory<br />in linux should look like /var/www/uploads<br />in windows like C:/Program Files/www");
-define("_MI_ADSLIGHT_LINKUPLOAD_TI","Link to your uploads directory");
-define("_MI_ADSLIGHT_LINKUPLOAD_DE","This is the address of the root of your uploads <br />like http://www.yoursite.com/uploads");
-define("_MI_ADSLIGHT_MAXFILEBYTES_T","Max size in bytes");
+define("_MI_ADSLIGHT_UPLOAD_TITLE" , "Uploads pad");
+define("_MI_ADSLIGHT_UPLOAD_DESC" , "Pad naar uw uploads directory<br />in linux  /var/www/uploads<br />in windows  C:/Program Files/www");
+define("_MI_ADSLIGHT_LINKUPLOAD_TI","Link naar uw uploads directory");
+define("_MI_ADSLIGHT_LINKUPLOAD_DE","Dit is het adres naat de map van uw uploads <br />bv. http://www.yoursite.com/uploads");
+define("_MI_ADSLIGHT_MAXFILEBYTES_T","Max grootte in bytes");
 define("_MI_ADSLIGHT_MAXFILEBYTES_D","This the maximum size a file of your pictue can have in bytes <br />like 512000 for 500 KB");
-define("_MI_ADSLIGHT_EDITOR","Editor to use:");
-define("_MI_ADSLIGHT_LIST_EDITORS","Select the editor to use.");
-define("_MI_ADSLIGHT_LIGHTBOX","Lightbox effects");
-define("_MI_ADSLIGHT_LIGHTBOX_DESC","Use the lightbox effects when viewing photos.");
-define("_MI_ADSLIGHT_USE_COUNTRY" ,"Use the Country Field");
-define("_MI_ADSLIGHT_USE_COUNTRY_DESC" ,"If set to 'No' the Country Field will not be shown");
+define("_MI_ADSLIGHT_EDITOR","Gebruik editor:");
+define("_MI_ADSLIGHT_LIST_EDITORS","Selecteer de toegewezen editor.");
+define("_MI_ADSLIGHT_LIGHTBOX","Lightbox effecten");
+define("_MI_ADSLIGHT_LIGHTBOX_DESC","Gebruik het lightbox effects voor het bekijken van fotos.");
+define("_MI_ADSLIGHT_USE_COUNTRY" ,"Gebruik het land veld");
+define("_MI_ADSLIGHT_USE_COUNTRY_DESC" ,"Als 'Nee' het uw land veld zal niet getoond worden");
 define("_MI_ADSLIGHT_SOLD_DAYS","Listing Duration after marked Sold");
 define("_MI_ADSLIGHT_SOLDINDAYS","in days");
 define("_MI_ADSLIGHT_ALMOST","When to send notice that the ad is about to expire");
@@ -198,14 +180,14 @@ define("_MI_ADSLIGHT_MAIN_CAT","Allow users to add listings in the main categori
 define("_MI_ADSLIGHT_MAIN_CAT_DESC","or just allow adding listings in sub-categoreies");
 define("_MI_ADSLIGHT_ADMIN_EDITOR","Editor to use for admin:");
 define("_MI_ADSLIGHT_LIST_ADMIN_EDITORS","Select the editor to use on the admin side.");
-define("_MI_ADSLIGHT_CAT_DESC","Category Description");
-define("_MI_ADSLIGHT_DESC_CAT_DESC","Add a description for each category.");
+define("_MI_ADSLIGHT_CAT_DESC", "Category Description");
+define("_MI_ADSLIGHT_DESC_CAT_DESC", "Add a description for each category.");
 define("_MI_ADSLIGHT_MUST_ADD_CAT","You must add a category first.");
 define("_MI_ADSLIGHT_BNAME3","Recent Listings w/Photo");
 define("_MI_ADSLIGHT_BNAME3_DESC","Recent Listings w/Photo Block");
 define("_MI_ADSLIGHT_BNAME4","Top Listings w/Photo");
 define("_MI_ADSLIGHT_BNAME4_DESC","Top Listings w/Photo Block");
-define("_MI_ADSLIGHT_USE_CAPTCHA" ,"Use Captcha");
+define("_MI_ADSLIGHT_USE_CAPTCHA" ,"Gebruik Captcha");
 
 // Menu AdsLight
 define("_MI_ADSLIGHT_SMENU1","Uw advertenties");
@@ -213,17 +195,17 @@ define("_MI_ADSLIGHT_SMENU2","Verzend");
 define("_MI_ADSLIGHT_SMENU3","Zoek"); 
 
 // support.php 
-define("_MI_ADSLIGHT_SUPPORT01"," If you wish to suggest an improvement:<br /><br />- A correction<br />- A translation<br />- A suggestion<br />- Report a Bug<br />");
-define("_MI_ADSLIGHT_SUPPORT02","Join us at the Support Forum AdsLight");
-define("_MI_ADSLIGHT_SUPPORT03","> Support Forum AdsLight <");
+define("_MI_ADSLIGHT_SUPPORT01", " If you wish to suggest an improvement:<br /><br />- A correction<br />- A translation<br />- A suggestion<br />- Report a Bug<br />");
+define("_MI_ADSLIGHT_SUPPORT02", "Join us at the Support Forum AdsLight");
+define("_MI_ADSLIGHT_SUPPORT03", "> Support Forum AdsLight <");
 
 // Bloc Carte de France
-define("_MI_ADSLIGHT_MAPFRANCE","Map of France");
-define("_MI_ADSLIGHT_MAPFRANCE_DESC","In your area");
+define("_MI_ADSLIGHT_MAPFRANCE", "Map of France");
+define("_MI_ADSLIGHT_MAPFRANCE_DESC", "In your area");
 
 // Bloc Ajouter une annonce
-define("_MI_ADSLIGHT_ADDMENU","Add Ad");
-define("_MI_ADSLIGHT_ADDMENU_DESC","Menu");
+define("_MI_ADSLIGHT_ADDMENU", "Add Ad");
+define("_MI_ADSLIGHT_ADDMENU_DESC", "Menu");
 
 // version Adslight 1.0.2
 // Active RewriteUrl
@@ -249,32 +231,32 @@ define("_MI_ADSLIGHT_ADSLIGHT_USE_BANNER","Gebruik code banner Xoops");
 define("_MI_ADSLIGHT_ADSLIGHT_USE_BANNER_DESC","stelt u in staat in te voegen tussen de banners Xoops voorstellen. <br /> Als u Ja kiest <br /> NO insert code hier");
 
 // Version 1.0.5
-// Code Adscence CatÃ©gories
-define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE","Pub-code op de pagina's categorie&#235;n");
-define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE_DESC","Google adsence code of code van een banner:<br/>Formaat: breedte = 300 hoogte = 250");
+// Code Adscence Catégories
+define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE", "Pub-code op de pagina's categorie&#235;n");
+define("_MI_ADSLIGHT_ADSLIGHT_CATS_CODE_DESC", "Google adsence code of code van een banner:<br/>Formaat: breedte = 300 hoogte = 250");
 
 // adslight_theme_set
-define("_MI_ADSLIGHT_THEMESET","Template keuze");
+define("_MI_ADSLIGHT_THEMESET", "Template keuze");
 
-// MÃ©ta Description / keywords Categories
+// Méta Description / keywords Categories
 define("_MI_ADSLIGHT_CAT_META","sta meta tags toe, Meta keywords categorieen?");
 define("_MI_ADSLIGHT_CAT_META_DESCRIPTION","Als u deze optie op 'Ja' zet,<br/> 
 kunt u voor elke categorie meta gegevens meegeven<br/>( Aanbevolen voor een betere ranking. )");
 
 // tips_writing_ad.php
-define("_MI_ADSLIGHT_USE_TIPS_WRITE","Aanpassen pagina info / advies?");
-define("_MI_ADSLIGHT_USEDESC_TIPS_WRITE","Als u ja, kunt u schrijven onder de titel en de tekst van de pagina info / advies");
-define("_MI_ADSLIGHT_TITLE_TIPS_WRITE","Titel pagina info / advies");
-define("_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE","Schrijf hier de titel die zal verschijnen op de pagina info / advies");
-define("_MI_ADSLIGHT_TEXT_TIPS_WRITE","Tekst van de pagina info / advies");
-define("_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE","Schrijf hier de tekst weergegeven op de pagina info / advies");
+define("_MI_ADSLIGHT_USE_TIPS_WRITE", "Aanpassen pagina info / advies?");
+define("_MI_ADSLIGHT_USEDESC_TIPS_WRITE", "Als u ja, kunt u schrijven onder de titel en de tekst van de pagina info / advies");
+define("_MI_ADSLIGHT_TITLE_TIPS_WRITE", "Titel pagina info / advies");
+define("_MI_ADSLIGHT_TITLEDESC_TIPS_WRITE", "Schrijf hier de titel die zal verschijnen op de pagina info / advies");
+define("_MI_ADSLIGHT_TEXT_TIPS_WRITE", "Tekst van de pagina info / advies");
+define("_MI_ADSLIGHT_TEXTDESC_TIPS_WRITE", "Schrijf hier de tekst weergegeven op de pagina info / advies");
 
 // Version 1.0.53
 // adslight_maps
-define("_MI_ADSLIGHT_MAPSSET","Selecteer de kaart uit uw land");
-define("_MI_ADSLIGHT_MAPSSET_DESC","Wilt u de kaart van uw land te cre&#235;ren.<br />Dank u voor de module docs te lezen.");
-define("_MI_ADSLIGHT_MAPSW_TITLE","Breedte kaart");
-define("_MI_ADSLIGHT_MAPSH_TITLE","Hoogte kaart");
+define("_MI_ADSLIGHT_MAPSSET", "Selecteer de kaart uit uw land");
+define("_MI_ADSLIGHT_MAPSSET_DESC", "Wilt u de kaart van uw land te cre&#235;ren.<br />Dank u voor de module docs te lezen.");
+define("_MI_ADSLIGHT_MAPSW_TITLE", "Breedte kaart");
+define("_MI_ADSLIGHT_MAPSH_TITLE", "Hoogte kaart");
 
 
 ?>
