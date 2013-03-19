@@ -71,4 +71,3 @@ function adslight_search($queryarray, $andor, $limit, $offset, $userid){
 	}
 	return $ret;
 }
-?>

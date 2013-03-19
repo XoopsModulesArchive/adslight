@@ -30,7 +30,7 @@ if (isset($_REQUEST['op'])) {
 
 include 'header.php';
 xoops_cp_header();
-loadModuleAdminMenu(3, "");
+//loadModuleAdminMenu(3, "");
 
     
 echo "<br /><br />";
@@ -78,5 +78,3 @@ echo "<br /><br /><br /><br />\n";
 unset ($permform);
 }
 xoops_cp_footer();
-
-?>

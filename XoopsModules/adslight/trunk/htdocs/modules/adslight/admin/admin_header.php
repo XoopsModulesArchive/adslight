@@ -1,36 +1,54 @@
 <?php
 /*
--------------------------------------------------------------------------
-                     ADSLIGHT 2 : Module for Xoops                           
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
 
-        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
-		Started with the Classifieds module and made MANY changes 
-        Website : http://www.luc-bizet.fr
-        Contact : adslight.translate@gmail.com
--------------------------------------------------------------------------
-             Original credits below Version History                       
-##########################################################################
-#                    Classified Module for Xoops                         #
-#  By John Mordo user jlm69 at www.xoops.org and www.jlmzone.com         #
-#      Started with the MyAds module and made MANY changes               #
-##########################################################################
- Original Author: Pascal Le Boustouller                                   
- Author Website : pascal.e-xoops@perso-search.com                         
- Licence Type   : GPL                                                     
-------------------------------------------------------------------------- 
-*/
+/**
+ * @copyright    The XOOPS Project http://sourceforge.net/projects/xoops/
+ * @license      GNU GPL 2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+ * @package
+ * @since
+ * @author     XOOPS Development Team
+ * @version    $Id $
+ */
 
-include_once '../../../include/cp_header.php';
-
+$path = dirname(dirname(dirname(dirname(__FILE__))));
+include_once $path . '/mainfile.php';
+include_once $path . '/include/cp_functions.php';
+require_once $path . '/include/cp_header.php';
 include_once $GLOBALS['xoops']->path( "/modules/adslight/include/gtickets.php");
 include_once $GLOBALS['xoops']->path( "/modules/adslight/include/functions.php");
 include_once $GLOBALS['xoops']->path( "/class/xoopsformloader.php" );
 include_once $GLOBALS['xoops']->path( "/modules/adslight/class/classifiedstree.php");
 include_once $GLOBALS['xoops']->path( "/modules/adslight/class/grouppermform.php");
 
+global $xoopsModule;
+
+$thisModuleDir = $GLOBALS['xoopsModule']->getVar('dirname');
+
+//if functions.php file exist
+//require_once dirname(dirname(__FILE__)) . '/include/functions.php';
+
+// Load language files
+xoops_loadLanguage('admin', $thisModuleDir);
+xoops_loadLanguage('modinfo', $thisModuleDir);
+xoops_loadLanguage('main', $thisModuleDir);
+
+$pathIcon16 = '../'.$xoopsModule->getInfo('icons16');
+$pathIcon32 = '../'.$xoopsModule->getInfo('icons32');
+$pathModuleAdmin = $xoopsModule->getInfo('dirmoduleadmin');
+
+include_once $GLOBALS['xoops']->path($pathModuleAdmin.'/moduleadmin.php');
+
 if ( $xoopsUser ) {
 	$xoopsModule = XoopsModule::getByDirname("adslight");
-	if ( !$xoopsUser->isAdmin($xoopsModule->mid()) ) { 
+	if ( !$xoopsUser->isAdmin($xoopsModule->mid()) ) {
 		redirect_header(XOOPS_URL."/",3,_NOPERM);
 		exit();
 	}
@@ -39,9 +57,4 @@ if ( $xoopsUser ) {
 	exit();
 }
 
-// Include language file
-xoops_loadLanguage('admin', 'system');
-xoops_loadLanguage('admin', $xoopsModule->getVar('dirname', 'e'));
-xoops_loadLanguage('modinfo', $xoopsModule->getVar('dirname', 'e'));
 $myts =& MyTextSanitizer::getInstance();
-?>

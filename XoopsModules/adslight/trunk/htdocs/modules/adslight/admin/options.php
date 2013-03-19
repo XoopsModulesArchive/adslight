@@ -34,7 +34,7 @@ function Index()
     global $hlpfile, $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $myts, $mydirname, $admin_lang;
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 
 	// Ajouter un type
     echo "<table width='100%' border='0' cellspacing='1' cellpadding='8' style='border: 2px solid #DFE0E0;'><tr class='bg4'><td valign='top'>\n";
@@ -140,7 +140,8 @@ function ListingAddType($type)
     if ($numrows>0) {
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
+
 
         echo "<table width='100%' border='0' cellspacing='1' cellpadding='8' style='border: 2px solid #DFE0E0;'><tr class='bg4'><td valign='top'>\n";
 		echo "<br /><center><b>"._AM_ADSLIGHT_ERRORTYPE." $nom_type "._AM_ADSLIGHT_EXIST."</b><br /><br />";
@@ -172,7 +173,7 @@ function ListingModType($id_type)
     global $xoopsDB, $xoopsConfig, $xoopsModule, $myts, $mydirname, $admin_lang;
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODTYPE."</legend>";
 	$result = $xoopsDB->query("select id_type, nom_type from ".$xoopsDB->prefix("adslight_type")." where id_type=$id_type");
 	list($id_type, $nom_type) = $xoopsDB->fetchRow($result);
@@ -232,7 +233,7 @@ function ListingAddPrice($type)
     if ($numrows>0) {
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 
 	    echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 		echo "<br /><center><b>"._AM_ADSLIGHT_ERRORPRICE." $nom_price "._AM_ADSLIGHT_EXIST."</b><br /><br />";
@@ -264,7 +265,7 @@ function ListingModPrice($id_price)
 	
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODPRICE."</legend>";
 	echo "<b>"._AM_ADSLIGHT_MODPRICE."</b><br /><br />";
 	$result = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." where id_price=$id_price");
@@ -323,7 +324,7 @@ function ListingAddUsure($type)
     if ($numrows>0) {
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 
 	    echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 		echo "<br /><center><b>"._AM_ADSLIGHT_ERRORUSURE." $nom_usure "._AM_ADSLIGHT_EXIST."</b><br /><br />";
@@ -355,7 +356,7 @@ function ListingModUsure($id_usure)
 	
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(2, "");
+//    loadModuleAdminMenu(2, "");
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODUSURE."</legend>";
 	echo "<b>"._AM_ADSLIGHT_MODUSURE."</b><br /><br />";
 	$result9 = $xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." where id_usure=$id_usure");

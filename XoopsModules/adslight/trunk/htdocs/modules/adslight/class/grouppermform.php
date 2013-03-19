@@ -25,6 +25,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 }
 require_once XOOPS_ROOT_PATH . '/class/xoopsform/formelement.php';
 require_once XOOPS_ROOT_PATH . '/class/xoopsform/formhidden.php';
+require_once XOOPS_ROOT_PATH . '/class/xoopsform/formhiddentoken.php';
 require_once XOOPS_ROOT_PATH . '/class/xoopsform/formbutton.php';
 require_once XOOPS_ROOT_PATH . '/class/xoopsform/formelementtray.php';
 require_once XOOPS_ROOT_PATH . '/class/xoopsform/form.php';
@@ -74,6 +75,7 @@ class XoopsGroupPermForm extends XoopsForm
         $this->_permName = $permname;
         $this->_permDesc = $permdesc;
         $this->addElement(new XoopsFormHidden('modid', $this->_modid));
+        $this->addElement(new XoopsFormHiddenToken($permname));
         if ($url != "") {
             $this->addElement(new XoopsFormHidden('redirect_url', $url));
         }

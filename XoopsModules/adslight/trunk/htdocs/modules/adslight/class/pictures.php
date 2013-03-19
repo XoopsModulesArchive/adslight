@@ -31,9 +31,9 @@ die("XOOPS root path not defined");
 * Includes of form objects and uploader 
 */
 include_once XOOPS_ROOT_PATH."/class/uploader.php";
-include_once XOOPS_ROOT_PATH."/class/xoopsobject.php";
+include_once XOOPS_ROOT_PATH."/kernel/object.php";
 include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
-include_once XOOPS_ROOT_PATH."/class/xoopsobject.php";
+include_once XOOPS_ROOT_PATH."/kernel/object.php";
 include_once XOOPS_ROOT_PATH."/modules/adslight/include/functions.php";
 
 /**
@@ -49,7 +49,7 @@ class jlm_pictures extends XoopsObject
 // constructor
 	function jlm_pictures ($id=null, $lid=null)
 	{
-		$this->db =& Database::getInstance();
+		$this->db =& XoopsDatabaseFactory::getDatabaseConnection();
 		$this->initVar("cod_img",XOBJ_DTYPE_INT,null,false,10);
 		$this->initVar("title",XOBJ_DTYPE_TXTBOX, null, false);
 		$this->initVar("date_added",XOBJ_DTYPE_TXTBOX,null,false);
@@ -83,7 +83,7 @@ class jlm_pictures extends XoopsObject
 	function getAll_pictures($criteria=array(), $asobject=false, $sort="cod_img", $order="ASC", $limit=0, $start=0)
 	{
 		global $mydirname;
-		$db =& Database::getInstance();
+		$db =& XoopsDatabaseFactory::getDatabaseConnection();
 		$ret = array();
 		$where_query = "";
 		if ( is_array($criteria) && count($criteria) > 0 ) {

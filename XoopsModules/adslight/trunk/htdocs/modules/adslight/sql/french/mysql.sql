@@ -28,7 +28,7 @@ CREATE TABLE adslight_listing (
   comments int(11) unsigned NOT NULL default '0',
   remind int(11) NOT NULL default '0',
   PRIMARY KEY  (lid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 CREATE TABLE adslight_categories (
   cid int(11) NOT NULL auto_increment,
@@ -42,7 +42,7 @@ CREATE TABLE adslight_categories (
   cat_moderate int(5) NOT NULL default '1',
   moderate_subcat int(5) NOT NULL default '1',
   PRIMARY KEY  (cid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO `adslight_categories` (`cid`, `pid`, `title`, `cat_desc`, `cat_keywords`, `img`, `ordre`, `affprice`, `cat_moderate`, `moderate_subcat`) VALUES
 (1, 0, 'Auto / Moto', '', '', 'car.png', 0, 1, 1, 1),
@@ -87,7 +87,7 @@ CREATE TABLE adslight_type (
   id_type int(11) NOT NULL auto_increment,
   nom_type varchar(150) NOT NULL default '',
   PRIMARY KEY  (id_type)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 
 INSERT INTO adslight_type VALUES (1,'À Vendre');
@@ -100,7 +100,7 @@ CREATE TABLE adslight_price (
   id_price int(11) NOT NULL auto_increment,
   nom_price varchar(150) NOT NULL default '',
   PRIMARY KEY  (id_price)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 
 INSERT INTO adslight_price VALUES (1,'Ferme');
@@ -111,7 +111,7 @@ CREATE TABLE adslight_usure (
   id_usure int(11) NOT NULL auto_increment,
   nom_usure varchar(150) NOT NULL default '',
   PRIMARY KEY  (id_usure)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 
 INSERT INTO adslight_usure VALUES (1,'En très bon état');
@@ -127,7 +127,7 @@ CREATE TABLE adslight_ip_log (
   ipnumber varchar(150) NOT NULL default '',
   email varchar(100) NOT NULL default '',
   PRIMARY KEY  (`ip_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 #
 # Table structure for table `adslight_votedata`
@@ -143,7 +143,7 @@ CREATE TABLE adslight_item_votedata (
   PRIMARY KEY  (ratingid),
   KEY ratinguser (ratinguser),
   KEY ratinghostname (ratinghostname)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 #
 # Table structure for table `adslight_votedata`
@@ -159,7 +159,7 @@ CREATE TABLE adslight_user_votedata (
   PRIMARY KEY  (ratingid),
   KEY ratinguser (ratinguser),
   KEY ratinghostname (ratinghostname)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 CREATE TABLE adslight_pictures (
   cod_img int(11) NOT NULL auto_increment,
@@ -170,7 +170,7 @@ CREATE TABLE adslight_pictures (
   uid_owner varchar(50) NOT NULL,
   url text NOT NULL,
   PRIMARY KEY  (cod_img)
-) TYPE=MyISAM  ;
+) ENGINE=MyISAM  ;
 
 CREATE TABLE adslight_replies (
   r_lid int(11) NOT NULL auto_increment,
@@ -183,4 +183,4 @@ CREATE TABLE adslight_replies (
   email varchar(100) NOT NULL default '',
   r_usid int(11) NOT NULL default '0',
   PRIMARY KEY  (r_lid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;

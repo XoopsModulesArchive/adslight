@@ -57,7 +57,9 @@ $mytree = new ClassifiedsTree($xoopsDB->prefix('adslight_categories'),'cid','pid
 #####################################################
 function viewads($lid=0)
 {
-    global $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $xoopsTpl, $xoopsUser, $myts, $meta, $mydirname, $main_lang, $prem_perm;
+    global $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $xoopsTpl, $xoopsUser, $myts, $meta, $mydirname, $main_lang, $prem_perm, $xoopsModule;
+      $pathIcon16 = $xoopsModule->getInfo('icons16');
+
 	$GLOBALS['xoopsOption']['template_main'] = "adslight_item.html";
 	include XOOPS_ROOT_PATH.'/header.php';
 	include XOOPS_ROOT_PATH.'/include/comment_view.php';
@@ -207,7 +209,7 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 		$viewcount_judge = false ;
 		}
 
-			$contact_pm ='<a href="'.XOOPS_URL.'/pmlite.php?send2=1&amp;to_userid='.addslashes($usid).'">&nbsp;'._ADSLIGHT_CONTACTBYMP.'</a>';
+			$contact_pm ='<a href="'.XOOPS_URL.'/pmlite.php?send2=1&amp;to_userid='.addslashes($usid).'">&nbsp;'._ADSLIGHT_CONTACT_BY_PM.'</a>';
 		}
 		if ($viewcount_judge == true ){
 			$xoopsDB->queryF('UPDATE '.$xoopsDB->prefix('adslight_listing').' SET hits=hits+1 WHERE lid = '.mysql_real_escape_string($lid).'');
@@ -262,8 +264,8 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 		$xoopsTpl->assign('xoop_user', true);
 			$currentid = $xoopsUser->getVar('uid', 'E');
 			if ($usid == $currentid) {
-   				$xoopsTpl->assign('modifyads', '<img src="images/modif.gif" border="0" alt="'._ADSLIGHT_MODIFANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ModAd&amp;lid='.addslashes($lid).'">'._ADSLIGHT_MODIFANN.'</a>');
-				$xoopsTpl->assign('deleteads', '<img src="images/del.gif" border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ListingDel&amp;lid='.addslashes($lid).'">'._ADSLIGHT_SUPPRANN.'</a>');
+   				$xoopsTpl->assign('modifyads', '<img src=' . $pathIcon16 . '/edit.png border="0" alt="'._ADSLIGHT_MODIFANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ModAd&amp;lid='.addslashes($lid).'">'._ADSLIGHT_MODIFANN.'</a>');
+				$xoopsTpl->assign('deleteads', '<img src=' . $pathIcon16 . '/delete.png  border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ListingDel&amp;lid='.addslashes($lid).'">'._ADSLIGHT_SUPPRANN.'</a>');
 				$xoopsTpl->assign('add_photos', '<img src="images/shape_square_add.png" border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="view_photos.php?lid='.$lid.'&uid='.$usid.'">'._ADSLIGHT_ADD_PHOTOS.'</a>');
 				
 				
@@ -271,7 +273,7 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 			$xoopsTpl->assign('isOwner',$isOwner);
 			}
 			if ($xoopsUser->isAdmin()) {
-				$xoopsTpl->assign('admin', '<a href="'.XOOPS_URL.'/modules/adslight/admin/modify_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src="images/modif.gif" border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>');
+				$xoopsTpl->assign('admin', '<a href="'.XOOPS_URL.'/modules/adslight/admin/modify_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src=' . $pathIcon16 . '/edit.png  border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>');
 			}
 		}
 		
