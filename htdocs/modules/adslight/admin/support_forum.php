@@ -28,7 +28,7 @@ if ( !is_readable(XOOPS_ROOT_PATH. "/Frameworks/art/functions.admin.php"))	{
     adslight_adminmenu(7, "");
 } else {
     include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
-    loadModuleAdminMenu (7, "");
+//    loadModuleAdminMenu (7, "");
 }
 
 
@@ -97,7 +97,7 @@ echo "<label>" ._AM_ADSLIGHT_SUPPORTFORUM_DESC. ":</label>Podrska forum, prijevo
 echo "<label>" ._AM_ADSLIGHT_SUPPORTFORUM_TRANSLATE. ": </label><a href=\"mailto:adslight.translate@gmail.com?subject=Correction AdsLight\"> Po&#353;alji ispravak</a><br />";
 echo "</tr></table><br />";
 
-//// Néerlandais ///
+//// NÃ©erlandais ///
 echo "<table width='100%' border='0' class='outer'><tr><td>";    
 echo "<label>" ._AM_ADSLIGHT_SUPPORTFORUM_CONTRYLANG. ":</label><img src=\"../images/flags/nl.png\" width=\"16\" height=\"11\" border=\"0\"><b>  Nederlands</b><br />";
 echo "<label>" ._AM_ADSLIGHT_SUPPORTFORUM_WEBLINKS. ":</label><a href=\"http://www.i-luc.fr/adslight/modules/newbb/index.php?cat=58\" target=\"_blank\" >Nederlandse steun Forum</a><br />";

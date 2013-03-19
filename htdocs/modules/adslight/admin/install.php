@@ -28,7 +28,7 @@ if ( !is_readable(XOOPS_ROOT_PATH . "/Frameworks/art/functions.admin.php"))	{
     adslight_adminmenu(6, "");
 } else {
     include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
-    loadModuleAdminMenu (6, "");
+//    loadModuleAdminMenu (6, "");
 }
 
 

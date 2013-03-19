@@ -112,7 +112,7 @@ function replace_links($matches)
 function adslight_seo_cat($cid)
 {
 	global $xoopsDB;
-	$db =& Database::getInstance();
+	$db =& XoopsDatabaseFactory::getDatabaseConnection();
 	$query = "
 		SELECT
 			title
@@ -129,7 +129,7 @@ function adslight_seo_cat($cid)
 function adslight_seo_titre($lid)
 {
 	global $xoopsDB;
-	$db =& Database::getInstance();
+	$db =& XoopsDatabaseFactory::getDatabaseConnection();
 	$query = "
 		SELECT
 			title

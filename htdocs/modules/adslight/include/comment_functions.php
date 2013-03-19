@@ -27,7 +27,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 	$mydirname = basename( dirname( dirname( __FILE__ ) ) ) ;
 if (isset($usid)) {
 function adslight_com_update($usid, $total_num){
-	$db =& Database::getInstance();
+	$db =& XoopsDatabaseFactory::getDatabaseConnection();
 	$sql = 'UPDATE '.$db->prefix("adslight_listing").' SET comments = '.$total_num.' WHERE usid = '.$usid;
 	$db->query($sql);
 }

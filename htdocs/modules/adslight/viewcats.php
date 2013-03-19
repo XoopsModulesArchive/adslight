@@ -58,7 +58,9 @@ $mytree = new ClassifiedsTree($xoopsDB->prefix('adslight_categories'),'cid','pid
 #####################################################
 function Adsview ($cid=0,$min=0,$orderby,$show=0)
 {
-    global $xoopsDB, $xoopsTpl, $xoopsConfig, $xoopsUser, $xoopsModule, $xoopsModuleConfig, $myts, $mytree, $imagecat, $meta, $mydirname, $main_lang, $xoopsUser, $mid, $prem_perm;
+    global $xoopsDB, $xoopsTpl, $xoopsConfig, $xoopsUser, $xoopsModule, $xoopsModuleConfig, $myts, $mytree, $imagecat, $meta, $mydirname, $main_lang, $xoopsUser, $mid, $prem_perm, $xoopsModule ;
+    $pathIcon16 = $xoopsModule->getInfo('icons16');
+
 	$GLOBALS['xoopsOption']['template_main'] = 'adslight_category.html';
 	include XOOPS_ROOT_PATH.'/header.php';
 	
@@ -322,7 +324,7 @@ if ($trows > "0") {
 			$date = formatTimestamp($date,"s");
 		if ($xoopsUser) {
 		if ($xoopsUser->isAdmin()){
-				$a_item['admin'] = '<a href="'.XOOPS_URL.'/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src="images/modif.gif" border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>';
+				$a_item['admin'] = '<a href="'.XOOPS_URL.'/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src="'. $pathIcon16 .'/edit.png'.'" border=0 alt="'._ADSLIGHT_MODADMIN.'" title="'._ADSLIGHT_MODADMIN.'"/></a>';
 				}
 			}
 			

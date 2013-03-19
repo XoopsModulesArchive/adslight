@@ -38,7 +38,7 @@ function Index()
 	
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
           
 // photo dir setting checker
 	$photo_dir = $xoopsModuleConfig["adslight_path_upload"];
@@ -71,7 +71,7 @@ function Index()
     if ($numrows>0) {
     
     
-///////// Il y a [..] Annonces en attente d'être approuvées //////    
+///////// Il y a [..] Annonces en attente d'Ãªtre approuvÃ©es //////    
         echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
   		echo "<img src='../images/admin/error_button.png' border=0 /></td><td>";
         echo "<font color=\"#00B4C4\"><b>"._AM_ADSLIGHT_THEREIS."</b></font> <b>$numrows</b> <font color=\"#00B4C4\">"._AM_ADSLIGHT_WAIT."</b></font>";
@@ -234,7 +234,7 @@ function IndexView($lid)
 	
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
 
 	
     $result = $xoopsDB->query("select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, typeusure, date, email, submitter, town, country, contactby, premium, photo from ".$xoopsDB->prefix("adslight_listing")." WHERE valid='No' AND lid='$lid'");
@@ -376,7 +376,7 @@ function ModifyAds($lid)
 
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
 	
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 
@@ -457,7 +457,10 @@ function ModifyAds($lid)
 ////// Etat d'usure			
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE_USURE." </td><td><select name=\"typeusure\">";
-		
+
+        $id_price='';
+        $nom_price='';
+
 		$result6=$xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
 		while(list($nom_usure) = $xoopsDB->fetchRow($result6)) {
     	    $sel = "";
@@ -471,7 +474,9 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
 
 			$result = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
-			echo " <select name=\"typeprice\"><option value=\"$id_price\">$non_price</option>";	
+
+
+			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nom_price</option>";
 			while(list($nom_price, $id_price) = $xoopsDB->fetchRow($result)) {
 				$nom_price = $myts->htmlSpecialChars($nom_price);
 			echo "<option value=\"$id_price\">$nom_price</option>";

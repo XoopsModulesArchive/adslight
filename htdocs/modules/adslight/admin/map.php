@@ -32,7 +32,7 @@ $mytree = new ClassifiedsTree($xoopsDB->prefix("adslight_categories"),"cid","pid
 global $mytree, $xoopsDB, $xoopsModuleConfig, $mydirname;
 include 'header.php';
 xoops_cp_header();
-loadModuleAdminMenu(1, "");
+//loadModuleAdminMenu(1, "");
 
 echo "<fieldset style='padding: 20px;'><legend style='font-weight: bold; color: #FF7300;'>"._AM_ADSLIGHT_GESTCAT." </legend>";
 echo "<p align=\"left\"><button name=\"buttonName\" type=\"button\" onclick=\"document.location.href='category.php?op=AdsNewCat&amp;cid=0';\">"._AM_ADSLIGHT_ADDCATPRINC."</button></p>";

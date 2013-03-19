@@ -39,7 +39,7 @@ function AdsNewCat($cat)
 
     include 'header.php';
     
-    loadModuleAdminMenu(1, "");
+//    loadModuleAdminMenu(1, "");
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_ADDSUBCAT."</legend>"; 
 	ShowImg();
 	
@@ -123,7 +123,7 @@ function AdsModCat($cid)
 	
     include 'header.php';
   
-    loadModuleAdminMenu(1, "");
+//    loadModuleAdminMenu(1, "");
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>". _AM_ADSLIGHT_MODIFCAT . "</legend>";
 	ShowImg();
 
@@ -264,7 +264,7 @@ function AdsDelCat($cid, $ok=0) {
     global $xoopsDB, $xoopsConfig, $xoopsModule, $mydirname;
 
     if(intval($ok)==1) {
-    	$xoopsDB =& Database::getInstance();
+    	$xoopsDB =& XoopsDatabaseFactory::getDatabaseConnection();
 	    $xoopsDB->queryf("delete from ".$xoopsDB->prefix("adslight_categories")." where cid=$cid or pid=$cid");
 	    $xoopsDB->queryf("delete from ".$xoopsDB->prefix("adslight_listing")." where cid=$cid");
 
@@ -274,7 +274,7 @@ function AdsDelCat($cid, $ok=0) {
     } else {
 
         include 'header.php';
-        loadModuleAdminMenu(1, "");
+//        loadModuleAdminMenu(1, "");
 
 		OpenTable();
 		echo "<br><center><b>"._AM_ADSLIGHT_SURDELCAT."</b><br><br>";

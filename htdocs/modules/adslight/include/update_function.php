@@ -23,7 +23,7 @@
 include_once XOOPS_ROOT_PATH.'/modules/adslight/include/functions.php';
 function xoops_module_update_adslight(&$xoopsModule) {
 
-		$db =& Database::getInstance();
+		$db =& XoopsDatabaseFactory::getDatabaseConnection();
 		
 		$sql = "ALTER TABLE `".$db->prefix('adslight_listing')."` MODIFY `price` decimal(20,2) NOT NULL default '0.00' AFTER `tel` ;";
 		$db->query($sql);
@@ -34,6 +34,3 @@ function xoops_module_update_adslight(&$xoopsModule) {
 	
     return true;
 }
-
-
-?>

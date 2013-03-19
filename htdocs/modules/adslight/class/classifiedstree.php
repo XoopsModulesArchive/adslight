@@ -32,7 +32,7 @@ class ClassifiedsTree
 
 function ClassifiedsTree($table_name, $id_name, $pid_name)
 	{
-		$this->db =& Database::getInstance();
+		$this->db =& XoopsDatabaseFactory::getDatabaseConnection();
 		$this->table = $table_name;
 		$this->id = $id_name;
 		$this->pid = $pid_name;
@@ -301,7 +301,7 @@ if(is_array($categories) && count($categories) > 0) {
 	}
 
 function makeAdSelBox($title,$order="",$preset_id=0, $none=0, $sel_name="", $onchange=""){
-		global  $xoopsModuleConfig, $myts, $xoopsDB;
+		global  $xoopsModuleConfig, $myts, $xoopsDB, $pathIcon16;
 		require XOOPS_ROOT_PATH.'/modules/adslight/include/gtickets.php';
 		
 		if ( $sel_name == '' ) {
@@ -320,9 +320,9 @@ function makeAdSelBox($title,$order="",$preset_id=0, $none=0, $sel_name="", $onc
             	<th align="left">';
             if ($xoopsModuleConfig['adslight_csortorder'] == 'ordre') { echo '('.$ordre.')'; }
             echo '&nbsp;&nbsp;'.$name.'&nbsp;&nbsp;</th>
-				<th align="center" width="10%"><a href="category.php?op=AdsNewCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.png" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></th>
-				<th align="center" width="10%"><a href="category.php?op=AdsModCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/modif.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></th>
-				<th align="center" width="10%"><a href="category.php?op=AdsDelCat&amp;cid='.addslashes($catid).'"><img src="'.XOOPS_URL.'/modules/adslight/images/del.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'"></a></th>
+				<th align="center" width="10%"><a href="category.php?op=AdsNewCat&amp;cid='.addslashes($catid).'"><img src="'. $pathIcon16 .'/add.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'" title="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></th>
+				<th align="center" width="10%"><a href="category.php?op=AdsModCat&amp;cid='.addslashes($catid).'"><img src="'. $pathIcon16 .'/edit.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'" title ="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></th>
+				<th align="center" width="10%"><a href="category.php?op=AdsDelCat&amp;cid='.addslashes($catid).'"><img src="'. $pathIcon16 .'/delete.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'" title="'._AM_ADSLIGHT_DELSUBCAT.'"></a></th>
 				</tr>';
 			
 			
@@ -337,9 +337,9 @@ function makeAdSelBox($title,$order="",$preset_id=0, $none=0, $sel_name="", $onc
 				$ordreS = $option['ordre'];
 				if ($xoopsModuleConfig["adslight_csortorder"] == 'ordre') { echo '('.$ordreS.')'; }	
 				echo ''.$catpath.'</a></td>
-					<td align="center"><a href="category.php?op=AdsNewCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/plus.png" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></td>
-					<td align="center"><a href="category.php?op=AdsModCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/modif.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></td>
-					<td align="center"><a href="category.php?op=AdsDelCat&amp;cid='.$option[$this->id].'"><img src="'.XOOPS_URL.'/modules/adslight/images/del.gif" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'"></a></td>';
+					<td align="center"><a href="category.php?op=AdsNewCat&amp;cid='.$option[$this->id].'"><img src="'. $pathIcon16 .'/add.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_ADDSUBCAT.'"title="'._AM_ADSLIGHT_ADDSUBCAT.'"></a></td>
+					<td align="center"><a href="category.php?op=AdsModCat&amp;cid='.$option[$this->id].'"><img src="'. $pathIcon16 .'/edit.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_MODIFSUBCAT.'" title ="'._AM_ADSLIGHT_MODIFSUBCAT.'"></a></td>
+					<td align="center"><a href="category.php?op=AdsDelCat&amp;cid='.$option[$this->id].'"><img src="'. $pathIcon16 .'/delete.png' .'" border=0 width=18 height=18 alt="'._AM_ADSLIGHT_DELSUBCAT.'" title="'._AM_ADSLIGHT_DELSUBCAT.'"></a></td>';
 				 
 				$class = ($class == 'even') ? 'odd' : 'even';
 							

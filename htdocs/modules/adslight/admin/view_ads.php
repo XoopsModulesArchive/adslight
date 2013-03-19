@@ -38,7 +38,7 @@ function Index()
 	
     include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
           
 // photo dir setting checker
 	$photo_dir = $xoopsModuleConfig["adslight_path_upload"];
@@ -71,7 +71,7 @@ function Index()
     if ($numrows>0) {
     
     
-///////// Il y a [..] Annonces en attente d'être approuvées //////    
+///////// Il y a [..] Annonces en attente d'Ãªtre approuvÃ©es //////    
         echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
   		echo "<img src='../images/admin/error_button.png' border=0 /></td><td>";
         echo "<font color=\"#00B4C4\"><b>"._AM_ADSLIGHT_THEREIS."</b></font> <b>$numrows</b> <b><font color=\"#00B4C4\">"._AM_ADSLIGHT_ADSVALIDE."</b></font>";
@@ -212,7 +212,7 @@ function IndexView($lid)
 	
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
 
 	
     $result = $xoopsDB->query("select lid, cid, title, status, expire, type, desctext, tel, price, typeprice, typeusure, date, email, submitter, town, country, contactby, premium, photo from ".$xoopsDB->prefix("adslight_listing")." WHERE valid='No' AND lid='$lid'");
@@ -354,7 +354,7 @@ function ModifyAds($lid)
 
 	include 'header.php';
     xoops_cp_header();
-    loadModuleAdminMenu(0, "");
+//    loadModuleAdminMenu(0, "");
 	
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 

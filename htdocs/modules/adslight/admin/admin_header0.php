@@ -3,9 +3,9 @@
 -------------------------------------------------------------------------
                      ADSLIGHT 2 : Module for Xoops                           
 
-        Redesigned and ameliorate By iluc user at www.frxoops.org
+        Redesigned and ameliorate By Luc Bizet user at www.frxoops.org
 		Started with the Classifieds module and made MANY changes 
-        Website : http://www.limonads.com
+        Website : http://www.luc-bizet.fr
         Contact : adslight.translate@gmail.com
 -------------------------------------------------------------------------
              Original credits below Version History                       
@@ -19,21 +19,28 @@
  Licence Type   : GPL                                                     
 ------------------------------------------------------------------------- 
 */
-// Blocks
-define("_MB_ADSLIGHT_TITLE","Classified Ads");
-define("_MB_ADSLIGHT_ALL_LISTINGS","View all Ads.");
-define("_MB_ADSLIGHT_ADDNOW","Add your classifieds FREE!");
-define("_MB_ADSLIGHT_DISP","Display");
-define("_MB_ADSLIGHT_LISTINGS","Listings");
-define("_MB_ADSLIGHT_CHARS","Length of the title");
-define("_MB_ADSLIGHT_LENGTH"," characters");
-define("_MB_ADSLIGHT_HITS","Hits");
-define("_MB_ADSLIGHT_DATE","Date");
-define("_MB_ADSLIGHT_ORDER","Order by");
-define("_MB_ADSLIGHT_PRICE","Price");
-define("_MB_ADSLIGHT_TYPEPRICE","Order by");
-define("_MB_ADSLIGHT_LOCAL2","Location");
-define("_MB_ADSLIGHT_ITEM","Title");
-// Blocks Maps
-define("_MB_ADSLIGHT_SEARCH_FR","Search in your area");
-?>
+
+include_once '../../../include/cp_header.php';
+
+include_once $GLOBALS['xoops']->path( "/modules/adslight/include/gtickets.php");
+include_once $GLOBALS['xoops']->path( "/modules/adslight/include/functions.php");
+include_once $GLOBALS['xoops']->path( "/class/xoopsformloader.php" );
+include_once $GLOBALS['xoops']->path( "/modules/adslight/class/classifiedstree.php");
+include_once $GLOBALS['xoops']->path( "/modules/adslight/class/grouppermform.php");
+
+if ( $xoopsUser ) {
+	$xoopsModule = XoopsModule::getByDirname("adslight");
+	if ( !$xoopsUser->isAdmin($xoopsModule->mid()) ) { 
+		redirect_header(XOOPS_URL."/",3,_NOPERM);
+		exit();
+	}
+} else {
+	redirect_header(XOOPS_URL."/",3,_NOPERM);
+	exit();
+}
+
+// Include language file
+xoops_loadLanguage('admin', 'system');
+xoops_loadLanguage('admin', $xoopsModule->getVar('dirname', 'e'));
+xoops_loadLanguage('modinfo', $xoopsModule->getVar('dirname', 'e'));
+$myts =& MyTextSanitizer::getInstance();

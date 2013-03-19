@@ -48,15 +48,34 @@ global $xoopsConfig;
  }
 
 $modversion['name'] = 'AdsLight';
-$modversion['version'] = '2,1 Beta';
+$modversion['version'] = '2.2';
 $modversion['description'] = _MI_ADSLIGHT_DESC ;
 $modversion['credits'] = 'AdsLight';
 $modversion['author'] = 'Luc Bizet **';
+$modversion['help']        = 'page=help';
 $modversion['license'] = 'GPL';
 $modversion['license_file'] = 'http://www.gnu.org/licenses/gpl.html';
-$modversion['official'] = '2,1 Beta';
+$modversion['official'] = 0;
 $modversion['image'] = 'images/adslight.png';
 $modversion['dirname'] = 'adslight';
+
+$modversion['dirmoduleadmin'] = '/Frameworks/moduleclasses/moduleadmin';
+$modversion['icons16']        = '../../Frameworks/moduleclasses/icons/16';
+$modversion['icons32']        = '../../Frameworks/moduleclasses/icons/32';
+//about
+$modversion['release_date']        = '2013/02/02';
+$modversion["module_website_url"]  = "www.xoops.org";
+$modversion["module_website_name"] = "XOOPS";
+$modversion["module_status"]       = "Beta 1";
+$modversion['min_php']             = '5.2';
+$modversion['min_xoops']           = "2.5.5";
+$modversion['min_admin']           = '1.1';
+$modversion['min_db']              = array(
+    'mysql'  => '5.0.7',
+    'mysqli' => '5.0.7'
+);
+
+
 $modversion['sqlfile']['mysql'] = $adslight_sql;
 $modversion['onInstall'] = 'include/install.php';
 $modversion['onUpdate'] = 'include/update_function.php';
@@ -81,6 +100,7 @@ $modversion['tables'][9] = 'adslight_usure';
 
 // Pour l'administration
 $modversion['hasAdmin'] = 1;
+$modversion['system_menu'] = 1;
 $modversion['adminindex'] = 'admin/index.php';
 $modversion['adminmenu'] = 'admin/menu.php';
 
@@ -512,6 +532,7 @@ $modversion['config'][38]['default'] = '';
 
 $modversion['config'][39]['name'] = 'adslight_use_captcha';
 $modversion['config'][39]['title'] = '_MI_ADSLIGHT_USE_CAPTCHA';
+$modversion['config'][39]['description'] = '_MI_ADSLIGHT_USE_CAPTCHA_DESC';
 $modversion['config'][39]['formtype'] = 'yesno' ;
 $modversion['config'][39]['valuetype'] = 'int' ;
 $modversion['config'][39]['default'] = '1' ;

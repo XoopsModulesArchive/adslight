@@ -23,6 +23,9 @@
 include "header.php";
 include(XOOPS_ROOT_PATH."/modules/adslight/include/functions.php");
 $myts =& MyTextSanitizer::getInstance(); // MyTextSanitizer object
+global $xoopsModule;
+$pathIcon16 = $xoopsModule->getInfo('icons16');
+
 
 include_once XOOPS_ROOT_PATH."/modules/adslight/class/classifiedstree.php";
 $mytree = new ClassifiedsTree($xoopsDB->prefix("adslight_categories"),"cid","pid");
@@ -182,7 +185,7 @@ $status_is = _ADSLIGHT_SOLD;
 
 
 	if ($isadmin) {
-	$adminlink = "<a href='".XOOPS_URL."/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid=".addslashes($lid)."'><img src='images/modif.gif' border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
+	$adminlink = "<a href='".XOOPS_URL."/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid=".addslashes($lid)."'><img src='" . $pathIcon16."/edit.png' border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
 	$xoopsTpl->assign('isadmin', $isadmin);
 	} else {
 		$adminlink = '';
@@ -193,7 +196,7 @@ $modify_link = '';
 		if ($usid == $member_usid) {
 	$istheirs = true;
 	$xoopsTpl->assign('istheirs', $istheirs);
-$modify_link = "<a href='modify.php?op=ModAd&amp;lid=".addslashes($lid)."'><img src='images/modif.gif' border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
+$modify_link = "<a href='modify.php?op=ModAd&amp;lid=".addslashes($lid)."'><img src='" . $pathIcon16."/1.png'  border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
 } else {
 	$istheirs = false;
 	$xoopsTpl->assign('istheirs', '');
