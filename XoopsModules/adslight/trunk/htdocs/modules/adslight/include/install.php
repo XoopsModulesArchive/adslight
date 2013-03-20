@@ -29,20 +29,20 @@ function xoops_module_install_adslight() {
 	//Creation du fichier AdsLight/
 	$dir = XOOPS_ROOT_PATH."/uploads/AdsLight";
 	if(!is_dir($dir))
-		mkdir($dir, 0705);
-		chmod($dir, 0705);
+		mkdir($dir);
+		chmod($dir, 0777);
 	
 	//Creation du fichier AdsLight/images/
 	$dir = XOOPS_ROOT_PATH."/uploads/AdsLight/midsize";
 	if(!is_dir($dir))
-		mkdir($dir, 0705);
-		chmod($dir, 0705);
+		mkdir($dir);
+		chmod($dir, 0777);
 	
 	//Creation du fichier AdsLight/images/cat
 	$dir = XOOPS_ROOT_PATH."/uploads/AdsLight/thumbs";
 	if(!is_dir($dir))
-		mkdir($dir, 0705);
-		chmod($dir, 0705);
+		mkdir($dir);
+		chmod($dir, 0777);
 	
 //Copie des index.html
 	$indexFile = XOOPS_ROOT_PATH."/modules/adslight/include/index.html";
