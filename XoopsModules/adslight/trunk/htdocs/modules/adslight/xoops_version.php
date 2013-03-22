@@ -479,17 +479,19 @@ $modversion['config'][32]['description'] =  '_MI_ADSLIGHT_LIST_EDITORS';
 $modversion['config'][32]['formtype'] = 'select';
 $modversion['config'][32]['valuetype'] = 'text';
 $modversion['config'][32]['default'] = 'textarea';
-$modversion['config'][32]['options'] = array('DHTML Editor' => 'dhtml', 'TextArea Editor' => 'textarea', 'Koivi Editor' => 'koivi', 'FCK Editor' => 'fckeditor',
-'TinyMCE Editor' => 'tinymce');
+xoops_load('xoopseditorhandler');
+$editor_handler = XoopsEditorHandler::getInstance();
+$modversion['config'][32]['options'] = array_flip($editor_handler->getList());
 
 $modversion['config'][33]['name'] = 'adslight_admin_editor';
 $modversion['config'][33]['title'] =  '_MI_ADSLIGHT_ADMIN_EDITOR';
 $modversion['config'][33]['description'] =  '_MI_ADSLIGHT_LIST_ADMIN_EDITORS';
 $modversion['config'][33]['formtype'] = 'select';
 $modversion['config'][33]['valuetype'] = 'text';
-$modversion['config'][33]['default'] = 'dhtml';
-$modversion['config'][33]['options'] = array('DHTML Editor' => 'dhtml', 'TextArea Editor' => 'textarea', 'Koivi Editor' => 'koivi', 'FCK Editor' => 'fckeditor',
-'TinyMCE Editor' => 'tinymce' );
+$modversion['config'][33]['default'] = 'dhtmltextarea';
+xoops_load('xoopseditorhandler');
+$editor_handler = XoopsEditorHandler::getInstance();
+$modversion['config'][33]['options'] = array_flip($editor_handler->getList());
 
 $modversion['config'][34]['name'] = 'adslight_lightbox';
 $modversion['config'][34]['title'] = '_MI_ADSLIGHT_LIGHTBOX';
