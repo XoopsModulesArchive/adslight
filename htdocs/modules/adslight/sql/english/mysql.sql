@@ -90,10 +90,10 @@ CREATE TABLE adslight_type (
 ) ENGINE=MyISAM;
 
 
-INSERT INTO adslight_type VALUES (1,'For Sale');
-INSERT INTO adslight_type VALUES (2,'Search');
-INSERT INTO adslight_type VALUES (3,'Give');
-INSERT INTO adslight_type VALUES (4,'Exchange');
+INSERT INTO adslight_type VALUES (1,'For Sale:');
+INSERT INTO adslight_type VALUES (2,'Search:');
+INSERT INTO adslight_type VALUES (3,'Give:');
+INSERT INTO adslight_type VALUES (4,'Exchange:');
 
 
 CREATE TABLE adslight_price (

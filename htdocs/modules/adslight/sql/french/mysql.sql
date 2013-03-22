@@ -90,11 +90,11 @@ CREATE TABLE adslight_type (
 ) ENGINE=MyISAM;
 
 
-INSERT INTO adslight_type VALUES (1,'À Vendre');
-INSERT INTO adslight_type VALUES (2,'Recherche');
-INSERT INTO adslight_type VALUES (3,'Donne');
-INSERT INTO adslight_type VALUES (4,'Echange');
-INSERT INTO adslight_type VALUES (5,'Loue');
+INSERT INTO adslight_type VALUES (1,'À Vendre:');
+INSERT INTO adslight_type VALUES (2,'Recherche:');
+INSERT INTO adslight_type VALUES (3,'Donne:');
+INSERT INTO adslight_type VALUES (4,'Echange:');
+INSERT INTO adslight_type VALUES (5,'Loue:');
 
 CREATE TABLE adslight_price (
   id_price int(11) NOT NULL auto_increment,
