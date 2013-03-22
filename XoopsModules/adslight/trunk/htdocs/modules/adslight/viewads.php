@@ -58,7 +58,7 @@ $mytree = new ClassifiedsTree($xoopsDB->prefix('adslight_categories'),'cid','pid
 function viewads($lid=0)
 {
     global $xoopsDB, $xoopsConfig, $xoopsModule, $xoopsModuleConfig, $xoopsTpl, $xoopsUser, $myts, $meta, $mydirname, $main_lang, $prem_perm, $xoopsModule;
-      $pathIcon16 = $xoopsModule->getInfo('icons16');
+    $pathIcon16 = $xoopsModule->getInfo('icons16');
 
 	$GLOBALS['xoopsOption']['template_main'] = "adslight_item.html";
 	include XOOPS_ROOT_PATH.'/header.php';
@@ -395,8 +395,9 @@ $identifier = $owner->getUnameFromId($usid);
 if ($xoopsModuleConfig['adslight_lightbox'] == 1) {
 
 $header_lightbox = '<link rel="stylesheet" href="'.XOOPS_URL.'/modules/adslight/style/adslight.css" type="text/css" media="all" />
-<script type="text/javascript" src="extra/lightbox/js/prototype.js"></script>
-<script type="text/javascript" src="extra/lightbox/js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="extra/lightbox/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="extra/lightbox/js/jquery-ui-1.8.18.custom.min"></script>
+<script type="text/javascript" src="extra/lightbox/js/jquery.smooth-scroll.min.js"></script>
 <script type="text/javascript" src="extra/lightbox/js/lightbox.js"></script>
 <link rel="stylesheet" href="style/galery.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" media="screen" href="extra/lightbox/css/lightbox.css"></link>';
