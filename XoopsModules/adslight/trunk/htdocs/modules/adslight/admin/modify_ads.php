@@ -226,9 +226,13 @@ function ModifyAds($lid)
 		}
 		    echo "</select></td></tr>";
 
+/////// Price
 			echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
 
+//////// Price type
+
 			$resultx = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
+
 			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nom_price</option>";
 			while(list($nom_price, $id_price) = $xoopsDB->fetchRow($resultx)) {
 			$sel = "";
@@ -239,7 +243,9 @@ function ModifyAds($lid)
 			echo "<option value=\"$id_price\" $sel>$nom_price</option>";
 	  		}
 			echo "</select></td>";
-		
+
+/////// Category
+
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_CAT2." </td><td>";
 			$mytree->makeMySelBox("title", "title", $cid);
