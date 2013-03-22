@@ -1,12 +1,12 @@
 <?php
 /*
 -------------------------------------------------------------------------
-                     ADSLIGHT 2 : Module for Xoops                           
+                     ADSLIGHT 2: Module for Xoops                           
 
         Redesigned and ameliorate By iluc user at www.frxoops.org
 		Started with the Classifieds module and made MANY changes 
-        Website : http://www.limonads.com
-        Contact : adslight.translate@gmail.com
+        Website: http://www.limonads.com
+        Contact: adslight.translate@gmail.com
 -------------------------------------------------------------------------
              Original credits below Version History                       
 ##########################################################################
@@ -15,8 +15,8 @@
 #      Started with the MyAds module and made MANY changes               #
 ##########################################################################
  Original Author: Pascal Le Boustouller                                   
- Author Website : pascal.e-xoops@perso-search.com                         
- Licence Type   : GPL                                                     
+ Author Website: pascal.e-xoops@perso-search.com                         
+ Licence Type  : GPL                                                     
 ------------------------------------------------------------------------- 
 */
 define("_ADSLIGHT_ADDON","Addon");
@@ -38,12 +38,12 @@ define("_ADSLIGHT_PREV","Previous Ads");
 define("_ADSLIGHT_NEXT","Next Ads");
 define("_ADSLIGHT_THEREIS","There are");
 define("_ADSLIGHT_INTHISCAT","Classified Ads in this category");
-define("_ADSLIGHT_AVAILAB","Subcategories available :");
+define("_ADSLIGHT_AVAILAB","Subcategories available:");
 define("_ADSLIGHT_ADMINCADRE","Administration Panel");
 define("_ADSLIGHT_WAIT","Classified Ads waiting to be approved");
 define("_ADSLIGHT_NO_CLA","There are no advertisements waiting to be approved");
 define("_ADSLIGHT_SEEIT","View pending advertisements");
-define("_ADSLIGHT_LOCAL","Location :");
+define("_ADSLIGHT_LOCAL","Location:");
 define("_ADSLIGHT_LOCAL2","Location");
 define("_ADSLIGHT_ANNFROM","Ads from");
 define("_ADSLIGHT_ADDED","added");
@@ -55,7 +55,7 @@ define("_ADSLIGHT_PHOTO","Photo");
 define("_ADSLIGHT_VIEW","Viewed");
 define("_ADSLIGHT_CONTACT","Contact");
 define("_ADSLIGHT_BYMAIL2","Email");
-define("_ADSLIGHT_STOP2","The listing period for your Ad  :");
+define("_ADSLIGHT_STOP2","The listing period for your Ad :");
 define("_ADSLIGHT_STOP3","has ended, it has been deleted");
 define("_ADSLIGHT_VU2","this");
 define("_ADSLIGHT_OTHER","If your want to place another ad ");
@@ -87,21 +87,21 @@ define("_ADSLIGHT_ANNNOMODERATE","Your Classified Ad will start immediately and 
 define("_ADSLIGHT_FORMEMBERS2","Posting advertisements is restricted to members <br />Please register or login if you are already a member.");
 define("_ADSLIGHT_OR","or");
 define("_ADSLIGHT_DAY","days");
-define("_ADSLIGHT_CAT3","Category :");
-define("_ADSLIGHT_TITLE2","Title :");
-define("_ADSLIGHT_TYPE","Type :");
+define("_ADSLIGHT_CAT3","Category:");
+define("_ADSLIGHT_TITLE2","Title:");
+define("_ADSLIGHT_TYPE","Type:");
 define('_ADSLIGHT_TYPE_USURE', "The state of wear:");
 define("_ADSLIGHT_NOTYPE","No type");
-define("_ADSLIGHT_CLASSIFIED_AD","Classified Ads :");
+define("_ADSLIGHT_CLASSIFIED_AD","Classified Ads:");
 define("_ADSLIGHT_CHARMAX","(255 Character max)");
-define("_ADSLIGHT_IMG","Add an image :");
-define("_ADSLIGHT_IMG2","Add a second image :");
-define("_ADSLIGHT_IMG3","Add a third image :");
-define("_ADSLIGHT_PRICE2","Price :");
-define("_ADSLIGHT_EMAIL","Email :");
-define("_ADSLIGHT_TEL","Telephone :");
-define("_ADSLIGHT_TOWN","Town :");
-define("_ADSLIGHT_COUNTRY","Country :");
+define("_ADSLIGHT_IMG","Add an image:");
+define("_ADSLIGHT_IMG2","Add a second image:");
+define("_ADSLIGHT_IMG3","Add a third image:");
+define("_ADSLIGHT_PRICE2","Price:");
+define("_ADSLIGHT_EMAIL","Email:");
+define("_ADSLIGHT_TEL","Telephone:");
+define("_ADSLIGHT_TOWN","Town:");
+define("_ADSLIGHT_COUNTRY","Country:");
 define("_ADSLIGHT_VALIDATE","Validate");
 define("_ADSLIGHT_SELECTYPE","Select Classified Ad Type");
 define("_ADSLIGHT_SELECTCAT","Select a category");
@@ -130,43 +130,43 @@ define("_ADSLIGHT_CLOSEF","Close this window");
 // listing-p-f.php //
 define("_ADSLIGHT_EXTRANN","This advertisement is from the classified ads section on the website ");
 define("_ADSLIGHT_SENDTO","<b>Send this advertisement to a friend</b><br><br>You can send ad No ");
-define("_ADSLIGHT_FRIEND","to a friend :");
-define("_ADSLIGHT_NAME","Your Name :");
-define("_ADSLIGHT_MAIL","Your Email :");
-define("_ADSLIGHT_NAMEFR","Friend's Name :");
-define("_ADSLIGHT_MAILFR","Friend's Email :");
+define("_ADSLIGHT_FRIEND","to a friend:");
+define("_ADSLIGHT_NAME","Your Name:");
+define("_ADSLIGHT_MAIL","Your Email:");
+define("_ADSLIGHT_NAMEFR","Friend's Name:");
+define("_ADSLIGHT_MAILFR","Friend's Email:");
 define("_ADSLIGHT_SENDFR","Send");
 define("_ADSLIGHT_ANNSEND","The Classified Ad selected has been sent");
 define("_ADSLIGHT_SUBJET","An interesting Classified Ad from");
 define("_ADSLIGHT_HELLO","Hello");
 define("_ADSLIGHT_MESSAGE","thinks this Classified Ad might interest you and has sent you this message.");
 define("_ADSLIGHT_INTERESS","Other Ads can be seen at ");
-define("_ADSLIGHT_TEL2","Telephone :");
-define("_ADSLIGHT_BYMAIL","Email :");
+define("_ADSLIGHT_TEL2","Telephone:");
+define("_ADSLIGHT_BYMAIL","Email:");
 define("_ADSLIGHT_DISPO","Expires on");
 define("_ADSLIGHT_NOMAIL","We do not give out users email addresses, to contact them by e-mail please use the contact form on our site by clicking on the e-mail link in the ad, you can view the ad at the following web address. ");
 // modify.php //
 define("_ADSLIGHT_OUI","Yes");
 define("_ADSLIGHT_NON","No");
-define("_ADSLIGHT_SURDELANN","ATTENTION : Are you sure you want to delete this advertisement");
+define("_ADSLIGHT_SURDELANN","ATTENTION: Are you sure you want to delete this advertisement");
 define("_RETURNANN","Return classified ads listing");
 define("_ADSLIGHT_ANNDEL","Classified Ad selected has been deleted");
 define("_ADSLIGHT_ANNMOD2","Classified Ad selected has been modified");
 define("_ADSLIGHT_NOMODIMG","Your Classified Ad includes a photo<br />(pictures may not be changed)");
 define("_ADSLIGHT_DU","added on");   
 define("_ADSLIGHT_MODIFBEFORE","Changes to this Classified Ad must be approved by the administrator and it will be queued for approval");
-define("_ADSLIGHT_SENDBY","Added by :");
-define("_ADSLIGHT_NUMANNN","Classified Ad No. :");
-define("_ADSLIGHT_NEWPICT","New image :");
-define("_ADSLIGHT_ACTUALPICT","Current image :");
+define("_ADSLIGHT_SENDBY","Added by:");
+define("_ADSLIGHT_NUMANNN","Classified Ad No.:");
+define("_ADSLIGHT_NEWPICT","New image:");
+define("_ADSLIGHT_ACTUALPICT","Current image:");
 define("_ADSLIGHT_DELPICT","Delete this image"); 
 // contact.php //
 define("_ADSLIGHT_CONTACTAUTOR","Contact the author of this Classified Ad");
 define("_ADSLIGHT_TEXTAUTO","The message automatically sends the first three fields, your name, your email, and your telephone number, you don't need to enter them again in your message.");
-define("_ADSLIGHT_YOURNAME","Your name :");
-define("_ADSLIGHT_YOUREMAIL","Your email :");
-define("_ADSLIGHT_YOURPHONE","Your telephone :");
-define("_ADSLIGHT_YOURMESSAGE","Your message :");
+define("_ADSLIGHT_YOURNAME","Your name:");
+define("_ADSLIGHT_YOUREMAIL","Your email:");
+define("_ADSLIGHT_YOURPHONE","Your telephone:");
+define("_ADSLIGHT_YOURMESSAGE","Your message:");
 define("_ADSLIGHT_VALIDMESS","Message is required.");
 define("_ADSLIGHT_MESSEND","your message has been sent...");
 define("_ADSLIGHT_CLASSIFIED","Classified Ad ");
@@ -192,7 +192,7 @@ define("_ADSLIGHT_HOW_LONG","How long do you want the listing shown.");
 define("_ADSLIGHT_WILL_LAST","This listing will last.");	
 //for search on index page
 define("_ADSLIGHT_SEARCHRESULTS","Classified Ads Search Results");
-define("_ADSLIGHT_SEARCH_LISTINGS","Search Listings : ");
+define("_ADSLIGHT_SEARCH_LISTINGS","Search Listings: ");
 define("_ADSLIGHT_ALL_WORDS","All Words");
 define("_ADSLIGHT_ANY_WORDS","Any Words");
 define("_ADSLIGHT_EXACT_MATCH","Exact Match");
@@ -256,12 +256,12 @@ define("_ADSLIGHT_RATINGHTOL","Rating (Highest Score to Lowest Score)");
 define("_ADSLIGHT_PRICELTOH","Price (lowest to highest)");
 define("_ADSLIGHT_PRICEHTOL","Price (highest to lowest)");
 define("_ADSLIGHT_POPULARITY","Popularity");
-define("_ADSLIGHT_ACTUALPICT2","Current second image :");
-define("_ADSLIGHT_ACTUALPICT3","Current third image :");
-define("_ADSLIGHT_NEWPICT2","New second image :");
-define("_ADSLIGHT_NEWPICT3","New third image :");
+define("_ADSLIGHT_ACTUALPICT2","Current second image:");
+define("_ADSLIGHT_ACTUALPICT3","Current third image:");
+define("_ADSLIGHT_NEWPICT2","New second image:");
+define("_ADSLIGHT_NEWPICT3","New third image:");
 define("_ADSLIGHT_SELECT_CONTACTBY","Select an option");
-define("_ADSLIGHT_CONTACTBY","Contact me by :");
+define("_ADSLIGHT_CONTACTBY","Contact me by:");
 define("_ADSLIGHT_CONTACT_BY_EMAIL","E-mail");
 define("_ADSLIGHT_CONTACT_BY_PM","Private Message(PM)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Both E-mail or PM");
@@ -290,10 +290,10 @@ define("_ADSLIGHT_ADD_PHOTOS","Add Photos");
 define("_ADSLIGHT_SHOWCASE","Gallery");
 define("_ADSLIGHT_EDIT_CAPTION","Edit the caption");
 define("_ADSLIGHT_EDIT","Edit");
-define("_ADSLIGHT_SUBMITTER","Name :");
+define("_ADSLIGHT_SUBMITTER","Name:");
 define("_ADSLIGHT_ADD_LISTING","Add a Listing");
 define("_ADSLIGHT_SUBMIT","Submit");
-define("_ADSLIGHT_PRICETYPE","Price Type :");
+define("_ADSLIGHT_PRICETYPE","Price Type:");
 define("_ADSLIGHT_ADD_PHOTO_NOW","Do you want to add Photos Now");
 define("_ADSLIGHT_ACTIVE","Active");
 define("_ADSLIGHT_INACTIVE","Inactive");
@@ -303,7 +303,7 @@ define("_ADSLIGHT_REPLIES","Replies");
 define("_ADSLIGHT_EXPIRES_ON","Expires on");
 define("_ADSLIGHT_ADDED_ON","Added on");
 define("_ADSLIGHT_REPLY_MESSAGE","Reply");
-define("_ADSLIGHT_REPLIED_ON","Replied on : ");
+define("_ADSLIGHT_REPLIED_ON","Replied on: ");
 define("_ADSLIGHT_VIEWNOW","view");
 define("_ADSLIGHT_REPLY_TITLE","Replies for Listing ");
 define("_ADSLIGHT_ALL_USER_LISTINGS","All Listings for ");
@@ -311,7 +311,7 @@ define("_ADSLIGHT_REPLY","Reply -");
 define("_ADSLIGHT_PAGES","Page -");
 define("_ADSLIGHT_REALNAME","Name");
 define("_ADSLIGHT_VIEW_YOUR_LISTINGS","View Your Listings");
-define("_ADSLIGHT_REPLIED_BY","Reply by : ");
+define("_ADSLIGHT_REPLIED_BY","Reply by: ");
 define("_ADSLIGHT_DELETE_REPLY","Delete This Reply");
 define("_ADSLIGHT_NO_REPLIES","There are no replies");
 define("_ADSLIGHT_THANKS","Thank You for using our Classified Ads");
@@ -336,9 +336,9 @@ define("_ADSLIGHT_RECIEVING_NOTIF","You have subscribed to receive notifications
 define("_ADSLIGHT_ERROR_NOTIF","If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:");
 define("_ADSLIGHT_FOLLOW_LINK","Here is a link to the new listing");
 define("_ADSLIGHT_YOU_CAN_VIEW_BELOW","You can view the full ad at the link below");
-define("_ADSLIGHT_LISTING_NUMBER","Listing Number :");
+define("_ADSLIGHT_LISTING_NUMBER","Listing Number:");
 define("_ADSLIGHT_NOREPLY","!!!  Do not reply to this e-mail, you will not get a reply.  !!!");
-define("_ADSLIGHT_CAPTCHA","Security Code :");
+define("_ADSLIGHT_CAPTCHA","Security Code:");
 define("_ADSLIGHT_NEW_WAITING_SUBJECT","New Ad! Waiting approval.");
 define("_ADSLIGHT_NEW_WAITING","There is a new listing waiting to be moderated.");
 define("_ADSLIGHT_PLEASE_CHECK","Please click the URL below to check this ad.");
