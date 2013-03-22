@@ -393,9 +393,19 @@ function ModifyAds($lid)
 			</tr><tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_COUNTRY." </td><td><input type=\"text\" name=\"country\" size=\"40\" value=\"$country\"></td>
 			</tr>
-			<tr class='head' border='1'>
-			<td>"._AM_ADSLIGHT_CONTACTBY." </td><td><input type=\"text\" name=\"contactby\" size=\"40\" value=\"$contactby\"></td>
-			</tr>";
+			<tr class='head' border='1'>";
+
+        if ($contactby == 4) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_EMAIL; }
+       	if ($contactby == 3) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PM; }
+       	if ($contactby == 2) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_BOTH; }
+       	if ($contactby == 1) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PHONE; }
+
+       	echo " <td class='head'>"._AM_ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
+       	<option value=\"".$contactby."\">".$contactselect."</option>
+       	<option value=\"4\">"._AM_ADSLIGHT_CONTACT_BY_EMAIL."</option>
+       	<option value=\"3\">"._AM_ADSLIGHT_CONTACT_BY_PM."</option>
+       	<option value=\"2\">"._AM_ADSLIGHT_CONTACT_BY_BOTH."</option>
+       	<option value=\"1\">"._AM_ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
 
 				echo "<tr><td class='head'>"._AM_ADSLIGHT_STATUS."</td><td class='head'><input type=\"radio\" name=\"status\" value=\"0\"";
 				if ($status == "0") {
@@ -422,13 +432,13 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE." </td><td><select name=\"type\">";
 		
-		$result5=$xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
-		while(list($nom_type) = $xoopsDB->fetchRow($result5)) {
+		$result5=$xoopsDB->query("select nom_type, id_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
+		while(list($nom_type, $id_type) = $xoopsDB->fetchRow($result5)) {
     	    	    $sel = "";
-		    if ($nom_type == $type) {
+		    if ($id_type == $type) {
 			$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_type\" $sel>$nom_type</option>";
+		    echo "<option value=\"$id_type\" $sel>$nom_type</option>";
 		}
 		    echo "</select></td></tr>";
 			
@@ -436,25 +446,35 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE_USURE." </td><td><select name=\"typeusure\">";
 		
-		$result6=$xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
-		while(list($nom_usure) = $xoopsDB->fetchRow($result6)) {
+		$result6=$xoopsDB->query("select nom_usure, id_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
+		while(list($nom_usure, $id_usure) = $xoopsDB->fetchRow($result6)) {
     	    $sel = "";
-		    if ($nom_usure == $typeusure) {
+		    if ($id_usure == $typeusure) {
 			$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_usure\" $sel>$nom_usure</option>";
+		    echo "<option value=\"$id_usure\" $sel>$nom_usure</option>";
 		}
 		    echo "</select></td></tr>";
 
+/////// Price
 			echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
 
-			$result = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
-			echo " <select name=\"typeprice\"><option value=\"$typeprice\">$typeprice</option>";	
-			while(list($nom_price) = $xoopsDB->fetchRow($result)) {
-				$nom_price = $myts->htmlSpecialChars($nom_price);
-			echo "<option value=\"$nom_price\">$nom_price</option>";
+//////// Price type
+
+			$resultx = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
+
+			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nom_price</option>";
+			while(list($nom_price, $id_price) = $xoopsDB->fetchRow($resultx)) {
+			$sel = "";
+		    if ($id_price == $typeprice) {
+			$sel = "selected";
+		    }
+
+			echo "<option value=\"$id_price\" $sel>$nom_price</option>";
 	  		}
 			echo "</select></td>";
+
+/////// Category
 		
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_CAT2." </td><td>";
