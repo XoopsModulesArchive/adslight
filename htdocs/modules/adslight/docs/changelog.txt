@@ -4,3 +4,9 @@
 
 - Converted to XOOPS 2.5.5 Admin GUI (mamba)
 - fixed minor bugs (cesag/mamba)
+
+---------------------------------------
+2.1 Beta 1  Unpublished (iLuc)
+---------------------------------------
+
+

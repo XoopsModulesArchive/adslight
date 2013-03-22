@@ -24,12 +24,12 @@ include_once("../../../include/cp_header.php");
 include 'header.php';
 xoops_cp_header();
 
-if ( !is_readable(XOOPS_ROOT_PATH . "/Frameworks/art/functions.admin.php"))	{
-    adslight_adminmenu(6, "");
-} else {
-    include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
+//if ( !is_readable(XOOPS_ROOT_PATH . "/Frameworks/art/functions.admin.php"))	{
+//    adslight_adminmenu(6, "");
+//} else {
+//    include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
 //    loadModuleAdminMenu (6, "");
-}
+//}
 
 
 $action='';
@@ -78,4 +78,3 @@ $xoopsTpl->clear_cache('db:profile_userinfo.html');
 }
 
 xoops_cp_footer();
-?>

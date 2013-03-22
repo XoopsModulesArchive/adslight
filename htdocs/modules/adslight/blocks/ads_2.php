@@ -134,4 +134,3 @@ function adslight_b2_edit($options) {
 
 	return $form;
 	}
-?>

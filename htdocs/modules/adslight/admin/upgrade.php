@@ -113,4 +113,3 @@ if(!jlm_ads_TableExists($xoopsDB->prefix("adslight_pictures")))
 	printf("<h2>%s</h2>\n",constant($admin_lang."_UPGR_ACCESS_ERROR"));
 }
 xoops_cp_footer();
-?>

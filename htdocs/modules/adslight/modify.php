@@ -410,4 +410,3 @@ switch ($op) {
 		redirect_header("index.php",1,""._RETURNANN."");
 	break;
 }
-?>

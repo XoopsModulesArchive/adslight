@@ -35,4 +35,3 @@ if ( $xoopsModuleConfig["active_rewriteurl"] > 0 )
 
 
 $myts =& MyTextSanitizer::getInstance();
-?>

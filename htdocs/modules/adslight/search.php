@@ -358,4 +358,3 @@ echo "</td><td width=\"20%\">";
     break;
 }
 include XOOPS_ROOT_PATH."/footer.php";
-?>

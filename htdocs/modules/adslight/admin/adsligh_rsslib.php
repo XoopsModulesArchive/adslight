@@ -257,5 +257,3 @@ function RSS_DisplayForum($url, $size = 15, $site = 0, $withdate = 0)
 	return $page."";
 		
 }
-
-?>

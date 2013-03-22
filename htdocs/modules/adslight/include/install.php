@@ -53,4 +53,3 @@ function xoops_module_install_adslight() {
    return true;
 	
 }
-?>

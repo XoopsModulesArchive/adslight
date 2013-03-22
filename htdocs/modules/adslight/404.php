@@ -21,18 +21,18 @@
 */
 
 if (file_exists('mainfile.php')) {
-include('mainfile.php');
+    include('mainfile.php');
 } elseif (file_exists('../mainfile.php')) {
-include('../mainfile.php');
-} else { 
-include('../../mainfile.php');
+    include('../mainfile.php');
+} else {
+    include('../../mainfile.php');
 }
-include(XOOPS_ROOT_PATH.'/header.php');
+include(XOOPS_ROOT_PATH . '/header.php');
 
-$xoopsTpl->assign( 'xoops_showrblock', 1); // 1 = Avec blocs de droite - 0 = Sans blocs de droite
-$xoopsTpl->assign( 'xoops_showlblock', 1); // 1 = Avec blocs de gauche - 0 = Sans blocs de gauche
+$xoopsTpl->assign('xoops_showrblock', 1); // 1 = Avec blocs de droite - 0 = Sans blocs de droite
+$xoopsTpl->assign('xoops_showlblock', 1); // 1 = Avec blocs de gauche - 0 = Sans blocs de gauche
 $xoopsTpl->assign('xoops_pagetitle', 'Erreur 404');
-$xoTheme -> addMeta ( 'meta', 'robots', 'noindex, nofollow');
+$xoTheme->addMeta('meta', 'robots', 'noindex, nofollow');
 
 echo '<table class="errorMsg" border="0" cellpadding="0" cellspacing="0">
 <tr>
@@ -54,6 +54,5 @@ echo '<table class="errorMsg" border="0" cellpadding="0" cellspacing="0">
 </td>
 </tr>
 </table>';
-	
-include(XOOPS_ROOT_PATH."/footer.php");
-?>
+
+include(XOOPS_ROOT_PATH . "/footer.php");

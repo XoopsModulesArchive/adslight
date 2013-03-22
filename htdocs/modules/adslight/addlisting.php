@@ -145,7 +145,7 @@ if($valid == 'Yes') {
 	$tags['FOLLOW_LINK'] = _ADSLIGHT_FOLLOW_LINK;
 	$tags['TYPE'] = $type;
 	$tags['NEED_TO_LOGIN'] = _ADSLIGHT_NEED_TO_LOGIN;
-	$tags['ADMIN_LINK'] = XOOPS_URL . '<{$xoops_url}>/modules/adslight/admin/index.php';
+	$tags['ADMIN_LINK'] = XOOPS_URL . '/modules/adslight/admin/validate_ads.php';
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cid);
 	$result2 = $xoopsDB->query($sql);
 	$row = $xoopsDB->fetchArray($result2);
@@ -338,4 +338,3 @@ if ($cat_moderate =="1") {
 	}
 	include XOOPS_ROOT_PATH.'/footer.php';
 }
-?>

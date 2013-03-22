@@ -61,5 +61,3 @@ function adslight_notify_iteminfo($category, $item_id)
 		return $item;
 	}
 }
-
-?>

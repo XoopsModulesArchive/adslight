@@ -145,7 +145,7 @@ while($myrow = $xoopsDB->fetchArray($result)) {
 	if ($myrow['img'] && $myrow['img'] != 'http://'){
 
 		$cat_img = $myts->htmlSpecialChars($myrow['img']);
-		$img = '<a href="viewcats.php?cid='.$myrow['cid'].'"><img src="'.XOOPS_URL.'/uploads/AdsLight/img_cat/'.$cat_img.'" align="middle" alt="'.$title.'" /></a>';
+		$img = '<a href="viewcats.php?cid='.$myrow['cid'].'"><img src="'.XOOPS_URL.'/modules/adslight/images/img_cat/'.$cat_img.'" align="middle" alt="'.$title.'" /></a>';
 
 	} else {
 		$img = '';
@@ -358,4 +358,3 @@ switch($pa)
 		break;
 }
 include XOOPS_ROOT_PATH.'/footer.php';
-?>

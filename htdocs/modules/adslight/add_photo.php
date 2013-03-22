@@ -102,4 +102,3 @@ if ($xCube) {
  * Close page  
  */
 include("../../footer.php");
-?>

@@ -120,4 +120,3 @@ $xoopsDB->queryF("UPDATE ".$xoopsDB->prefix("adslight_listing")." SET photo=phot
  * Close page  
  */
 include("../../footer.php");
-?>

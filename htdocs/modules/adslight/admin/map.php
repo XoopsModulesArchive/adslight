@@ -41,6 +41,3 @@ echo "<br />";
 echo "<br /></fieldset><br />";
 
 xoops_cp_footer();
-
-
-?>

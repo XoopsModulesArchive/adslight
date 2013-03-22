@@ -562,4 +562,3 @@ $field_token = $GLOBALS['xoopsSecurity']->getTokenHTML();
 		imagedestroy($img2);
 	}
 }
-?>

@@ -135,4 +135,3 @@ $album_factory->renderFormEdit($caption,$cod_img,$url);
  * Close page
  */
 include("../../footer.php");
-?>

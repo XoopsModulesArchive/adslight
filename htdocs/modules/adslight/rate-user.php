@@ -117,4 +117,3 @@ if (!empty($HTTP_POST_VARS['submit'])) {
 	$xoopsTpl->assign('mydirname', $mydirname);
 	include XOOPS_ROOT_PATH.'/footer.php';
 }
-?>

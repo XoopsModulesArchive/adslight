@@ -290,7 +290,7 @@ global $mydirname;
 	echo "if (!document.images)\n";
 	echo "return\n";
 	echo "document.images.avatar.src=\n";
-	echo "'".XOOPS_URL."/uploads/AdsLight/img_cat/' + document.imcat.img.options[document.imcat.img.selectedIndex].value\n";
+	echo "'".XOOPS_URL."/modules/adslight/images/img_cat/' + document.imcat.img.options[document.imcat.img.selectedIndex].value\n";
 	echo "}\n\n";
 	echo "//-->\n";
 	echo "</script>\n";
@@ -640,6 +640,4 @@ function returnAllAdsFluxRss(){
 		array_push($result, $resultTemp);
 	}
 	return($result);
-}       
-
-?>
+}

@@ -330,6 +330,3 @@ function admin_refcheck($chkref = "") {
 }
 
 }
-
-
-?>

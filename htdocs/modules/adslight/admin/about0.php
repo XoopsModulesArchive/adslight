@@ -24,12 +24,12 @@ include_once("../../../include/cp_header.php");
 include 'header.php';
 xoops_cp_header();
 
-if ( !is_readable(XOOPS_ROOT_PATH . "/Frameworks/art/functions.admin.php"))	{
-    adslight_adminmenu(6, "");
-} else {
-    include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
-//    loadModuleAdminMenu (6, "");
-}
+//if ( !is_readable(XOOPS_ROOT_PATH . "/Frameworks/art/functions.admin.php"))	{
+//    adslight_adminmenu(6, "");
+//} else {
+//    include_once XOOPS_ROOT_PATH.'/Frameworks/art/functions.admin.php';
+//   loadModuleAdminMenu (6, "");
+//}
 
 
 $versioninfo =& $module_handler->get( $xoopsModule->getVar( 'mid' ) );
@@ -187,4 +187,3 @@ echo "<tr class='odd'><td><br />
 // }
 
 xoops_cp_footer();
-?>
