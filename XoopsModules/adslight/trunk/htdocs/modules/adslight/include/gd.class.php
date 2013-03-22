@@ -164,4 +164,3 @@ class GD
 		imagedestroy($this -> image);
 	}
 }
-?>

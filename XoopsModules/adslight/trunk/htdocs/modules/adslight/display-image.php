@@ -48,4 +48,3 @@ echo "<table><tr><td><center><a href=#  onClick='window.close()'>"._ADSLIGHT_CLO
 
 
 xoops_footer();
-?>

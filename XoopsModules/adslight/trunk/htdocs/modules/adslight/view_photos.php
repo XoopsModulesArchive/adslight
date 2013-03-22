@@ -247,4 +247,3 @@ include XOOPS_ROOT_PATH.'/include/comment_view.php';
  * Closing the page
  */ 
 include("../../footer.php");
-?>

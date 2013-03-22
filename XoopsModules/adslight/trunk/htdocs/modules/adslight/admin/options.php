@@ -481,5 +481,3 @@ switch ($op) {
     break;
 
 }
-
-?>

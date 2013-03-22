@@ -227,4 +227,3 @@ function adslight_absolutize($s){
 	
 	return $s;
 }
-?>

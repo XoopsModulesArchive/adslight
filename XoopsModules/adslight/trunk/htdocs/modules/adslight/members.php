@@ -285,4 +285,3 @@ $updir = $xoopsModuleConfig["adslight_link_upload"];
 	}
 
 include XOOPS_ROOT_PATH.'/footer.php';
-?>

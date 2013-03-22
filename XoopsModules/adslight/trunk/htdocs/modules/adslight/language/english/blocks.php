@@ -36,4 +36,3 @@ define("_MB_ADSLIGHT_LOCAL2","Location");
 define("_MB_ADSLIGHT_ITEM","Title");
 // Blocks Maps
 define("_MB_ADSLIGHT_SEARCH_FR","Search in your area");
-?>

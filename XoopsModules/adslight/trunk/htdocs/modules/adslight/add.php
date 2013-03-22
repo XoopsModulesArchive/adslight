@@ -355,4 +355,3 @@ if ($cat_moderate =="1") {
 	}
 	include XOOPS_ROOT_PATH.'/footer.php';
 }
-?>

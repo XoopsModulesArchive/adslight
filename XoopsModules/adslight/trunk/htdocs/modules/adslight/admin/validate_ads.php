@@ -708,6 +708,3 @@ switch ($op) {
     break;
 
 }
-
-
-?>

@@ -71,7 +71,7 @@ $cat_keywords = '';
 	echo "<tr>
       <td class=\"even\">"._AM_ADSLIGHT_IMGCAT."  </td><td class=\"odd\" colspan=2><select name=\"img\" onChange=\"showimage()\">";	  
 	  
-	$rep = XOOPS_ROOT_PATH."/uploads/AdsLight/img_cat";
+	$rep = XOOPS_ROOT_PATH."/modules/adslight/images/img_cat";
 	$handle=opendir($rep);
 	while ($file = readdir($handle)) {
 		$filelist[] = $file;
@@ -88,7 +88,7 @@ $cat_keywords = '';
 			}
 		}
 	}
-	echo "</select>&nbsp;&nbsp;<img src=\"".XOOPS_URL."/uploads/AdsLight/img_cat/default.png\" name=\"avatar\" align=\"absmiddle\"><br/><b>"._AM_ADSLIGHT_REPIMGCAT."</b><br/>../uploads/AdsLight/img_cat/..</td></tr>";
+	echo "</select>&nbsp;&nbsp;<img src=\"".XOOPS_URL."/modules/adslight/images/img_cat/default.png\" name=\"avatar\" align=\"absmiddle\"><br/><b>"._AM_ADSLIGHT_REPIMGCAT."</b><br/>../modules/adslight/images/img_cat/..</td></tr>";
 
 		echo "<tr><td class=\"even\">"._AM_ADSLIGHT_DISPLPRICE2." </td><td class=\"odd\" colspan=2><input type=\"radio\" name=\"affprice\" value=\"1\" checked>"._AM_ADSLIGHT_OUI."&nbsp;&nbsp; <input type=\"radio\" name=\"affprice\" value=\"0\">"._AM_ADSLIGHT_NON." ("._AM_ADSLIGHT_INTHISCAT.")</td></tr>";
 
@@ -152,7 +152,7 @@ function AdsModCat($cid)
 	echo "<tr>
 	<td class=\"even\">"._AM_ADSLIGHT_IMGCAT."  </td><td class=\"odd\"><select name=\"img\" onChange=\"showimage()\">";	  
 	  
-	$rep = XOOPS_ROOT_PATH."/uploads/AdsLight/img_cat";
+	$rep = XOOPS_ROOT_PATH."/modules/adslight/images/img_cat";
 	$handle=opendir($rep);
 	while ($file = readdir($handle)) {
 		$filelist[] = $file;
@@ -169,7 +169,7 @@ function AdsModCat($cid)
 			}
 		}
 	}
-		echo "</select>&nbsp;&nbsp;<img src=\"".XOOPS_URL."/uploads/AdsLight/img_cat/$imgs\" name=\"avatar\" align=\"absmiddle\"><br/><b>"._AM_ADSLIGHT_REPIMGCAT."</b><br/>../uploads/AdsLight/img_cat/..</td></tr>";
+		echo "</select>&nbsp;&nbsp;<img src=\"".XOOPS_URL."/modules/adslight/images/img_cat/$imgs\" name=\"avatar\" align=\"absmiddle\"><br/><b>"._AM_ADSLIGHT_REPIMGCAT."</b><br/>../modules/adslight/images/img_cat/..</td></tr>";
 
 		echo "<tr><td class=\"even\">"._AM_ADSLIGHT_DISPLPRICE2." </td><td class=\"odd\" colspan=2><input type=\"radio\" name=\"affprice\" value=\"1\""; if ($affprice == "1")
 		echo "checked"; 
@@ -325,5 +325,3 @@ switch ($op) {
     break;
 
 }
-
-?>

@@ -40,7 +40,7 @@ function adslight_maps_show($options)
 
 	$block['title'] = "".constant($block_lang."_TITLE")."";
 	
-	
+
 	$block['imgmapsurl'] = '<a title="Recherche dans votre r&eacute;gion" href="'.XOOPS_URL.'/modules/adslight/maps.php"><img src="'.XOOPS_URL.'/modules/adslight/maps/'.$xoopsConfig['language'].'/images/map.png" alt="Recherche dans votre r&eacute;gion" border="0"></a><br />';
 	
 	
@@ -76,4 +76,3 @@ function adslight_maps_edit($options) {
 
 	return $form;
 }
-?>

@@ -53,5 +53,3 @@ echo "]]></description>
 }
 echo "</channel>
 </rss>";
-
-?>

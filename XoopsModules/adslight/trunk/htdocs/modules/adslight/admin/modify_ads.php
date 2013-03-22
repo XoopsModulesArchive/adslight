@@ -122,6 +122,8 @@ function ModifyAds($lid)
 	include 'header.php';
     xoops_cp_header();
 //    loadModuleAdminMenu(0, "");
+    $id_price='';
+    $nom_price='';
 	
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 
@@ -166,7 +168,7 @@ function ModifyAds($lid)
 	if ($contactby == 2) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_BOTH; }
 	if ($contactby == 1) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PHONE; }
 	
-	echo " <td class='head'>"._AM__ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
+	echo " <td class='head'>"._AM_ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
 	<option value=\"".$contactby."\">".$contactselect."</option>
 	<option value=\"4\">"._AM_ADSLIGHT_CONTACT_BY_EMAIL."</option>
 	<option value=\"3\">"._AM_ADSLIGHT_CONTACT_BY_PM."</option>
@@ -227,7 +229,7 @@ function ModifyAds($lid)
 			echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
 
 			$resultx = $xoopsDB->query("select nom_price, id_price from ".$xoopsDB->prefix("adslight_price")." order by nom_price");
-			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nonprice</option>";	
+			echo " <select name=\"typeprice\"><option value=\"$id_price\">$nom_price</option>";
 			while(list($nom_price, $id_price) = $xoopsDB->fetchRow($resultx)) {
 			$sel = "";
 		    if ($id_price == $typeprice) {
@@ -373,6 +375,3 @@ switch ($op) {
     break;
 
 }
-
-
-?>

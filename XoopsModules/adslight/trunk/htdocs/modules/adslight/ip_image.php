@@ -31,4 +31,3 @@ Imagestring($img_number,10,5,5,$number,$textcolor);
 
 header("Content-type: image/jpeg");
 imagejpeg($img_number);
-?>

@@ -257,4 +257,3 @@ define("_MI_ADSLIGHT_CURRENCY","ISO currency code");
 define("_MI_ADSLIGHT_LISTING_COST","The registration will be charged at this rate per day");
 define("_MI_ADSLIGHT_PURCHASELISTING","Inscriptions Purchasable");
 define('_MI_ADSLIGHT_PURCHASELISTING_DESC',"These are the categories that the cost per day to list an ad");
-?>

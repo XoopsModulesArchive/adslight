@@ -702,5 +702,3 @@ $modversion['notification']['event'][2]['caption'] = _MI_ADSLIGHT_GLOBAL_NEWPOST
 $modversion['notification']['event'][2]['description'] = _MI_ADSLIGHT_GLOBAL_NEWPOST_NOTIFYDSC;
 $modversion['notification']['event'][2]['mail_template'] = 'listing_newpost_notify';
 $modversion['notification']['event'][2]['mail_subject'] = _MI_ADSLIGHT_GLOBAL_NEWPOST_NOTIFYSBJ;
-
-?>

@@ -416,4 +416,3 @@ define("_ADSLIGHT_RESERVEDMEMBER","<strong> Status: </ strong> <font color='red'
 define("_MN_ADSLIGHT_PURCHASE","Buy It Now");
 define("_MN_ADSLIGHT_YOURNAME","Establish invoice:");
 define("_MN_ADSLIGHT_YOUREMAIL","Billing Email:");
-?>

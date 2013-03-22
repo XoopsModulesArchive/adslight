@@ -95,4 +95,3 @@ function adslight_edit($options) {
 
 	return $form;
 }
-?>

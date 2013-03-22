@@ -79,5 +79,3 @@ if (! empty($seoOp) && ! empty($seoMap[$seoOp]))
 }
 
 exit;
-
-?>

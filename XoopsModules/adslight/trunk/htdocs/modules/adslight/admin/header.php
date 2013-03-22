@@ -87,4 +87,3 @@ function loadModuleAdminMenu($currentoption, $breadcrumb = "")
 }
     
 ENDIF;
-?>
