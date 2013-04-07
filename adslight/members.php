@@ -185,7 +185,7 @@ $status_is = _ADSLIGHT_SOLD;
 
 
 	if ($isadmin) {
-	$adminlink = "<a href='".XOOPS_URL."/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid=".addslashes($lid)."'><img src='" . $pathIcon16."/edit.png' border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
+	$adminlink = "<a href='".XOOPS_URL."/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid=".$lid."'><img src='" . $pathIcon16."/edit.png' border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
 	$xoopsTpl->assign('isadmin', $isadmin);
 	} else {
 		$adminlink = '';
@@ -196,7 +196,7 @@ $modify_link = '';
 		if ($usid == $member_usid) {
 	$istheirs = true;
 	$xoopsTpl->assign('istheirs', $istheirs);
-$modify_link = "<a href='modify.php?op=ModAd&amp;lid=".addslashes($lid)."'><img src='" . $pathIcon16."/1.png'  border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
+$modify_link = "<a href='modify.php?op=ModAd&amp;lid=".$lid."'><img src='" . $pathIcon16."/1.png'  border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
 } else {
 	$istheirs = false;
 	$xoopsTpl->assign('istheirs', '');
@@ -233,7 +233,7 @@ if ($user_votes == 1) {
 	$path = substr($path, 1);
 	$path = str_replace("/"," - ",$path);
 	if ($rrows >= 1) {
-		$view_now = "<a href='replies.php?lid=".addslashes($lid)."'>"._ADSLIGHT_VIEWNOW."</a>";
+		$view_now = "<a href='replies.php?lid=".$lid."'>"._ADSLIGHT_VIEWNOW."</a>";
 	}else{
 		$view_now = '';
 	}
@@ -249,10 +249,10 @@ $updir = $xoopsModuleConfig["adslight_link_upload"];
 		$resultp = $xoopsDB->query($sql);
 		while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
 		if ($photo) {
-			$photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
+			$photo = "<a href='viewads.php?lid=".$lid."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
 				}
 			}
-		$no_photo = "<a href='viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"images/nophoto.jpg\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
+		$no_photo = "<a href='viewads.php?lid=".$lid."'><img class=\"thumb\" src=\"images/nophoto.jpg\" align=\"left\" width=\"100px\" alt=\"$title\" /></a>";
 
 	$xoopsTpl->append('items', array('id' => $lid, 'cid' => $cid, 'title' => $myts->htmlSpecialChars($title), 'status' => $myts->htmlSpecialChars($status_is), 'expire' => $myts->htmlSpecialChars($expire), 'type' => $myts->htmlSpecialChars($type), 'desctext' => $myts->displayTarea($desctext), 'tel' => $myts->htmlSpecialChars($tel), 'price' => $myts->htmlSpecialChars($price), 'typeprice' => $myts->htmlSpecialChars($typeprice), 'date' => $myts->htmlSpecialChars($date), 'email' => $myts->htmlSpecialChars($email), 'submitter' => $myts->htmlSpecialChars($submitter), 'usid' => $myts->htmlSpecialChars($usid), 'town' => $myts->htmlSpecialChars($town), 'country' => $myts->htmlSpecialChars($country), 'contactby' => $myts->htmlSpecialChars($contactby), 'premium' => $myts->htmlSpecialChars($premium), 'valid' => $myts->htmlSpecialChars($valid), 'hits' => $hits, 'rlid' => $myts->htmlSpecialChars($rlid), 'rdate' => $myts->htmlSpecialChars($rdate), 'rsubmitter' => $myts->htmlSpecialChars($rsubmitter), 'message' => $myts->htmlSpecialChars($message), 'remail' => $myts->htmlSpecialChars($remail), 'rrows' => $rrows, 'expires' => $myts->htmlSpecialChars($date2), 'view_now' => $view_now, 'modify_link' => $modify_link, 'photo' => $photo, 'no_photo' => $no_photo, 'adminlink' => $adminlink, 'new' => $newitem, 'sold' => $sold));
 }

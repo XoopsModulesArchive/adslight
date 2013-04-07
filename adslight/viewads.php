@@ -243,7 +243,7 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 		$sold = _ADSLIGHT_RESERVED;
 		} else { $sold = ''; }
 		
-		$xoopsTpl->assign('printA', '<a href="print.php?op=PrintAd&amp;lid='.addslashes($lid).'" ><img src="images/print.gif" border=0 alt="'._ADSLIGHT_PRINT.'" /></a>&nbsp;');
+		$xoopsTpl->assign('printA', '<a href="print.php?op=PrintAd&amp;lid='.$lid.'" ><img src="images/print.gif" border=0 alt="'._ADSLIGHT_PRINT.'" /></a>&nbsp;');
 	
 		if ($usid > 0) {
 		$xoopsTpl->assign('submitter', '<img src="images/lesannonces.png" border="0" alt="'._ADSLIGHT_VIEW_MY_ADS.'" />&nbsp;&nbsp;<a href="members.php?usid='.addslashes($usid).'" />'._ADSLIGHT_VIEW_MY_ADS.' '.$submitter.'</a>');
@@ -264,8 +264,8 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 		$xoopsTpl->assign('xoop_user', true);
 			$currentid = $xoopsUser->getVar('uid', 'E');
 			if ($usid == $currentid) {
-   				$xoopsTpl->assign('modifyads', '<img src=' . $pathIcon16 . '/edit.png border="0" alt="'._ADSLIGHT_MODIFANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ModAd&amp;lid='.addslashes($lid).'">'._ADSLIGHT_MODIFANN.'</a>');
-				$xoopsTpl->assign('deleteads', '<img src=' . $pathIcon16 . '/delete.png  border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ListingDel&amp;lid='.addslashes($lid).'">'._ADSLIGHT_SUPPRANN.'</a>');
+   				$xoopsTpl->assign('modifyads', '<img src=' . $pathIcon16 . '/edit.png border="0" alt="'._ADSLIGHT_MODIFANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ModAd&amp;lid='.$lid.'">'._ADSLIGHT_MODIFANN.'</a>');
+				$xoopsTpl->assign('deleteads', '<img src=' . $pathIcon16 . '/delete.png  border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="modify.php?op=ListingDel&amp;lid='.$lid.'">'._ADSLIGHT_SUPPRANN.'</a>');
 				$xoopsTpl->assign('add_photos', '<img src="images/shape_square_add.png" border="0" alt="'._ADSLIGHT_SUPPRANN.'" />&nbsp;&nbsp;<a href="view_photos.php?lid='.$lid.'&uid='.$usid.'">'._ADSLIGHT_ADD_PHOTOS.'</a>');
 				
 				
@@ -273,7 +273,7 @@ $arrow = '&nbsp;<img src="'.XOOPS_URL.'/modules/adslight/images/arrow.gif" alt="
 			$xoopsTpl->assign('isOwner',$isOwner);
 			}
 			if ($xoopsUser->isAdmin()) {
-				$xoopsTpl->assign('admin', '<a href="'.XOOPS_URL.'/modules/adslight/admin/modify_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src=' . $pathIcon16 . '/edit.png  border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>');
+				$xoopsTpl->assign('admin', '<a href="'.XOOPS_URL.'/modules/adslight/admin/modify_ads.php?op=ModifyAds&amp;lid='.$lid.'"><img src=' . $pathIcon16 . '/edit.png  border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>');
 			}
 		}
 		
@@ -333,13 +333,13 @@ if ($xoopsModuleConfig["adslight_use_country"] == 1) {
 			$contact = '<br /><strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
 		}
 		if ($contactby == 2) {
-			$contact = '<a rel="nofollow" href="contact.php?lid='.addslashes($lid).'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'<br />'._ADSLIGHT_ORBY.''.$contact_pm; 
+			$contact = '<a rel="nofollow" href="contact.php?lid='.$lid.'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'<br />'._ADSLIGHT_ORBY.''.$contact_pm; 
 		}
 		if ($contactby == 3) {
 			$contact = $contact_pm.''.$tphon;
 		}
 		if ($contactby == 4) {
-			$contact = '<a rel="nofollow" href="contact.php?lid='.addslashes($lid).'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'';
+			$contact = '<a rel="nofollow" href="contact.php?lid='.$lid.'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'';
 		}
 		// $xoopsTpl->assign('contact', $contact);
 		$xoopsTpl->assign('local_head', '<img src="images/house.png" border="0" alt="local_head" />&nbsp;&nbsp;'._ADSLIGHT_LOCAL);
@@ -435,14 +435,14 @@ $xoopsTpl->assign('xoops_module_header', $header_lightbox);
     $result8 = $xoopsDB->query('select title from '.$xoopsDB->prefix('adslight_categories').' where cid='.mysql_real_escape_string($cid).'');
     
     list($ctitle) = $xoopsDB->fetchRow($result8);
-	$xoopsTpl->assign('friend', '<img src="images/friend.gif" border="0" alt="'._ADSLIGHT_SENDFRIENDS.'" />&nbsp;&nbsp;<a rel="nofollow" href="sendfriend.php?op=SendFriend&amp;lid='.addslashes($lid).'">'._ADSLIGHT_SENDFRIENDS.'</a>');
+	$xoopsTpl->assign('friend', '<img src="images/friend.gif" border="0" alt="'._ADSLIGHT_SENDFRIENDS.'" />&nbsp;&nbsp;<a rel="nofollow" href="sendfriend.php?op=SendFriend&amp;lid='.$lid.'">'._ADSLIGHT_SENDFRIENDS.'</a>');
 	
-	$xoopsTpl->assign('alerteabus', '<img src="images/error.png" border="0" alt="'._ADSLIGHT_ALERTEABUS.'" />&nbsp;&nbsp;<a rel="nofollow" href="report-abuse.php?op=ReportAbuse&amp;lid='.addslashes($lid).'">'._ADSLIGHT_ALERTEABUS.'</a>');
+	$xoopsTpl->assign('alerteabus', '<img src="images/error.png" border="0" alt="'._ADSLIGHT_ALERTEABUS.'" />&nbsp;&nbsp;<a rel="nofollow" href="report-abuse.php?op=ReportAbuse&amp;lid='.$lid.'">'._ADSLIGHT_ALERTEABUS.'</a>');
 	
 	$xoopsTpl->assign('link_main', '<a href="../adslight/">'._ADSLIGHT_MAIN.'</a>');
 	$xoopsTpl->assign('link_cat', '<a href="viewcats.php?cid='.addslashes($cid).'">'._ADSLIGHT_GORUB.' '.$ctitle.'</a>');
 	
-	$xoopsTpl->assign('printA', '<img src="images/print.gif" border="0" alt="'._ADSLIGHT_PRINT.'" />&nbsp;&nbsp;<a rel="nofollow" href="print.php?op=PrintAd&amp;lid='.addslashes($lid).'">'._ADSLIGHT_PRINT.'</a>');
+	$xoopsTpl->assign('printA', '<img src="images/print.gif" border="0" alt="'._ADSLIGHT_PRINT.'" />&nbsp;&nbsp;<a rel="nofollow" href="print.php?op=PrintAd&amp;lid='.$lid.'">'._ADSLIGHT_PRINT.'</a>');
 }
 
 

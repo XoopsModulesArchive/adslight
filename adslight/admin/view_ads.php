@@ -122,7 +122,7 @@ function Index()
 		while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
 			
 		if ($photo) {
-			$photo3 = "<a href='".XOOPS_URL."/modules/adslight/viewads.php?lid=".addslashes($lid)."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\"></a>";
+			$photo3 = "<a href='".XOOPS_URL."/modules/adslight/viewads.php?lid=".$lid."'><img class=\"thumb\" src=\"$updir/thumbs/thumb_$url\" align=\"left\" width=\"100px\" alt=\"$title\"></a>";
 			
 		
   } 
@@ -607,7 +607,7 @@ function ListingValid($lid, $cat, $title, $status, $expire, $type, $desctext, $t
 	$tags['THANKS'] = _AM_ADSLIGHT_THANKS;
 	$tags['TEAMOF'] = _AM_ADSLIGHT_TEAMOF;
 	$tags['META_TITLE'] = $meta['title'];
-	$tags['LINK_URL'] = XOOPS_URL ."/modules/". $xoopsModule->getVar('dirname') ."/viewads.php?lid=".addslashes($lid)."";
+	$tags['LINK_URL'] = XOOPS_URL ."/modules/". $xoopsModule->getVar('dirname') ."/viewads.php?lid=".$lid."";
 	$tags['YOUR_AD'] = _AM_ADSLIGHT_YOUR_AD;
 	$tags['WEBMASTER'] = _AM_ADSLIGHT_WEBMASTER;
 	$tags['YOUR_AD_ON'] = _AM_ADSLIGHT_YOUR_AD_ON;
@@ -637,7 +637,7 @@ function ListingValid($lid, $cat, $title, $status, $expire, $type, $desctext, $t
 	$tags['HELLO'] = _AM_ADSLIGHT_HELLO;
 	$tags['FOLLOW_LINK'] = _AM_ADSLIGHT_FOLLOW_LINK;
 	$tags['TYPE'] = $type;
-	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . addslashes($lid);
+	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . $lid;
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cat);
 	$result = $xoopsDB->query($sql);
 	$row = $xoopsDB->fetchArray($result);

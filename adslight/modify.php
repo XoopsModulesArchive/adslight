@@ -77,7 +77,7 @@ function ListingDel($lid, $ok)
 				echo "<br /><center>";
 				echo "<strong>"._ADSLIGHT_SURDELANN."</strong><br /><br />";
 			}
-			echo "[ <a href=\"modify.php?op=ListingDel&amp;lid=".addslashes($lid)."&amp;ok=1\">"._ADSLIGHT_OUI."</a> | <a href=\"index.php\">"._ADSLIGHT_NON."</a> ]<br /><br />";
+			echo "[ <a href=\"modify.php?op=ListingDel&amp;lid=".$lid."&amp;ok=1\">"._ADSLIGHT_OUI."</a> | <a href=\"index.php\">"._ADSLIGHT_NON."</a> ]<br /><br />";
 			echo "</td></tr></table>";
 		}
 	}

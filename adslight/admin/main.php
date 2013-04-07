@@ -51,7 +51,7 @@ echo "<table width=\"50%\" border=\"0\" cellspacing=\"8\" cellpadding=\"0\">
 /// Test Release ///    
 $resultat_site = "http://www.i-luc.fr/release/release.html";
 $page1 = implode("", file("$resultat_site"));
-if(ereg("1.07",$page1))
+if(preg_match("1.07",$page1))
 { echo "<table class='outer' border=0 cellspacing=5 cellpadding=0><tr><td width=40>";
   echo "<img src='../images/admin/info_button_32.png' border=0 alt=\"._AM_ADSLIGHT_RELEASEOK.\" /></td><td>"; 
   echo "<font color='#00B4C4'><b>"._AM_ADSLIGHT_RELEASEOK."- AdsLigh 1.07</b></font>";

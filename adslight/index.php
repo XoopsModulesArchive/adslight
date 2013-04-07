@@ -250,7 +250,7 @@ if(is_array($categories) && count($categories) > 0) {
 			$date = formatTimestamp($date,'s');
 		if ($xoopsUser) {
 			if ($xoopsUser->isAdmin()) {
-				$a_item['admin'] = '<a href="'.XOOPS_URL.'/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid='.addslashes($lid).'"><img src="'. $pathIcon16 .'/edit.png'.'" border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>';
+				$a_item['admin'] = '<a href="'.XOOPS_URL.'/modules/adslight/admin/validate_ads.php?op=ModifyAds&amp;lid='.$lid.'"><img src="'. $pathIcon16 .'/edit.png'.'" border=0 alt="'._ADSLIGHT_MODADMIN.'" /></a>';
 			}
 			}
 			
@@ -258,7 +258,7 @@ if(is_array($categories) && count($categories) > 0) {
 			list($nom_type) = $xoopsDB->fetchRow($result7);
 
 			$a_item['type'] = $myts->htmlSpecialChars($nom_type);
-			$a_item['title'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.addslashes($lid).'"><strong>'.$title.'</strong></a>';
+			$a_item['title'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.$lid.'"><strong>'.$title.'</strong></a>';
 			
 			$result8=$xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." WHERE id_price=".mysql_real_escape_string($typeprice)."");
 			list($nom_price) = $xoopsDB->fetchRow($result8);
@@ -288,7 +288,7 @@ if(is_array($categories) && count($categories) > 0) {
 		
 if ( $xoopsModuleConfig['active_thumbsindex'] > 0 )
 {		
-		$a_item['no_photo'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.addslashes($lid).'"><img class="thumb" src="'.XOOPS_URL.'/modules/adslight/images/nophoto.jpg" align="left" width="100px" alt="'.$title.'" /></a>';
+		$a_item['no_photo'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.$lid.'"><img class="thumb" src="'.XOOPS_URL.'/modules/adslight/images/nophoto.jpg" align="left" width="100px" alt="'.$title.'" /></a>';
 		
 		$updir = $xoopsModuleConfig['adslight_link_upload'];
 		$sql = "select cod_img, lid, uid_owner, url from ".$xoopsDB->prefix('adslight_pictures')." where  uid_owner=".mysql_real_escape_string($usid)." and lid=".mysql_real_escape_string($lid)." order by date_added ASC limit 1";
@@ -297,7 +297,7 @@ if ( $xoopsModuleConfig['active_thumbsindex'] > 0 )
 while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
 		
 	if ($photo) {
-				$a_item['photo'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.addslashes($lid).'"><img class="thumb" src="'.$updir.'/thumbs/thumb_'.$url.'" align="left" width="100px" alt="'.$title.'" /></a>';
+				$a_item['photo'] = '<a href="'.XOOPS_URL.'/modules/adslight/viewads.php?lid='.$lid.'"><img class="thumb" src="'.$updir.'/thumbs/thumb_'.$url.'" align="left" width="100px" alt="'.$title.'" /></a>';
 			}
 		}
 } else {

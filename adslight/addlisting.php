@@ -120,7 +120,7 @@ if($valid == 'Yes') {
 	$tags['HELLO'] = _ADSLIGHT_HELLO;
 	$tags['FOLLOW_LINK'] = _ADSLIGHT_FOLLOW_LINK;
 	$tags['TYPE'] = $type;
-	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . addslashes($lid);
+	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . $lid;
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cid);
 	$result2 = $xoopsDB->query($sql);
 	$row = $xoopsDB->fetchArray($result2);
