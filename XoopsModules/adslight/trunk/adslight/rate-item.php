@@ -45,7 +45,7 @@ if (!empty($HTTP_POST_VARS['submit'])) {
 
    	// Check if Rating is Null
    	if ($rating=="--") {
-		redirect_header("rate-item.php?lid=".addslashes($lid)."",4,constant("_ADSLIGHT_NORATING"));
+		redirect_header("rate-item.php?lid=".$lid."",4,constant("_ADSLIGHT_NORATING"));
 		exit();
    	}
 
@@ -54,7 +54,7 @@ if (!empty($HTTP_POST_VARS['submit'])) {
        	$result=$xoopsDB->query("select submitter from ".$xoopsDB->prefix("adslight_listing")." where lid=".mysql_real_escape_string($lid)."");
        	while(list($ratinguserDB) = $xoopsDB->fetchRow($result)) {
        		if ($ratinguserDB == $ratinguser) {
-				redirect_header("viewads.php?lid=".addslashes($lid)."",4,constant("_ADSLIGHT_CANTVOTEOWN"));
+				redirect_header("viewads.php?lid=".$lid."",4,constant("_ADSLIGHT_CANTVOTEOWN"));
 				exit();
           	}
        	}
@@ -63,7 +63,7 @@ if (!empty($HTTP_POST_VARS['submit'])) {
    		$result=$xoopsDB->query("select ratinguser from ".$xoopsDB->prefix("adslight_item_votedata")." where lid=".mysql_real_escape_string($lid)."");
        	while(list($ratinguserDB) = $xoopsDB->fetchRow($result)) {
        		if ($ratinguserDB == $ratinguser) {
-				redirect_header("viewads.php?lid=".addslashes($lid)."",4,constant("_ADSLIGHT_VOTEONCE2"));
+				redirect_header("viewads.php?lid=".$lid."",4,constant("_ADSLIGHT_VOTEONCE2"));
 				exit();
            	}
       	}
@@ -75,7 +75,7 @@ if (!empty($HTTP_POST_VARS['submit'])) {
        	$result=$xoopsDB->query("select count(*) FROM ".$xoopsDB->prefix("adslight_item_votedata")." WHERE lid=".mysql_real_escape_string($lid)." AND ratinguser=0 AND ratinghostname = '$ip' AND ratingtimestamp > $yesterday");
    		list($anonvotecount) = $xoopsDB->fetchRow($result);
    		if ($anonvotecount > 0) {
-			redirect_header("viewads.php?lid=".addslashes($lid)."",4,constant("_ADSLIGHT_VOTEONCE2"));
+			redirect_header("viewads.php?lid=".$lid."",4,constant("_ADSLIGHT_VOTEONCE2"));
 			exit();
        	}
    	}
@@ -92,7 +92,7 @@ if (!empty($HTTP_POST_VARS['submit'])) {
     //All is well.  Calculate Score & Add to Summary (for quick retrieval & sorting) to DB.
     updateIrating($lid);
 	$ratemessage = constant("_ADSLIGHT_VOTEAPPRE")."<br />".sprintf(constant("_ADSLIGHT_THANKURATEITEM"),$xoopsConfig['sitename']);
-	redirect_header("viewads.php?lid=".addslashes($lid)."",3,$ratemessage);
+	redirect_header("viewads.php?lid=".$lid."",3,$ratemessage);
 	exit();
 
 } else {

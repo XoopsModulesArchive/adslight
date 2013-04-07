@@ -124,7 +124,7 @@ if ($xoopsModuleConfig["adslight_use_captcha"] == '1') {
 	$tags['COUNTRY'] = $country;
 	$tags['OTHER'] = ""._ADSLIGHT_INTERESS."". $xoopsConfig['sitename']."";
 	$tags['LISTINGS'] = "".XOOPS_URL."/modules/adslight/";
-	$tags['LINK_URL'] = "".XOOPS_URL."/modules/adslight/viewads.php?lid=".addslashes($lid)."";
+	$tags['LINK_URL'] = "".XOOPS_URL."/modules/adslight/viewads.php?lid=".$lid."";
 	$tags['THINKS_REPORT'] = ""._ADSLIGHT_REPORTMESSAGE."";
 	$tags['NO_MAIL'] = ""._ADSLIGHT_NOMAIL."";
 	$tags['YOU_CAN_VIEW_BELOW'] = ""._ADSLIGHT_YOU_CAN_VIEW_BELOW."";

@@ -178,10 +178,10 @@ $header_lightbox = '<link rel="stylesheet" href="style/galery.css" type="text/cs
  */  
 
 
-$sql = "SELECT title FROM ".$xoopsDB->prefix("adslight_listing")." where lid=".addslashes($lid)." and valid='Yes'";
+$sql = "SELECT title FROM ".$xoopsDB->prefix("adslight_listing")." where lid=".$lid." and valid='Yes'";
 $result=$xoopsDB->query($sql);
 while(list($title) = $xoopsDB->fetchRow($result)) {
-		$xoopsTpl->assign('lang_gtitle',"<a href='viewads.php?lid=".addslashes($lid)."'>".$title."</a>");
+		$xoopsTpl->assign('lang_gtitle',"<a href='viewads.php?lid=".$lid."'>".$title."</a>");
 		$xoopsTpl->assign('lang_showcase',_ADSLIGHT_SHOWCASE);
 	}
 
