@@ -604,7 +604,7 @@ function ListingValid($lid, $cat, $title, $status, $expire, $type, $desctext, $t
 	$tags['VEDIT_AD'] = _AM_ADSLIGHT_VEDIT_AD;
 	$tags['ANNACCEPT'] = _AM_ADSLIGHT_ANNACCEPT;
 	$tags['CONSULTTO'] = _AM_ADSLIGHT_CONSULTTO;
-	$tags['THANKS'] = _AM_ADSLIGHT_THANKS;
+	$tags['THANKS'] = _ADSLIGHT_THANKS;
 	$tags['TEAMOF'] = _AM_ADSLIGHT_TEAMOF;
 	$tags['META_TITLE'] = $meta['title'];
 	$tags['LINK_URL'] = XOOPS_URL ."/modules/". $xoopsModule->getVar('dirname') ."/viewads.php?lid=".$lid."";

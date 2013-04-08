@@ -78,7 +78,7 @@ $cat_keywords = '';
 	}
 	asort($filelist);
 	while (list ($key, $file) = each ($filelist)) {
-		if (preg_match('/.gif/i', $file) || preg_match('/.jpg/i', $file) || preg_match('/.png/i', $file)) {
+		if (!preg_match('`gif$|jpg$|png$`i')) {
 			if ($file == "." || $file == "..") $a=1;
 		} else {
 			if ($file == "default.png") {
@@ -159,7 +159,7 @@ function AdsModCat($cid)
 	}
 	asort($filelist);
 	while (list ($key, $file) = each ($filelist)) {
-		if (preg_match('/.gif/i', $file) || preg_match('/.jpg/i', $file) || preg_match('/.png/i', $file)) {
+		if (!preg_match('`gif$|jpg$|png$`i')) {
 			if ($file == "." || $file == "..") $a=1;
 		} else {
 			if ($file == $imgs) {

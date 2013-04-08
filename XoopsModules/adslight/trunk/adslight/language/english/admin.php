@@ -53,7 +53,6 @@ define("_AM_ADSLIGHT_SAVMOD","Save your changes");
 define("_AM_ADSLIGHT_MODTYPE","Modify Ad Type");
 define("_AM_ADSLIGHT_ANNACCEPT","Your advertisement has been approved");
 define("_AM_ADSLIGHT_CONSULTTO","Please contact:");
-define("_AM_ADSLIGHT_THANK","Thank you");
 define("_AM_ADSLIGHT_TEAMOF","Team");
 // End message
 define("_AM_ADSLIGHT_RETURN","Return");
@@ -147,7 +146,6 @@ define("_AM_ADSLIGHT_UPDATEMODULE","<b>Update Module</b>");
 define("_AM_ADSLIGHT_UPGRADEFAILED","Update Failed");
 define("_AM_ADSLIGHT_UPGRADEFAILED0","Update");
 define("_AM_ADSLIGHT_UPGR_ACCESS_ERROR","Access Error");
-define("_AM_ADSLIGHT_THANKS","Thank You for using our Classified Ads");
 define("_AM_ADSLIGHT_WEBMASTER","Webmaster");
 define("_AM_ADSLIGHT_YOUR_AD","Your ad");
 define("_AM_ADSLIGHT_AT","at");
