@@ -120,7 +120,7 @@ if ($_POST['submit']) {
         $tags['HELLO']       = _ADSLIGHT_HELLO;
         $tags['REPLIED_BY']  = _ADSLIGHT_REPLIED_BY;
         $tags['YOUR_AD']     = _ADSLIGHT_YOUR_AD;
-        $tags['THANKS']      = _ADSLIGHT_THANK;
+        $tags['THANKS']      = _ADSLIGHT_THANKS;
         $tags['WEBMASTER']   = _ADSLIGHT_WEBMASTER;
         $tags['SITE_URL']    = "<a href=\"" . XOOPS_URL . "\">" . XOOPS_URL . "</a>";
         $tags['AT']          = _ADSLIGHT_AT;

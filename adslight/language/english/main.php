@@ -59,7 +59,6 @@ define("_ADSLIGHT_STOP2","The listing period for your Ad :");
 define("_ADSLIGHT_STOP3","has ended, it has been deleted");
 define("_ADSLIGHT_VU2","this");
 define("_ADSLIGHT_OTHER","If your want to place another ad ");
-define("_ADSLIGHT_THANK","Thank You for using our classified ad service.");
 define("_ADSLIGHT_TEAM","Team");
 define("_ADSLIGHT_ACTUALY","There are");
 define("_ADSLIGHT_ADVERTISEMENTS","Ad(s) active");
