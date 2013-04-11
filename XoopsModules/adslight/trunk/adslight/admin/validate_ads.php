@@ -421,17 +421,17 @@ function ModifyAds($lid)
 			<tr class='head' border='1'>";
 
 
-        if ($contactby == 4) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_EMAIL; }
-       	if ($contactby == 3) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PM; }
-       	if ($contactby == 2) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_BOTH; }
-       	if ($contactby == 1) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PHONE; }
+        if ($contactby == 1) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_EMAIL; }
+       	if ($contactby == 2) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PM; }
+       	if ($contactby == 3) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_BOTH; }
+       	if ($contactby == 4) { $contactselect = _AM_ADSLIGHT_CONTACT_BY_PHONE; }
 
        	echo " <td class='head'>"._AM_ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
        	<option value=\"".$contactby."\">".$contactselect."</option>
-       	<option value=\"4\">"._AM_ADSLIGHT_CONTACT_BY_EMAIL."</option>
-       	<option value=\"3\">"._AM_ADSLIGHT_CONTACT_BY_PM."</option>
-       	<option value=\"2\">"._AM_ADSLIGHT_CONTACT_BY_BOTH."</option>
-       	<option value=\"1\">"._AM_ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
+       	<option value=\"1\">"._AM_ADSLIGHT_CONTACT_BY_EMAIL."</option>
+       	<option value=\"2\">"._AM_ADSLIGHT_CONTACT_BY_PM."</option>
+       	<option value=\"3\">"._AM_ADSLIGHT_CONTACT_BY_BOTH."</option>
+       	<option value=\"4\">"._AM_ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
 
 				echo "<tr><td class='head'>"._AM_ADSLIGHT_STATUS."</td><td class='head'><input type=\"radio\" name=\"status\" value=\"0\"";
 				if ($status == "0") {
