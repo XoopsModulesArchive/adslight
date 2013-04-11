@@ -176,17 +176,17 @@ function ModAd($lid)
 	}
 	echo "</tr><tr>";
 	
-	if ($contactby == 4) { $contactselect = _ADSLIGHT_CONTACT_BY_EMAIL; }
-	if ($contactby == 3) { $contactselect = _ADSLIGHT_CONTACT_BY_PM; }
-	if ($contactby == 2) { $contactselect = _ADSLIGHT_CONTACT_BY_BOTH; }
-	if ($contactby == 1) { $contactselect = _ADSLIGHT_CONTACT_BY_PHONE; }
+	if ($contactby == 1) { $contactselect = _ADSLIGHT_CONTACT_BY_EMAIL; }
+	if ($contactby == 2) { $contactselect = _ADSLIGHT_CONTACT_BY_PM; }
+	if ($contactby == 3) { $contactselect = _ADSLIGHT_CONTACT_BY_BOTH; }
+	if ($contactby == 4) { $contactselect = _ADSLIGHT_CONTACT_BY_PHONE; }
 	
 	echo " <td class='head'>"._ADSLIGHT_CONTACTBY." </td><td class='head'><select name=\"contactby\">
 	<option value=\"".$contactby."\">".$contactselect."</option>
-	<option value=\"4\">"._ADSLIGHT_CONTACT_BY_EMAIL."</option>
-	<option value=\"3\">"._ADSLIGHT_CONTACT_BY_PM."</option>
-	<option value=\"2\">"._ADSLIGHT_CONTACT_BY_BOTH."</option>
-	<option value=\"1\">"._ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
+	<option value=\"1\">"._ADSLIGHT_CONTACT_BY_EMAIL."</option>
+	<option value=\"2\">"._ADSLIGHT_CONTACT_BY_PM."</option>
+	<option value=\"3\">"._ADSLIGHT_CONTACT_BY_BOTH."</option>
+	<option value=\"4\">"._ADSLIGHT_CONTACT_BY_PHONE."</option></select></td></tr>";
 
 	if ($xoopsModuleConfig["adslight_diff_email"] == '1') {
 			
