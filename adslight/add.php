@@ -60,7 +60,7 @@ $erh = new ErrorHandler; //ErrorHandler object
 	if (empty($xoopsUser)) {
 	redirect_header(XOOPS_URL."/user.php",2,_ADS_MUSTREGFIRST);
 	exit();
-}
+    }
 
 	if (!empty($_POST['submit'])) {
 	$howlong=$xoopsModuleConfig["adslight_howlong"];
@@ -114,11 +114,13 @@ if ($_POST["title"]=="") {
 	
 	$sql = sprintf("INSERT INTO %s (lid, cid, title, status, expire, type, desctext, tel, price, typeprice, typeusure, date, email, submitter, usid, town, country, contactby, premium, valid) VALUES (%u, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')", $xoopsDB->prefix("adslight_listing"), $newid, $cid, $title, $status, $expire, $type, $desctext, $tel, $price, $typeprice, $typeusure, $date, $email, $submitter, $usid, $town, $country, $contactby, $premium, $valid);
 	$xoopsDB->query($sql) or $erh->show("0013");
+	
+	$lid = $xoopsDB->getInsertId();
 
 if($valid == 'Yes') {
 
 	$notification_handler =& xoops_gethandler('notification');
-	$lid = $xoopsDB->getInsertId();
+	//$lid = $xoopsDB->getInsertId();
 	$tags=array();
 	$tags['TITLE'] = $title;
 	$tags['ADDED_TO_CAT'] = _ADSLIGHT_ADDED_TO_CAT;
@@ -181,7 +183,7 @@ if ( !empty($_POST['addphotonow']) ) {
 	}
 
 if ($addphotonow) {
-	$lid = $xoopsDB->getInsertId();
+	//$lid = $xoopsDB->getInsertId();
 	redirect_header("view_photos.php?lid=$lid&uid=$usid",3,_ADSLIGHT_ADSADDED);
 } else {
 	redirect_header("index.php",3,_ADSLIGHT_ADSADDED);
