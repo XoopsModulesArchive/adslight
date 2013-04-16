@@ -64,7 +64,7 @@ function adslight_search($queryarray, $andor, $limit, $offset, $userid){
 		$ret[$i]['desctext'] = $myts->displayTarea($myrow['desctext'],1,1,1,1,1);
 		$ret[$i]['nophoto'] = "images/nophoto.jpg";
 		$ret[$i]['photo'] = $url;
-		$ret[$i]['sphoto'] = $xoopsModuleConfig["adslight_link_upload"]."thumbs/thumb_".$url."";
+		$ret[$i]['sphoto'] = $xoopsModuleConfig['adslight_link_upload']."thumbs/thumb_".$url."";
 		$ret[$i]['time'] = $myrow['date'];
 		$ret[$i]['uid'] = $myrow['usid'];
 		$i++;

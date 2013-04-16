@@ -114,7 +114,7 @@ if ($xoopsModuleConfig["adslight_use_captcha"] == '1') {
 	$tags['LID'] = $lid;
 	$tags['LISTING_NUMBER'] = _ADSLIGHT_LISTING_NUMBER;
 	$tags['TITLE'] = $title;
-	$tags['TYPE'] = $type;
+	$tags['TYPE'] = adslight_NameType($type);
 	$tags['DESCTEXT'] = $desctext;
 	$tags['PRICE'] = $price;
 	$tags['TYPEPRICE'] = $typeprice;

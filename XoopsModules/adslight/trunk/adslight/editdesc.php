@@ -128,7 +128,7 @@ if ($array_pict = $album_factory->getObjects($criteria)){
         $caption = $array_pict[0]->getVar("title");
         $url = $array_pict[0]->getVar("url");
 }
-$url = $xoopsModuleConfig["adslight_link_upload"]."/thumbs/thumb_".$url;
+$url = $xoopsModuleConfig['adslight_link_upload']."/thumbs/thumb_".$url;
 $album_factory->renderFormEdit($caption,$cod_img,$url);
 
 /**

@@ -201,7 +201,7 @@ $xoopsTpl->assign('lang_nb_pict', sprintf(_ADSLIGHT_YOUHAVE,$pictures_number));
 
 $xoopsTpl->assign('lang_albumtitle',sprintf(_ADSLIGHT_ALBUMTITLE,"<a href=".XOOPS_URL."/userinfo.php?uid=".addslashes($uid).">".$identifier."</a>"));
 
-$xoopsTpl->assign('path_uploads',$xoopsModuleConfig["adslight_link_upload"]);
+$xoopsTpl->assign('path_uploads',$xoopsModuleConfig['adslight_link_upload']);
 
 $xoopsTpl->assign('xoops_pagetitle', $xoopsModule->getVar('name'). " - ".$identifier."'s album");
 

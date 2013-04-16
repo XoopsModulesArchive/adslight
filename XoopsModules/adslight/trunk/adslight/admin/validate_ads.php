@@ -116,7 +116,7 @@ function Index()
 		$premium = $myts->htmlSpecialChars($premium);
 
 	 
-		$updir = $xoopsModuleConfig["adslight_link_upload"];
+		$updir = $xoopsModuleConfig['adslight_link_upload'];
 		$sql = "select cod_img, lid, uid_owner, url from ".$xoopsDB->prefix("adslight_pictures")." where  uid_owner=".mysql_real_escape_string($usid)." and lid=".mysql_real_escape_string($lid)." order by date_added ASC limit 1";
 		$resultp = $xoopsDB->query($sql);
 		while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
@@ -623,7 +623,7 @@ function ListingValid($lid, $cat, $title, $status, $expire, $type, $desctext, $t
 
 	$tags=array();
 	$tags['TITLE'] = $title;
-	$tags['TYPE'] = $type;
+	$tags['TYPE'] = adslight_NameType($type);
 	$tags['SUBMITTER'] = $submitter;
 	$tags['DESCTEXT'] = stripslashes($desctext);
 	$tags['EMAIL'] = _AM_ADSLIGHT_EMAIL;
@@ -664,7 +664,7 @@ function ListingValid($lid, $cat, $title, $status, $expire, $type, $desctext, $t
 	$tags['WEBMASTER'] = _AM_ADSLIGHT_WEBMASTER;
 	$tags['HELLO'] = _AM_ADSLIGHT_HELLO;
 	$tags['FOLLOW_LINK'] = _AM_ADSLIGHT_FOLLOW_LINK;
-	$tags['TYPE'] = $type;
+	$tags['TYPE'] = adslight_NameType($type);
 	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . $lid;
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cat);
 	$result = $xoopsDB->query($sql);

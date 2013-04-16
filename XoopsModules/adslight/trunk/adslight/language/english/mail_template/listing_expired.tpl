@@ -4,7 +4,7 @@
 {HELLO} {SUBMITTER},<br /><br />
 </td></tr><tr><td>
 {YOUR_AD_ON} {X_SITENAME} {EXPIRED}<br /><br />
- {TYPE} : {TITLE}<br /><br />
+ {TYPE}  {TITLE}<br /><br />
  {DESCTEXT}<br /><br />
 </td></tr><tr><td>
 {VIEWED} {HITS} {TIMES}<br /><br />

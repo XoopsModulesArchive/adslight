@@ -68,7 +68,7 @@ function adslight_b2_show($options)
 
 	$ad_title = $myrow['title'];
 	$a_item['status'] = $status;
-	$a_item['type'] = $type;
+	$a_item['type'] = adslight_NameType($type);
 	$a_item['price'] = $price;
 	$a_item['typeprice'] = $typeprice;
 	$a_item['town'] = $town;

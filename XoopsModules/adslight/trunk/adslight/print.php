@@ -35,7 +35,7 @@ function PrintAd($lid)
 	
 	$title = $myts->htmlSpecialChars($title);
 	$expire = $myts->htmlSpecialChars($expire);
-	$type = $myts->htmlSpecialChars($type);
+	$type = adslight_NameType($myts->htmlSpecialChars($type));
 	$desctext = $myts->displayTarea($desctext, 1, 1, 1, 1, 1);
 	$tel = $myts->htmlSpecialChars($tel);
 	$price = $myts->htmlSpecialChars($price);

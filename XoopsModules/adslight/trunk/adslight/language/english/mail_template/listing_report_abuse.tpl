@@ -6,7 +6,7 @@
 {YNAME} {THINKS_INTERESTING} <br /><br />
 </td></tr><tr><td>
 {LISTING_NUMBER} {LID}<br />
- {TITLE} : {TYPE}<br /><br />
+ {TITLE}  {TYPE}<br /><br />
 {DESCTEXT}<br /><br />
 
 </td></tr><tr><td>

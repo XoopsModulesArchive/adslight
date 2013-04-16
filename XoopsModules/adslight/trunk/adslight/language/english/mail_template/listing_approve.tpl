@@ -10,7 +10,7 @@
 <a href="{LINK_URL}">{LINK_URL}</a><br /><br />
 </td></tr><tr><td>
  {YOUR_AD}<br />
- {TYPE} : {TITLE}<br />
+ {TYPE}  {TITLE}<br />
  {DESCTEXT}<br />
 <br />
 </td></tr><tr><td>
