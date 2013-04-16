@@ -66,7 +66,7 @@ $xoopsDB->queryF("update ".$xoopsDB->prefix("adslight_listing")." set remind='1'
 				$tags['TIMES'] = ""._ADSLIGHT_TIMES."";
 				$tags['WEBMASTER'] = ""._ADSLIGHT_WEBMASTER."";
 				$tags['THANKS'] = ""._ADSLIGHT_THANKS."";
-				$tags['TYPE'] = $type;
+				$tags['TYPE'] = adslight_NameType($type);
 				$tags['DESCTEXT'] = $desctext;
 				$tags['HITS'] = $hits;
 				$tags['META_TITLE'] = $meta['title'];
@@ -126,7 +126,7 @@ $xoopsDB->queryF("update ".$xoopsDB->prefix("adslight_listing")." set remind='1'
 				$subject =  ""._ADSLIGHT_STOP."";
 				$tags['TITLE'] = $title;
 				$tags['HELLO'] =  ""._ADSLIGHT_HELLO."";
-				$tags['TYPE'] = $type;
+				$tags['TYPE'] = adslight_NameType($type);
 				$tags['DESCTEXT'] = $desctext;
 				$tags['HITS'] = $hits;
 				$tags['META_TITLE'] = $meta['title'];
@@ -640,4 +640,11 @@ function returnAllAdsFluxRss(){
 		array_push($result, $resultTemp);
 	}
 	return($result);
+}
+
+function adslight_NameType($type) {
+global $xoopsDB;
+			$sql=$xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." WHERE id_type=".mysql_real_escape_string($type)."");
+			list($nom_type) = $xoopsDB->fetchRow($sql);
+return $nom_type;
 }

@@ -6,7 +6,7 @@
  {YOUR_AD_ON} {X_SITENAME} {SOON}<br />
 </td></tr><tr><td>
  {YOUR_AD}<br /><br />
- {TYPE} : {TITLE}<br /><br />
+ {TYPE}  {TITLE}<br /><br />
 
  {DESCTEXT}<br />
 </td></tr><tr><td>

@@ -8,7 +8,7 @@
 {EMAIL} {POST}<br /><br />
 </td></tr><tr><td>
  {YOUR_AD}<br />
- {TYPE} : {TITLE}<br />
+ {TYPE}  {TITLE}<br />
  <br />{DESCTEXT}<br />
 </td></tr><tr><td>
 {VIEW_AD}<br />

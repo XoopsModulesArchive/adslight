@@ -10,7 +10,7 @@
 {NEED_TO_LOGIN}<br /><br />
 </td></tr><tr><td>
  {NEWAD}<br /><br />
- {TYPE} : {TITLE}<br /><br />
+ {TYPE}  {TITLE}<br /><br />
  {DESCTEXT}<br /><br />
 
 ----------- <br />

@@ -6,7 +6,7 @@ Click on the URL below to activate it.<br />
 {URL_VALIDATE}<br />
 <br />
 Votre annonce<br />
-{TYPE} : {TITLE}<br />
+{TYPE}  {TITLE}<br />
 {DESCRIPTION}<br />
 <br />
 <br />

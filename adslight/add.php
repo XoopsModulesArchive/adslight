@@ -129,7 +129,7 @@ if($valid == 'Yes') {
 	$tags['WEBMASTER'] = _ADSLIGHT_WEBMASTER;
 	$tags['HELLO'] = _ADSLIGHT_HELLO;
 	$tags['FOLLOW_LINK'] = _ADSLIGHT_FOLLOW_LINK;
-	$tags['TYPE'] = $type;
+	$tags['TYPE'] = adslight_NameType($type);
 	$tags['LINK_URL'] = XOOPS_URL . '/modules/adslight/viewads.php?'. '&lid=' . $lid;
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cid);
 	$result2 = $xoopsDB->query($sql);
@@ -153,7 +153,7 @@ if($valid == 'Yes') {
 	$tags['WEBMASTER'] = _ADSLIGHT_WEBMASTER;
 	$tags['HELLO'] = _ADSLIGHT_HELLO;
 	$tags['FOLLOW_LINK'] = _ADSLIGHT_FOLLOW_LINK;
-	$tags['TYPE'] = $type;
+	$tags['TYPE'] = adslight_NameType($type);
 	$tags['NEED_TO_LOGIN'] = _ADSLIGHT_NEED_TO_LOGIN;
 	$tags['ADMIN_LINK'] = XOOPS_URL . '/modules/adslight/admin/validate_ads.php';
 	$sql = "SELECT title FROM " . $xoopsDB->prefix("adslight_categories") . " WHERE cid=" . addslashes($cid);

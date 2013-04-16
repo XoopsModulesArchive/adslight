@@ -133,7 +133,7 @@ if($xoopsUser && is_array($submit_perms) && count($submit_perms) > 0) {
 	$max = $min + $show;
 	$orderby = (isset($orderby)) ? adslight_convertorderbyin($orderby) : $default_sort ;
 
-	$updir = $xoopsModuleConfig["adslight_link_upload"];
+	$updir = $xoopsModuleConfig['adslight_link_upload'];
 	$xoopsTpl->assign('add_from', _ADSLIGHT_ADDFROM." ".$xoopsConfig['sitename']);
 	$xoopsTpl->assign('add_from_title', _ADSLIGHT_ADDFROM );
 	$xoopsTpl->assign('add_from_sitename', $xoopsConfig['sitename']);

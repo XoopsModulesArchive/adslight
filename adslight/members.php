@@ -244,7 +244,7 @@ if ($user_votes == 1) {
 
 
 			$xoopsTpl->assign('xoops_pagetitle',""._ADSLIGHT_ALL_USER_LISTINGS." ".$submitter."");
-$updir = $xoopsModuleConfig["adslight_link_upload"];
+$updir = $xoopsModuleConfig['adslight_link_upload'];
 	$sql = "select cod_img, lid, uid_owner, url from ".$xoopsDB->prefix("adslight_pictures")." where  uid_owner=".mysql_real_escape_string($usid)." and lid=".mysql_real_escape_string($lid)." order by date_added ASC limit 1";
 		$resultp = $xoopsDB->query($sql);
 		while(list($cod_img, $pic_lid, $uid_owner, $url)=$xoopsDB->fetchRow($resultp)) {
