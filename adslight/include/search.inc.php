@@ -24,6 +24,14 @@
 include_once (XOOPS_ROOT_PATH."/modules/adslight/include/functions.php");
 
 function adslight_search($queryarray, $andor, $limit, $offset, $userid){
+
+	if (strpos($_SERVER["REQUEST_URI"], "/modules/adslight/search.php"))
+	{
+	$visible = true;
+	}else{
+	$visible = false;
+	}
+
 	global $xoopsDB, $xoopsModuleConfig, $mydirname;
 	
 	$sql = "SELECT lid,title,type,desctext,tel,price,typeprice,date,submitter,usid,town,country FROM ".$xoopsDB->prefix("adslight_listing")." WHERE valid='Yes' AND status!='1' AND date<=".time()."";
@@ -57,17 +65,19 @@ function adslight_search($queryarray, $andor, $limit, $offset, $userid){
 		$ret[$i]['image'] = "images/deco/icon.png";
 		$ret[$i]['link'] = "viewads.php?lid=".$myrow['lid']."";
 		$ret[$i]['title'] = $myrow['title'];
-		$ret[$i]['type'] = $myrow['type'];
+		$ret[$i]['type'] = adslight_NameType($myrow['type']);
 		$ret[$i]['price'] = number_format($myrow['price'], 2, ".", ",");
 		$ret[$i]['typeprice'] = $myrow['typeprice'];
 		$ret[$i]['town'] = $myrow['town'];
 		$ret[$i]['desctext'] = $myts->displayTarea($myrow['desctext'],1,1,1,1,1);
 		$ret[$i]['nophoto'] = "images/nophoto.jpg";
 		$ret[$i]['photo'] = $url;
+		if ( $visible ){
 		$ret[$i]['sphoto'] = $xoopsModuleConfig['adslight_link_upload']."thumbs/thumb_".$url."";
+		}
 		$ret[$i]['time'] = $myrow['date'];
 		$ret[$i]['uid'] = $myrow['usid'];
-		$i++;
+		$i++;	
 	}
 	return $ret;
 }
