@@ -542,10 +542,11 @@ function ListingDel($lid, $photo)
 {
      global $xoopsDB, $mydirname, $admin_lang;
     
-    $result2 = $xoopsDB->query("select usid, p.lid, p.url FROM ".$xoopsDB->prefix("adslight_listing")." l LEFT JOIN ".$xoopsDB->prefix("adslight_pictures")." p  ON l.lid=p.lid where l.lid=".mysql_real_escape_string($lid)."");
-	list($usid, $plid, $purl) = $xoopsDB->fetchRow($result2);
+    $result2 = $xoopsDB->query("select p.url FROM ".$xoopsDB->prefix("adslight_listing")." l LEFT JOIN ".$xoopsDB->prefix("adslight_pictures")." p  ON l.lid=p.lid where l.lid=".mysql_real_escape_string($lid)."");
 	
-	     if ($purl) {
+	while( list( $purl ) = $xoopsDB->fetchRow( $result2 ) ) {
+		if ($purl) 
+		{
 					$destination = XOOPS_ROOT_PATH."/uploads/AdsLight";
 					if (file_exists("$destination/$purl")) {
 						unlink("$destination/$purl");
@@ -558,10 +559,11 @@ function ListingDel($lid, $photo)
 					if (file_exists("$destination3/resized_$purl")) {
 						unlink("$destination3/resized_$purl");
 					}
-		
+		$xoopsDB->query("delete from ".$xoopsDB->prefix("adslight_pictures")." where lid=$lid");
+		}
 	}
-
-    $xoopsDB->query("delete from ".$xoopsDB->prefix("adslight_listing")." where lid=$lid");
+	
+	$xoopsDB->query("delete from ".$xoopsDB->prefix("adslight_listing")." where lid=$lid");
 	
 	redirect_header("view_ads.php",1,_AM_ADSLIGHT_ANNDEL);
 	exit();
