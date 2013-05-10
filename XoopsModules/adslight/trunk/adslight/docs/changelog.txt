@@ -2,9 +2,9 @@
 2.2 Beta 2  2013-05-10
 ---------------------------------------
 - phone number will show only when selected by the user as the way to contact (chefry/mamba)
-- moved hard-coded 404 error text to language file
-- fixed: ad owner cannot edit his ad, when set to "inactive"
-- removed encoded footer
+- moved hard-coded 404 error text to language file (mamba)
+- fixed: ad owner cannot edit his ad, when set to "inactive" (surfinsaxman/mamba)
+- removed encoded footer (mamba)
 
 ---------------------------------------
 2.2 Beta 1  2013-03-13
@@ -12,7 +12,7 @@
 
 - Converted to XOOPS 2.5.5 Admin GUI (mamba)
 - fixed minor bugs (cesag/mamba)
-- add: dynamic configuration of Text Editors in Preferences
+- add: dynamic configuration of Text Editors in Preferences (mamba)
 
 #################################################
 
