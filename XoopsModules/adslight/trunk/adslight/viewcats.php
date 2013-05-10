@@ -58,7 +58,7 @@ $mytree = new ClassifiedsTree($xoopsDB->prefix('adslight_categories'),'cid','pid
 #####################################################
 function Adsview ($cid=0,$min=0,$orderby,$show=0)
 {
-    global $xoopsDB, $xoopsTpl, $xoopsConfig, $xoopsUser, $xoopsModule, $xoopsModuleConfig, $myts, $mytree, $imagecat, $meta, $mydirname, $main_lang, $xoopsUser, $mid, $prem_perm, $xoopsModule ;
+    global $xoopsDB, $xoopsTpl, $xoopsConfig, $xoopsUser, $xoopsModuleConfig, $myts, $mytree, $imagecat, $meta, $mydirname, $main_lang, $xoopsUser, $mid, $prem_perm, $xoopsModule ;
     $pathIcon16 = $xoopsModule->getInfo('icons16');
 
 	$GLOBALS['xoopsOption']['template_main'] = 'adslight_category.html';

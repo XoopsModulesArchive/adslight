@@ -326,21 +326,22 @@ if ($xoopsModuleConfig["adslight_use_country"] == 1) {
 	}
 		
 	$tphon = '';
-	    if ($tel) {
-		 $tphon = '<br />'._ADSLIGHT_ORBY.'&nbsp;<strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
-		}
-		if ($contactby == 1) {
-			$contact = '<br /><strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
-		}
-		if ($contactby == 2) {
+//	    if ($tel) {
+//		 $tphon = '<br />'._ADSLIGHT_ORBY.'&nbsp;<strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
+//		}
+
+        if ($contactby == 1) {
+      			$contact = '<a rel="nofollow" href="contact.php?lid='.$lid.'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'';
+      		}
+        if ($contactby == 2) {
+      			$contact = $contact_pm.''.$tphon;
+      		}
+		if ($contactby == 3) {
 			$contact = '<a rel="nofollow" href="contact.php?lid='.$lid.'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'<br />'._ADSLIGHT_ORBY.''.$contact_pm; 
 		}
-		if ($contactby == 3) {
-			$contact = $contact_pm.''.$tphon;
-		}
-		if ($contactby == 4) {
-			$contact = '<a rel="nofollow" href="contact.php?lid='.$lid.'">'._ADSLIGHT_BYMAIL2.'</a>'.$tphon.'';
-		}
+        if ($contactby == 4) {
+      			$contact = '<br /><strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
+      		}
 		// $xoopsTpl->assign('contact', $contact);
 		$xoopsTpl->assign('local_head', '<img src="images/house.png" border="0" alt="local_head" />&nbsp;&nbsp;'._ADSLIGHT_LOCAL);
 		
