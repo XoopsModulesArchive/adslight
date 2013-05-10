@@ -355,6 +355,8 @@ function ModifyAds($lid)
 	include 'header.php';
     xoops_cp_header();
 //    loadModuleAdminMenu(0, "");
+    $id_price='';
+    $nom_price='';
 	
 	echo "<fieldset><legend style='font-weight: bold; color: #900;'>"._AM_ADSLIGHT_MODANN."</legend>";
 

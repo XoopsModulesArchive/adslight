@@ -260,7 +260,7 @@ define("_ADSLIGHT_ACTUALPICT3","Current third image:");
 define("_ADSLIGHT_NEWPICT2","New second image:");
 define("_ADSLIGHT_NEWPICT3","New third image:");
 define("_ADSLIGHT_SELECT_CONTACTBY","Select an option");
-define("_ADSLIGHT_CONTACTBY","Contact me by:");
+define("_ADSLIGHT_CONTACTBY"," by:");//removed "Contact me"
 define("_ADSLIGHT_CONTACT_BY_EMAIL","E-mail");
 define("_ADSLIGHT_CONTACT_BY_PM","Private Message(PM)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Both E-mail or PM");
