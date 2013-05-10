@@ -190,18 +190,18 @@ $status_is = _ADSLIGHT_SOLD;
 	} else {
 		$adminlink = '';
 	}
-$modify_link = '';
-	if ($xoopsUser) {
-		$member_usid = $xoopsUser->getVar("uid", "E");
-		if ($usid == $member_usid) {
-	$istheirs = true;
-	$xoopsTpl->assign('istheirs', $istheirs);
-$modify_link = "<a href='modify.php?op=ModAd&amp;lid=".$lid."'><img src='" . $pathIcon16."/1.png'  border=0 alt=\""._ADSLIGHT_MODADMIN."\" /></a>";
-} else {
-	$istheirs = false;
-	$xoopsTpl->assign('istheirs', '');
-	}
-}
+    $modify_link = '';
+    if ($xoopsUser) {
+        $member_usid = $xoopsUser->getVar("uid", "E");
+        if ($usid == $member_usid) {
+            $istheirs = true;
+            $xoopsTpl->assign('istheirs', $istheirs);
+            $modify_link = "<a href='modify.php?op=ModAd&amp;lid=" . $lid . "'><img src='" . $pathIcon16 . "/edit.png'  border=0 alt=\"" . _ADSLIGHT_MODADMIN . "\" /></a>";
+        } else {
+            $istheirs = false;
+            $xoopsTpl->assign('istheirs', '');
+        }
+    }
 
 		$xoopsTpl->assign('submitter',$submitter);
 		$xoopsTpl->assign('usid', $usid);
@@ -219,6 +219,8 @@ $modify_link = "<a href='modify.php?op=ModAd&amp;lid=".$lid."'><img src='" . $pa
 		$xoopsTpl->assign('local_town', "$town");
 		$xoopsTpl->assign('local_country', "$country");
 		$xoopsTpl->assign('local_head', _ADSLIGHT_LOCAL2);
+        $xoopsTpl->assign('edit_ad', _ADSLIGHT_EDIT);
+
 		$usid = addslashes($usid);
 if ($user_votes == 1) {
 		$votestring = _ADSLIGHT_ONEVOTE;

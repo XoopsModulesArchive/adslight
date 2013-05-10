@@ -308,3 +308,5 @@ define("_AM_ADSLIGHT_ADSMENU_NEWTXT","<b>AdsLight Version 2:</b><br />
 define("_AM_ADSLIGHT_ADSMENU_PLUGIN","List of Plugins");
 define("_AM_ADSLIGHT_SEND_PLUGIN","Send a Plugin");
 define("_AM_ADSLIGHT_SEND_TRANSLATION","Send Translation");
+
+define("_AM_ADSLIGHT_ACTIONS","Actions");

@@ -141,9 +141,6 @@ if ($xoopsUser) {
 	$xoopsTpl->assign('ad_exists', $recordexist);
 	$xoopsTpl->assign('mydirname', $mydirname);
 	
-if (!$xoopsUser) {
-eval(base64_decode('JHhvb3BzVHBsLT5hc3NpZ24oJ3hvb3BzX2Zvb3RlcicsICdQb3dlcmVkIGJ5IFhvb3BzICYgRnJlZSBNb2R1bGUgQWRzTGlnaHQgLSA8YSBocmVmPSJodHRwOi8vd3d3LmxpbW9uYWRzLmNvbSI+UGV0aXRlcyBhbm5vbmNlczwvYT4nKTs='));
-}
 	$count = 0;
 	$x=0;
 	$i=0;
@@ -325,7 +322,7 @@ if ($xoopsModuleConfig["adslight_use_country"] == 1) {
 			}
 	}
 		
-	$tphon = '';
+//	$tphon = '';
 //	    if ($tel) {
 //		 $tphon = '<br />'._ADSLIGHT_ORBY.'&nbsp;<strong>'._ADSLIGHT_TEL.'</strong> '.$tel;
 //		}
@@ -352,7 +349,7 @@ if ($sold) {
 } else {
 	
 	if ($xoopsUser){
-			$xoopsTpl->assign('bullinfotext', _ADSLIGHT_CONTACT_SUBMITTER.' '.$submitter.' '._ADSLIGHT_CONTACTBY.' ' .$contact);
+			$xoopsTpl->assign('bullinfotext', _ADSLIGHT_CONTACT_SUBMITTER.' '.$submitter.' '._ADSLIGHT_CONTACTBY2.' ' .$contact);
 		}else{
 			$xoopsTpl->assign('bullinfotext', '<font color="#de090e"><b>'._ADSLIGHT_MUSTLOGIN.'</b></font>');	
 		}

@@ -260,7 +260,7 @@ define("_ADSLIGHT_ACTUALPICT3","Current third image:");
 define("_ADSLIGHT_NEWPICT2","New second image:");
 define("_ADSLIGHT_NEWPICT3","New third image:");
 define("_ADSLIGHT_SELECT_CONTACTBY","Select an option");
-define("_ADSLIGHT_CONTACTBY"," by:");//removed "Contact me"
+define("_ADSLIGHT_CONTACTBY","Contact me by:");
 define("_ADSLIGHT_CONTACT_BY_EMAIL","E-mail");
 define("_ADSLIGHT_CONTACT_BY_PM","Private Message(PM)");
 define("_ADSLIGHT_CONTACT_BY_BOTH","Both E-mail or PM");
@@ -415,3 +415,28 @@ define("_ADSLIGHT_RESERVEDMEMBER","<strong> Status: </ strong> <font color='red'
 define("_MN_ADSLIGHT_PURCHASE","Buy It Now");
 define("_MN_ADSLIGHT_YOURNAME","Establish invoice:");
 define("_MN_ADSLIGHT_YOUREMAIL","Billing Email:");
+
+//2.2 Beta 2
+define("_MN_ADSLIGHT_ERROR404","Error 404");
+define("_MN_ADSLIGHT_ERROR404_TEXT",'<table class="errorMsg" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<center>
+	<h1>Error 404</h1><br /><br />
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<br />
+<b><font size="3">The page does not exist or has been moved</font></b><br />
+<br /><b>Did you enter this address directly into your browser? ?</b><br />
+- Check your entry and try again.<br /><br />
+<b>Did you click on a link? ?</b><br />
+-  Maybe it is an old link that is no longer valid..<br />
+<p>You can also use our <u><a href="search.php">search engine</a></u><br />
+</td>
+</tr>
+</table>');
+
+define("_ADSLIGHT_CONTACTBY2"," by:");
