@@ -142,7 +142,7 @@ function Index()
 		
 
 		echo "<form action=\"view_ads.php\" method=\"post\">";
-		echo "<tr><th align='left'>"._AM_ADSLIGHT_LID.": $lid</th><th align='left'>$photo4 "._AM_ADSLIGHT_NBR_PHOTO."</th><th align='left'>"._AM_ADSLIGHT_TITLE.":</th><th align='left'>"._AM_ADSLIGHT_DESC."</th><th align='left'></th></tr>";
+		echo "<tr><th align='left'>"._AM_ADSLIGHT_LID.": $lid</th><th align='left'>$photo4 "._AM_ADSLIGHT_NBR_PHOTO."</th><th align='left'>"._AM_ADSLIGHT_TITLE.":</th><th align='left'>"._AM_ADSLIGHT_DESC."</th><th align='left'><!--"._AM_ADSLIGHT_ACTIONS."--></th></tr>";
 					
 		echo "<tr><td class='even' width='3%'></td>";
 		echo "<td class='odd' width='10%' >$photo3</td>";

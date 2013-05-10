@@ -21,8 +21,8 @@
 	  	<td class="head"></td>
         <{if $istheirs}><{if $permit}><td class="head" align="center"><{$status_head}></td><{/if}><{/if}>
           	<td class="head"><{$title_head}></td>
-	<{if $istheirs}><{if $permit}><td class="head" align="center"></td><{/if}>
-					<{/if}>
+	<{if $istheirs}><td class="head" align="center"><{$edit_ad}></td><{/if}>
+
 					<td class="head" align="left"><{$expires_head}></td>
 					<td class="head" align="left"><{$local_head}></td>
 		<{if $istheirs}><{if $permit}><td class="head"><{$replies_head}></td><{/if}><{/if}>
@@ -38,8 +38,8 @@
         	<strong><{$item.price}></strong>&nbsp;<{$money_sign}>&nbsp;<{$item.typeprice}><br /><br />
         	<{if $item.sold}><{$item.sold}><{/if}><br />
         	</td>
-		<{if $istheirs}><{if $permit}><td align="left"><{$item.modify_link}></td><{/if}>
-					<{/if}>
+		<{if $istheirs}><td align="center"><{$item.modify_link}></td><{/if}>
+
 					<td align="left"><{$item.expires}></td>
 					<td align="left"><{$item.town}></td>
 		<{if $istheirs}><{if $permit}><td align="right"><{$item.rrows}>&nbsp;<{$item.view_now}></td><{/if}><{/if}>
