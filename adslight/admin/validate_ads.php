@@ -303,13 +303,13 @@ function IndexView($lid)
 			</tr><tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE." </td><td><select name=\"type\">";
 		
-		$result5=$xoopsDB->query("select nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
-		while(list($nom_type) = $xoopsDB->fetchRow($result5)) {
+		$result5=$xoopsDB->query("select id_type, nom_type from ".$xoopsDB->prefix("adslight_type")." order by nom_type");
+		while(list($id_type, $nom_type) = $xoopsDB->fetchRow($result5)) {
 			$sel = "";
-		    if ($nom_type == $type) {
+		    if ($id_type == $type) {
 				$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_type\" $sel>$nom_type</option>";
+		    echo "<option value=\"$id_type\" $sel>$nom_type</option>";
 		}
 		
 		echo "</select></td></tr>";
@@ -318,21 +318,25 @@ function IndexView($lid)
 			echo "<tr class='head' border='1'>
 			<td>"._AM_ADSLIGHT_TYPE_USURE." </td><td><select name=\"typeusure\">";
 		
-		$result6=$xoopsDB->query("select nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
-		while(list($nom_usure) = $xoopsDB->fetchRow($result6)) {
+		$result6=$xoopsDB->query("select id_usure, nom_usure from ".$xoopsDB->prefix("adslight_usure")." order by nom_usure");
+		while(list($id_usure, $nom_usure) = $xoopsDB->fetchRow($result6)) {
     	    $sel = "";
-		    if ($nom_usure == $typeusure) {
+		    if ($id_usure == $typeusure) {
 			$sel = "selected";
 		    }
-		    echo "<option value=\"$nom_usure\" $sel>$nom_usure</option>";
+		    echo "<option value=\"$id_usure\" $sel>$nom_usure</option>";
 		}
 		echo "</select></td></tr>";
 
 		echo "<tr class='head' border='1'><td>"._AM_ADSLIGHT_PRICE2." </td><td><input type=\"text\" name=\"price\" size=\"20\" value=\"$price\"> ".$xoopsModuleConfig["adslight_money"]."";
-		$result3 = $xoopsDB->query("select nom_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
-		echo " <select name=\"typeprice\"><option value=\"$typeprice\">$typeprice</option>";
-		while(list($nom_price) = $xoopsDB->fetchRow($result3)) {
-		echo "<option value=\"$nom_price\">$nom_price</option>";
+		$result3 = $xoopsDB->query("select id_price, nom_price from ".$xoopsDB->prefix("adslight_price")." order by id_price");
+		echo " <select name=\"typeprice\">";
+		while(list($id_price, $nom_price) = $xoopsDB->fetchRow($result3)) {
+		$sel = "";
+		    if ($id_price == $typeprice) {
+			$sel = "selected";
+		    }		
+			echo "<option value=\"$id_price\">$nom_price</option>";
 	    	}
 			echo "</select></td></tr>";
 
