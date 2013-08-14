@@ -139,9 +139,6 @@ if ($xoopsUser) {
 	$xoopsTpl->assign('ad_exists', $recordexist);
 	$xoopsTpl->assign('mydirname', $mydirname);
 	
-if (!$xoopsUser) {
-eval(base64_decode('JHhvb3BzVHBsLT5hc3NpZ24oJ3hvb3BzX2Zvb3RlcicsICdQb3dlcmVkIGJ5IFhvb3BzICYgRnJlZSBNb2R1bGUgQWRzTGlnaHQgLSA8YSBocmVmPSJodHRwOi8vd3d3LmxpbW9uYWRzLmNvbSI+UGV0aXRlcyBhbm5vbmNlczwvYT4nKTs='));
-}
 	$count = 0;
 	$x=0;
 	$i=0;
